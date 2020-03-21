@@ -78,6 +78,7 @@ module.exports = async (env, argv) => {
 
 - [`webpack-bundle-analyzer`][webpack-bundle-analyzer]
 - [`@expo/webpack-config`][webpack-config]
+- PR to deprecate the feature: https://github.com/expo/expo-cli/pull/1718
 
 [webpack-bundle-analyzer]: https://www.npmjs.com/package/webpack-bundle-analyzer
 [webpack-config]: https://www.npmjs.com/package/@expo/webpack-config
