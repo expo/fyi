@@ -6,6 +6,8 @@ In older `Notifications` API implementations, `presentNotificationAsync` has alw
 
 Architecture changes in `expo-notifications`, aligning the module's logic closer to how native platforms work, allowed us to expose a much more powerful and customizable API, letting developers explicitly decide how a notification should be handled when the application is in foreground.
 
+The default behavior applied for notifications triggered when the app is in foreground on both platforms is not to show the notification (the app will only get notified via event listeners), so in order to present the notification to the user, one will need to explicitly define an appropriate behavior.
+
 In the first version of `expo-notifications` we have decided to leave `presentNotificationAsync` to help developers migrate their code more swiftly, but we have also deprecated it to gently prompt you move to the new API.
 
 #### 💡 Solution
