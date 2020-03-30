@@ -39,7 +39,7 @@ With this handler in place we can now schedule the notification with a trigger t
 ```ts
 import * as Notifications from 'expo-notifications';
 
-const notification = { title: 'I am a one, hasty notification.' };
+const content = { title: 'I am a one, hasty notification.' };
 
-Notifications.scheduleNotificationAsync(notification, null);
+Notifications.scheduleNotificationAsync({ content, trigger: null });
 ```
