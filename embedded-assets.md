@@ -1,6 +1,6 @@
 # Embedded Assets
 
-In addition to loading updates from remote servers, apps with `expo-updates` installed also include the necessary capability to load updates embedded in the app binar at build-time. This is critical to ensure that your app can load for all users immediately upon installation, without needing to talk to a server first.
+In addition to loading updates from remote servers, apps with `expo-updates` installed also include the necessary capability to load updates embedded in the app binary at build-time. This is critical to ensure that your app can load for all users immediately upon installation, without needing to talk to a server first.
 
 When you run `expo export` or `expo publish` with `expo-updates` installed, Expo CLI will make local copies of the update's manifest (`app.manifest`) and JavaScript bundle (`app.bundle`) so they can be included in the Xcode and Android Studio projects and embedded in release-mode application binaries.
 
