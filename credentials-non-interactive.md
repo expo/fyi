@@ -1,10 +1,10 @@
-# Setting up credentials in non-interactive mode
+# Setting up ios credentials in non-interactive mode
 
 In order to set up credentials in non-interactive mode, you must do one of the following:
 
 ## Run build before in interactive mode
 
-Set up credentials before by running the command in interactive mode. You can do this by running `expo build:[platform]` or `expo credentials:manager -p [platform]`.
+Set up credentials before by running the command in interactive mode. You can do this by running `expo build:ios` or `expo credentials:manager -p ios`.
 
 ## Pass credentials in via build flags
 
