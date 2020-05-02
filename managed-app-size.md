@@ -54,7 +54,8 @@ to be at least some libraries that you aren't using that are included in your bu
 
 - **Automatically removing what you don't use**: Making it possible to include *only the dependencies that your app uses* in the final build in managed workflow.
 - **Safe but flexible over-the-air updates**: New APIs that help you to ensure that your binaries don't receive incompatible over-the-air updates.
-- **Build service support for bare apps**: Support builds for bare React Native projects on the Expo build service, so it's easier to eject to the bare workflow if needed and keep building your project the same as before.
+- **Building first-class support for custom native code in Expo apps**: We are working on a longer term change to make the main workflow support custom native code (including Expo modules from npm or GitHub that might contain native code) in Expo projects by giving direct control over the Xcode and Android Studio projects.
+- **Build service support for bare apps**: Support builds also for bare React Native projects on the Expo build service, so it's easier to eject to the bare workflow if needed and keep building your project the same as before.
 
 We are hoping to get these out in developers' hands by the end of 2020. More information will be available as we're ready to talk about it!
 
