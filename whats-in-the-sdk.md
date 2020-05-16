@@ -1,4 +1,4 @@
-### What goes into the Expo SDK?
+# What goes into the Expo SDK?
 
 The simplest way to look at Expo's SDK is to think of it as a toolbox that Expo provides. Included in that toolbox are what we believe are the most essential and widely usable tools for building extraordinary and powerful apps (like a hammer, powerdrill, and saw). You can do a lot with just these tools and creative thinking. Of course, there are other tools out there that are made for narrower use-cases (like a [tailpipe cutter](https://www.amazon.com/OEMTOOLS-27045-Tailpipe-Cutter/dp/B004FELJ20)). These can be really useful, and sometimes are even make-or-break for specific apps.
 
