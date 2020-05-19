@@ -16,7 +16,7 @@ Imagine that you're working on expo-cli and want to add more context on some ter
 
 - Go to [https://github.com/expo/fyi](https://github.com/expo/fyi)
 - Click "Create a new file"
-- Pick a name for it and include the `.md` extension. If you are teaching people about the "tunnel" connection type in expo-cli, maybe you would call it `[tunnel-connection.md](http://tunnel-connection.md)` and then the url would be [https://expo.fyi/tunnel-connection](https://expo.fyi/tunnel-connection)
+- Pick a name for it and include the `.md` extension. If you are teaching people about the "tunnel" connection type in expo-cli, maybe you would call it `tunnel-connection.md` and then the url would be [https://expo.fyi/tunnel-connection](https://expo.fyi/tunnel-connection)
 
 ## 💡**FYI**
 
