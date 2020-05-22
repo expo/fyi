@@ -6,10 +6,6 @@ If you're submitting your Android app to Google Play Store using the `expo uploa
 
 [<img src="./assets/missing-privacy-policy/01-privacy-policy-error.png" width="800" />](./assets/missing-privacy-policy/01-privacy-policy-error.png)
 
-If you were trying to submit your app with `expo upload:android` you may have seen the following error:
-
-> The app has permissions that require a privacy policy set for the app.
-
 #### 💡 Solution
 
 This page will guide you through setting a privacy policy in Google Play Console.

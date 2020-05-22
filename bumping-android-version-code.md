@@ -2,11 +2,7 @@
 
 #### 🤔 What Happened
 
-If you're submitting your Android app to Google Play Store using the `expo upload:android` command, you may encouter the following error:
-
-> You've already submitted this version of the app.<br>
-> Versions are identified by Android version code (expo.android.versionCode in app.json).<br>
-> If you're submitting a managed Expo project, increment the version code in app.json and build the project with expo build:android.
+If you're submitting your Android app to Google Play Store using the `expo upload:android` command, you may encounter the error saying you've already submitted a particular version of the app.
 
 #### 💡 Solution
 
