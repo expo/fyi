@@ -2,7 +2,7 @@
 
 #### 🤔 What Happened
 
-If you're submitting your Android app to Google Play Store for the first time you need to do it manually. If you tried to take advantage of the `expo upload:android` you most probably got the following error:
+If you're submitting your Android app to Google Play Store *for the first time*, Google requires that you manually upload it through their web user interface. After you have submitted it once through the web user interface, you will be able to use `expo upload:android` for subsequent submissions.
 
 > You haven't submitted this app to Google Play Store yet. The first submission of the app needs to be performed manually.
 
@@ -19,7 +19,7 @@ This page will guide you through creating an app in Google Play Console and uplo
 
 [<img src="./assets/first-android-submission/02-create-application.png" width="800" />](./assets/first-android-submission/02-create-application.png)
 
-4. You'll be redirected to a new subpage where you can set **Product details**. **You don't need to set them now.**
+4. You'll be redirected to a new subpage where you can set **Product details**. **You don't need to set them now, come back and do this later.**
 
 [<img src="./assets/first-android-submission/03-product-details.png" width="800" />](./assets/first-android-submission/03-product-details.png)
 
@@ -31,7 +31,7 @@ This page will guide you through creating an app in Google Play Console and uplo
 
 [<img src="./assets/first-android-submission/05-create-release.png" width="800" />](./assets/first-android-submission/05-create-release.png)
 
-7. Opt in to app signing by Google Play. Althought it's not necessary, this will let you upload your app when you lose your Android Keystore. Click the **CONTINUE** button.
+7. Opt in to app signing by Google Play. Althought it's not necessary, this will let you upload your app if you somehow happen to lose your Android Keystore. Click the **CONTINUE** button.
 
 [<img src="./assets/first-android-submission/06-google-app-signing.png" width="800" />](./assets/first-android-submission/06-google-app-signing.png)
 
