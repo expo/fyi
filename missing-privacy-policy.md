@@ -8,6 +8,8 @@ If you're submitting your Android app to Google Play Store using the `expo uploa
 
 #### 💡 Solution
 
+#### Set Privacy Policy in Google Play Console ...
+
 This page will guide you through setting a privacy policy in Google Play Console.
 
 1. Open [Google Play Console](https://play.google.com/apps/publish/), find your app on the list and enter the dashboard.
@@ -25,3 +27,8 @@ This page will guide you through setting a privacy policy in Google Play Console
 4. Find your release in the **App releases** tab. Verify that no errors show up in the **Review summary** section.
 
 [<img src="./assets/missing-privacy-policy/05-release-summary.png" width="800" />](./assets/missing-privacy-policy/05-release-summary.png)
+
+#### ... or Customize App Permissions
+
+If your app is not using the permissions that Google Play Store detects, you can customize them, rebuild the app and submit it again.
+Learn more [how to customize permissions here](https://docs.expo.io/distribution/app-stores/#android-permissions).
