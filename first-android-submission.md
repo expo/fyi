@@ -29,7 +29,7 @@ This page will guide you through creating an app in Google Play Console and uplo
 
 [<img src="./assets/first-android-submission/05-create-release.png" width="800" />](./assets/first-android-submission/05-create-release.png)
 
-7. Opt in to app signing by Google Play. Althought it's not necessary, this will let you upload your app if you somehow happen to lose your Android Keystore. Click the **CONTINUE** button.
+7. Opt in to app signing by Google Play. Although it's not necessary, this will let you upload your app if you somehow happen to lose your Android Keystore. Click the **CONTINUE** button.
 
 [<img src="./assets/first-android-submission/06-google-app-signing.png" width="800" />](./assets/first-android-submission/06-google-app-signing.png)
 
