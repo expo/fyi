@@ -1,6 +1,6 @@
 # Enabling web service workers
 
-Expo's Webpack config has all the required plugins for building a [progressive web app](https://developers.google.com/web/progressive-web-apps/), but the offline support is **disabled** by default.
+Expo's Webpack config has all the required plugins for building a [progressive web app](https://developers.google.com/web/progressive-web-apps/), but the offline support is **disabled** by default starting in Expo SDK 39.
 
 To enable offline support you can do the following:
 
