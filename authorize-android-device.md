@@ -8,7 +8,7 @@ Android devices can only be used for debugging apps if your computer is "authori
 
 1. Disconnect your Android device from the computer.
 2. Revoke USB Debugging on the device:
-   - Open the `Settings` app on the phone.
+   - Open the `Settings` app on your device.
    - **Navigate:** `Developer Options` -> select _Revoke USB debugging authorizations_.
 3. Reconnect the device:
    - The device will prompt you to agree to connect the computer. You must confirm it.
