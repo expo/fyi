@@ -12,4 +12,4 @@ If your application is already on App Store Connect, please follow these steps:
 5. Your App ID can be found under _General Information_ section, called `Apple ID`
    > Not to be confused with Apple ID as your account username.
 
-[screen here]
+[<img src="./assets/asc-app-id/finding-app-id.png" width="800" />](./assets/asc-app-id/finding-app-id.png)
