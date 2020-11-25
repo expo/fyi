@@ -1,8 +1,8 @@
 # Apple App-Specific Password
 
-The Apple application-specific password is a password for your Apple ID account that let you sign in to your Apple account securely from a third-party app. It is required by Submission Service to submit your build to App Store.
+The Apple app-specific password is a password for your Apple ID account that lets you sign in to your Apple account securely from a third-party app. It is required by the EAS Submission Service to submit your build to Apple App Store.
 
-### How do I generate one?
+### How do I generate an app-specific password?
 
 1. Sign in to your [Apple ID account](https://appleid.apple.com/account/home).
 2. Go to the _Security_ section and click `Generate Password` under _App-Specific Passwords_.
