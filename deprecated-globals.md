@@ -4,7 +4,9 @@
 
 Expo has historically exported several APIs on the global `__expo` and `Expo` objects in order to make it easier for libraries to interoperate between Expo managed environments and bare React Native projects.
 
-All of these APIs have since been extracted from the `expo` package itself and other techniques are available to solve the problem that the globals were intended to solve. So, the globals exports will be removed in SDK 41.
+All of these APIs have since been extracted from the `expo` package itself and other techniques are available to solve the problem that the globals were intended to solve.
+
+**Global exports will be removed in SDK 41.**
 
 #### 💡 Solution
 
