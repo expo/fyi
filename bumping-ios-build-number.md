@@ -6,13 +6,13 @@ If you're submitting your iOS app to App Store using the `eas submit` command, y
 
 #### 💡 Solution
 
-1. - **If you are building your app using EAS Build**
+1. - **If you are building a managed Expo app**
 
      Increment the value for the `expo.ios.buildNumber` key in `app.json`. Remember that this value must be a string. Optionally, commit this change. Then, build a new app archive with `eas build`. Wait for the build to finish.
 
      [<img src="./assets/bumping-ios-build-number/01-bumping-ios-build-number.png" width="800" />](./assets/bumping-ios-build-number/01-ios-build-number-code.png)
 
-   - **If you are building your app using Xcode**
+   - **If you are building a bare React Native app**
 
      Enter your project settings (left click on project name) and increase the _Build_ value under _General -> Identity_ section.
 
