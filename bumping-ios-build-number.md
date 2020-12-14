@@ -14,7 +14,7 @@ If you're submitting your iOS app to App Store using the `eas submit` command, y
 
    - **If you are building a bare React Native app**
 
-     Enter your project settings (left click on project name) and increase the _Build_ value under _General -> Identity_ section.
+     In Xcode, enter your project settings (left click on project name) and increase the _Build_ value under _General -> Identity_ section.
 
      [<img src="./assets/bumping-ios-build-number/01b-bumping-in-xcode.png" width="800" />](./assets/bumping-ios-build-number/01b-bumping-in-xcode.png)
 
