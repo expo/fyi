@@ -1,6 +1,6 @@
 # Creating Google Service Account
 
-If you’d like to submit your Android app to Google Play Store with `expo upload:android` you need to create a Google Service Account key. This page will guide you through this process.
+If you’d like to submit your Android app to Google Play Store with `expo upload:android` or `eas submit` you need to create a Google Service Account key. This page will guide you through this process.
 
 1. Open [Google Play Console](https://play.google.com/apps/publish/) and go to the **Settings** tab.
 
@@ -43,4 +43,4 @@ If you’d like to submit your Android app to Google Play Store with `expo uploa
 
 [<img src="./assets/creating-google-service-account/12-invite-user.png" width="800" />](./assets/creating-google-service-account/12-invite-user.png)
 
-10. That's all! From now on, you can use the generated Google Service Account to upload your app with `expo upload:android`.
+10. That's all! From now on, you can use the generated Google Service Account to upload your app with `expo upload:android` or `eas submit`.
