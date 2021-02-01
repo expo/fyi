@@ -49,7 +49,7 @@ Both `getExpoPushTokenAsync` and `getDevicePushTokenAsync` have the exact same m
 - [`Notifications.getExpoPushTokenAsync()`](https://docs.expo.io/versions/latest/sdk/notifications/#getexpopushtokenasyncoptions-expotokenoptions-expopushtoken)
 - [`Notifications.getDevicePushTokenAsync()`](https://docs.expo.io/versions/latest/sdk/notifications/#getdevicepushtokenasync-devicepushtoken)
 
-No changes are necessary unless you eject to bare, in which case you should check the method parameters in the docs.
+The only difference is that the new methods return an object of the format `{ type: string, data: string }`, where `data` is the actual push token string. No other changes are necessary unless you eject to bare, in which case you should check the method parameters in the docs.
 
 #### `LegacyNotifications.presentLocalNotificationAsync()` & `LegacyNotifications.scheduleLocalNotificationAsync()`
 
