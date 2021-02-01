@@ -58,19 +58,19 @@ Both of these have been replaced by [`Notifications.scheduleNotificationAsync()`
 
 #### `LegacyNotifications.dismissNotificationAsync()` 
 
-There is an identical method in the new `expo-notifications` module- [`Notifications.dismissNotificationAsync()`](https://docs.expo.io/versions/latest/sdk/notifications/#dismissnotificationasyncidentifier-string-promisevoid)- no changes necessary:
+There is an identical method in the new `expo-notifications` module- [`Notifications.dismissNotificationAsync()`](https://docs.expo.io/versions/latest/sdk/notifications/#dismissnotificationasyncidentifier-string-promisevoid)- no changes necessary.
 
 #### `LegacyNotifications.dismissAllNotificationsAsync()` 
 
-There is an identical method in the new `expo-notifications` module- [`Notifications.dismissAllNotificationsAsync()`](https://docs.expo.io/versions/latest/sdk/notifications/#dismissallnotificationsasync-promisevoid)- no changes necessary:
+There is an identical method in the new `expo-notifications` module- [`Notifications.dismissAllNotificationsAsync()`](https://docs.expo.io/versions/latest/sdk/notifications/#dismissallnotificationsasync-promisevoid)- no changes necessary.
 
 #### `LegacyNotifications.cancelScheduledNotificationAsync()` 
 
-There is an identical method in the new `expo-notifications` module- [`Notifications.cancelScheduledNotificationAsync()`](https://docs.expo.io/versions/latest/sdk/notifications/#cancelschedulednotificationasyncidentifier-string-promisevoid)- no changes necessary:
+There is an identical method in the new `expo-notifications` module- [`Notifications.cancelScheduledNotificationAsync()`](https://docs.expo.io/versions/latest/sdk/notifications/#cancelschedulednotificationasyncidentifier-string-promisevoid)- no changes necessary.
 
 #### `LegacyNotifications.cancelAllScheduledNotificationsAsync()`
 
-There is an identical method in the new `expo-notifications` module- [`Notifications.cancelAllScheduledNotificationsAsync()`](https://docs.expo.io/versions/latest/sdk/notifications/#cancelallschedulednotificationsasync-promisevoid)- no changes necessary:
+There is an identical method in the new `expo-notifications` module- [`Notifications.cancelAllScheduledNotificationsAsync()`](https://docs.expo.io/versions/latest/sdk/notifications/#cancelallschedulednotificationsasync-promisevoid)- no changes necessary.
 
 
 #### `LegacyNotifications.getBadgeNumberAsync()`
