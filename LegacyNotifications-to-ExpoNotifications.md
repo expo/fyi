@@ -21,6 +21,8 @@ import * as Notifications from 'expo-notifications';
 
 ### Edit `app.json`
 
+If you're upgrading to SDK 40 or below, you need to set `android.useNextNotificationsApi: true` in your app.json file. [See here for details](https://docs.expo.io/versions/latest/sdk/notifications/#android).
+
 Some values from [your `app.json` `notification` key](https://docs.expo.io/versions/latest/config/app/#notification) still apply, but some do not:
 
 - `icon` still applies, do not remove it ✅
