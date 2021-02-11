@@ -2,6 +2,8 @@
 
 > TL;DR: Starting in Expo SDK 40, the `.expo.js` extension is deprecated in favor of optional imports.
 
+Files with the `.expo.*` extension will no longer be used in SDK 41+, and the `EXPO_TARGET` environment variable is deprecated.
+
 ## Background
 
 In the past, it was impossible to import files that didn't exist using the Metro bundler. Even if you wrapped a require statement in a try/catch, Metro would just fail to bundle instead of throwing. We've upstreamed a fix in SDK 40+ which correctly throws an error:
