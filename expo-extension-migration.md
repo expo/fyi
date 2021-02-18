@@ -17,7 +17,7 @@ try {
 }
 ```
 
-To combat this, we created the `.expo.js` extension which would get used in the Expo client or legacy turtle V1 builds (`expo build`). This feature was primarily used by library authors who wanted to support standalone versions of expo packages like `react-native-camera` if `expo-camera` wasn't installed in the project. In SDK 40+ this can be done using try/catch syntax.
+To work around this, we created the `.expo.js` extension which would get used in the Expo client and classic standalone builds (`expo build`). This feature was primarily used by library authors who wanted to support alternative APIs like `react-native-camera` if `expo-camera` wasn't installed in the project. In SDK 40+ this can be done using try/catch syntax.
 
 ## Examples
 
