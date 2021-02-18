@@ -43,7 +43,7 @@ export * from "another-camera-package";
 
 #### After
 
-Now you can simply use the optional import syntax:
+Now you can use the optional import syntax instead:
 
 `Camera.js`
 
