@@ -57,7 +57,7 @@ to be at least some libraries that you aren't using that are included in your bu
 - **Building first-class support for custom native code in Expo apps**: We are working on a longer term change to make the main workflow support custom native code (including Expo modules from npm or GitHub that might contain native code) in Expo projects by giving direct control over the Xcode and Android Studio projects.
 - **Build service support for bare apps**: Support builds also for bare React Native projects on the Expo build service, so it's easier to eject to the bare workflow if needed and keep building your project the same as before.
 
-We are hoping to get these out in developers' hands by the end of 2020. More information will be available as we're ready to talk about it!
+Some of this is already available in preview! Read more in [Expo Application Services (EAS): Build and Submit](https://blog.expo.io/expo-application-services-eas-build-and-submit-fc1d1476aa2e). Support for managed apps in EAS Build will be available in preview around the end of Q1 2021, [read more](https://docs.expo.io/build/introduction/). This will resolve the minimum app size concerns by only including the libraries that you actually use in your application at build time.
 
 ## A note about using "Hello, world!" apps to make technical decisions
 
