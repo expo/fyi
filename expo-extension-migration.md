@@ -1,8 +1,8 @@
-# Migration off the expo extension
+# Migration off the expo file extension
 
 > TL;DR: Starting in Expo SDK 40, the `.expo.js` extension is deprecated in favor of optional imports.
 
-Files with the `.expo.*` extension will no longer be used in SDK 41+, and the `EXPO_TARGET` environment variable is deprecated.
+Files with the `.expo.*` extension will no longer be used in SDK 41+, the `EXPO_TARGET` environment variable, and the `--target` flag on `expo publish`, and `expo export` are all deprecated.
 
 ## Background
 
@@ -59,7 +59,7 @@ module.exports = camera;
 
 ### Detecting Expo
 
-If you wanted to detect if you were running in Expo go, you needed to use workflow extensions, instead, you should use `expo-constants`.
+If you wanted to detect if you were running in Expo Go, you needed to use workflow extensions, instead, you should use `expo-constants`.
 
 #### Before
 
@@ -83,7 +83,7 @@ Now you can use a far more reasonable approach:
 let isExpo = false;
 try {
   const Constants = require("expo-constants");
-  // True if the app is running in an `expo build` app or if it's running in Expo go.
+  // True if the app is running in an `expo build` app or if it's running in Expo Go.
   isExpo =
     Constants.executionEnvironment === "standalone" ||
     Constants.executionEnvironment === "storeClient";
