@@ -65,7 +65,7 @@ If your app created an album using SDK <= 40 and you want to add more assets to 
 
 To make the migration as easy as possible, we introduced two new functions into the media library:
 
-- `checkIfAlbumShouldBeMigratedAsync` which checks if the album should be migrated. In other words, it will check that new media can be added to the library — if not, then the album needs to be migrated.
+- `albumNeedsMigrationAsync` which checks if the album should be migrated. In other words, it will check that new media can be added to the library — if not, then the album needs to be migrated.
 - `migrateAlbumIfNeededAsync` which tries to migrate your album automatically to the new directory.
 
 Unfortunately, it not always possible to migrate automatically. For example, if the album contains incompatible file types, the migration method will be rejected, because the media library couldn't figure out where files should be saved. This can happen if you stored mixed file types like music and photos in the same album.
@@ -82,7 +82,7 @@ Unfortunately, it not always possible to migrate automatically. For example, if 
 
 ### What about newly created albums?
 
-From now (SDK >= 41), all new albums will be saved into directories compatible with the scoped storage. If you're not sure if the album should be migrated or not, use `checkIfAlbumShouldBeMigratedAsync` from media library.
+From now (SDK >= 41), all new albums will be saved into directories compatible with the scoped storage. If you're not sure if the album should be migrated or not, use `albumNeedsMigrationAsync` from media library.
 
 ### What can I do when the migration failed?
 
