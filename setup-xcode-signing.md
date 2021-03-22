@@ -4,6 +4,9 @@ In order to build an iOS app onto a physical device (not a simulator) you'll nee
 
 > 💡 Certificates are saved to your local Keychain so you don't need to set them up often.
 
+![code-signing-page](https://user-images.githubusercontent.com/9664363/112059266-db521e00-8b18-11eb-9538-2a31c6bd6e39.png)
+
+
 1. Open your iOS project in Xcode with: `open ios/<yourproject>.xcworkspace`
 2. Select the first project in the **navigator** then the target with the matching native in the "project and targets list".
 3. Select "Signing & Capabilities", ensure you have "Automatically manage signing" selected.
