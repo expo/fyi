@@ -99,3 +99,13 @@ After the user selects the folder, you will receive a URI that is compatible wit
 > If you want to know more about scoped storage on Android, please check out the [documentation](https://developer.android.com/about/versions/11/privacy/storage).
 
 > To get more information about the new API, check out [expo-media-library](https://docs.expo.io/versions/latest/sdk/media-library/) and [expo-file-system](https://docs.expo.io/versions/latest/sdk/filesystem/) documentation.
+
+## MAC Address
+
+Beginning with Android R, non-system applications no longer have access to the device's MAC address.
+
+Your standalone apps built with SDK 40 or below will continue to work as before on older Android operating systems. On Android R, the `getMacAddressAsync` method will always return a dummy value of `'02:00:00:00:00:00'`.
+
+In Expo Go 2.19.x, the `getMacAddressAsync` method will always return `'02:00:00:00:00:00'` in **all supported SDK versions**. This will also be the behavior in SDK 41+ standalone apps.
+
+The `getMacAddressAsync` method has been deprecated as of SDK 41 and will be removed in a future release. To uniquely identify a device, we recommend using the methods/values found in `expo-application`.
