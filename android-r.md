@@ -1,8 +1,8 @@
-# What is new in the Android R
+# What's new in Android R
 
 ### Does it concern me?
 
-If you're using or want to update to **SDK 41** or **higher**, you should check if you're using expo-location or expo-media-library and follow the instruction below.
+If you're using or want to update to **SDK 41** or **higher**, you should check if you're using expo-location or expo-media-library and follow the instructions below.
 
 You may also observe in SDK <= 40 projects running the latest Play Store version of Expo Go that some functionality doesn't work as intended when using a device with Android R or higher. That's because we didn't backport changes required by the newest Android to the older SDKs. We didn't backport the changes because that would have broken existing applications on already-released SDKs and forced developers to change their code even when they didn't update the SDK version.
 When you building your app using SDK <= 40 with the `expo build:android` service, everything should work as it used to. For development purposes, rather than using the Expo Go app from the Play Store you can install an older version of Expo Go by running `expo client:install:android` in your project directory.
@@ -84,7 +84,7 @@ Unfortunately, it not always possible to migrate automatically. For example, if 
 
 From now (SDK >= 41), all new albums will be saved into directories compatible with the scoped storage. If you're not sure if the album should be migrated or not, use `albumNeedsMigrationAsync` from media library.
 
-### What can I do when the migration failed?
+### What can I do if the migration failed?
 
 If `migrateAlbumIfNeededAsync` doesn't meet your needs, you can always try to migrate files manually. To do this, you can use new method from the file system module - `askForDirectoryPermissionsAsync`. This function allows users to select a specific directory, granting your app access to all of the files and sub-directories within that directory.
 
@@ -99,3 +99,13 @@ After the user selects the folder, you will receive a URI that is compatible wit
 > If you want to know more about scoped storage on Android, please check out the [documentation](https://developer.android.com/about/versions/11/privacy/storage).
 
 > To get more information about the new API, check out [expo-media-library](https://docs.expo.io/versions/latest/sdk/media-library/) and [expo-file-system](https://docs.expo.io/versions/latest/sdk/filesystem/) documentation.
+
+## MAC Address
+
+Beginning with Android R, non-system applications no longer have access to the device's MAC address.
+
+Your standalone apps built with SDK 40 or below will continue to work as before on older Android operating systems. On Android R, the `getMacAddressAsync` method will always return a dummy value of `'02:00:00:00:00:00'`.
+
+In Expo Go 2.19.x, the `getMacAddressAsync` method will always return `'02:00:00:00:00:00'` in **all supported SDK versions**. This will also be the behavior in SDK 41+ standalone apps.
+
+The `getMacAddressAsync` method has been deprecated as of SDK 41 and will be removed in a future release. To uniquely identify a device, we recommend using the methods/values found in `expo-application`.
