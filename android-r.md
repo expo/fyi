@@ -19,7 +19,7 @@ If your app contains a feature that shares or receives location information only
 
 When your application requests the foreground permission, users will see modal that looks like this:
 
-[<img src="./assets/android-r/foreground_permissions_modal.png" width="300" />](./assets/asc-app-id/finding-app-id.png)
+[<img src="./assets/android-r/foreground_permissions_modal.png" width="300" />](Foreground permissions modal)
 
 #### Differences in the way it works across all Android versions
 
@@ -33,8 +33,7 @@ An app requires background location access if a feature within the app constantl
 
 When your application requests the background permission, users won't see a modal — they will be redirected to the settings screen, which should look like this:
 
-[<img src="./assets/android-r/background_permissions_modal.png" width="300" />](./assets/asc-app-id/finding-app-id.png)
-
+![<img src="./assets/android-r/background_permissions_modal.png" width="300" />](Background permissions modal)
 In order for the user to understand why they have been redirected to this screen, you should inform the user why your application requires background permissions.
 
 **You can request the background permission only if the foreground permission was granted.**
@@ -57,7 +56,7 @@ The scoped storage API was introduced in Android 10. Previously, we temporarily 
 
 Some of the media library functions will ask the user for permissions before they perform any actions. You should be prepared that any of those functions may be rejected when the user doesn't grant the required permissions.
 
-[<img src="./assets/android-r/modifying_media_request.png" width="400" />](./assets/asc-app-id/finding-app-id.png)
+[<img src="./assets/android-r/modifying_media_request.PNG" width="400" />](Dialog example)
 
 If your app created an album using SDK <= 40 and you want to add more assets to this album, you need to migrate it to the new scoped directory. Otherwise, your app won't have access to the old album directory and expo-media-library won't be able to add new assets to it. However, all other functions will work without problems. You only need to migrate the old album if you want to add something to it.
 
