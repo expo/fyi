@@ -19,7 +19,7 @@ If your app contains a feature that shares or receives location information only
 
 When your application requests the foreground permission, users will see modal that looks like this:
 
-[<img src="./assets/android-r/foreground_permissions_modal.png" width="300" />](Foreground permissions modal)
+<img src="./assets/android-r/foreground_permissions_modal.png" width="300" />
 
 #### Differences in the way it works across all Android versions
 
@@ -33,7 +33,8 @@ An app requires background location access if a feature within the app constantl
 
 When your application requests the background permission, users won't see a modal — they will be redirected to the settings screen, which should look like this:
 
-![<img src="./assets/android-r/background_permissions_modal.png" width="300" />](Background permissions modal)
+<img src="./assets/android-r/background_permissions_modal.png" width="300" />
+
 In order for the user to understand why they have been redirected to this screen, you should inform the user why your application requires background permissions.
 
 **You can request the background permission only if the foreground permission was granted.**
@@ -56,7 +57,7 @@ The scoped storage API was introduced in Android 10. Previously, we temporarily 
 
 Some of the media library functions will ask the user for permissions before they perform any actions. You should be prepared that any of those functions may be rejected when the user doesn't grant the required permissions.
 
-[<img src="./assets/android-r/modifying_media_request.PNG" width="400" />](Dialog example)
+<img src="./assets/android-r/modifying_media_request.PNG" width="400" />
 
 If your app created an album using SDK <= 40 and you want to add more assets to this album, you need to migrate it to the new scoped directory. Otherwise, your app won't have access to the old album directory and expo-media-library won't be able to add new assets to it. However, all other functions will work without problems. You only need to migrate the old album if you want to add something to it.
 
@@ -87,7 +88,7 @@ From now (SDK >= 41), all new albums will be saved into directories compatible w
 
 If `migrateAlbumIfNeededAsync` doesn't meet your needs, you can always try to migrate files manually. To do this, you can use new method from the file system module - `askForDirectoryPermissionsAsync`. This function allows users to select a specific directory, granting your app access to all of the files and sub-directories within that directory.
 
-[<img src="./assets/android-r/ask_for_dir_permissions.png" width="300" />](./assets/asc-app-id/finding-app-id.png)
+<img src="./assets/android-r/ask_for_dir_permissions.png" width="300" />
 
 After the user selects the folder, you will receive a URI that is compatible with the Scoped Storage Framework (SAF). Your application will have read and write permissions for that directory. However, the SAF URI can't be treated as other URIs which can be found on Android. **It's impossible to use expo-media-library directly with SAF URI.** Therefore, you need to manually copy or move files from the external album directory into internal storage with expo-file-system. Then using expo-media-library, you can create a new album or do whatever you want.
 
