@@ -2,7 +2,7 @@
 
 The `--config` flag for commands like `expo start` and `expo publish` was added to provide developers with a mechanism to switch between different `app.json` configuration files to support use cases like staging environments and white labeling.
 
-At the time the flag was introduced, dynamic configuration with `app.config.js` was not possible. Now that it is, we are deprecating the `--config` flag in favor of using `app.config.js`. The `--config` flag will continue to work for existing use cases, but it won't be supported in new scenarios, such as on EAS Build or when embedding app config when building native projects locally.
+At the time the flag was introduced, dynamic configuration with `app.config.js` was not possible. Now that it is, we are deprecating the `--config` flag in favor of using `app.config.js`. The `--config` flag will continue to work for existing use cases, but it won't be supported in new scenarios, such as on EAS Build and embedding app config when building native projects locally.
 
 The migration process itself is quick, here's how you can do it.
 
@@ -85,3 +85,7 @@ module.exports = () => {
   }
 };
 ```
+
+### Verifying your configuration
+
+You can use the `expo config` command to verify that your config is switching based on environment variables as expected. For example, run `APP_ENV=production expo config --type public` to see what your app config evaluates to with the `APP_ENV` set to `production`.
