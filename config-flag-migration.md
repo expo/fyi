@@ -41,7 +41,7 @@ const commonConfig = {
   splash: "./assets/splash.png",
 };
 
-export default () => {
+module.exports = () => {
   if (process.env.APP_ENV === "production") {
     return {
       ...commonConfig,
@@ -75,7 +75,7 @@ export default () => {
 Rename your `app.json` to `app.development.json` and create `app.config.js` with the following contents:
 
 ```js
-export default () => {
+module.exports = () => {
   if (process.env.APP_ENV === "production") {
     return require("./app.production.json");
   } else if (process.env.APP_ENV === "staging") {
