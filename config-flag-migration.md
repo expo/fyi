@@ -30,7 +30,7 @@ We can migrate to `app.config.js` and switch the configuration that we use depen
 
 While there is essentially unlimited flexibility in how you structure your project, here are two possible ways you may do this: move all of the config to `app.config.js`, or keep the config files separate and load the appropriate file from `app.config.js`.
 
-1. **Move all config to `app.config.js`**
+#### 1. **Move all config to `app.config.js`**
 
 Create `app.config.js`, and copy and paste your config into one file.
 
@@ -70,7 +70,7 @@ module.exports = () => {
 };
 ```
 
-2. **Keep config in separate files, select the config in `app.config.js`**
+#### 2. **Keep config in separate files, select the config in `app.config.js`**
 
 Rename your `app.json` to `app.development.json` and create `app.config.js` with the following contents:
 
