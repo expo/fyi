@@ -85,7 +85,7 @@ You can customize which assets are included in your standalone app builds using 
 
 ### Opt-in to manual "lean builds" on Android
 
-You can set the `android.enableDangerousExperimentalLeanBuilds` property to `true` in `app.json` to opt-in to only including the Expo SDK packages that you use in your app in your Android standalone app build. This requires that you have expo-updates installed in your project (`expo install expo-updates`), but if you use the feature we also strongly recommend that you either disable over the air updates or that you are very cautious and use release channels for updates to specific binary versions.  Note that the react-native-* packages (eg: react-native-gesture-handler) that are included in the Expo SDK are not currently eligible for exclusion using this approach, only expo-* packages.
+You can set the `android.enableDangerousExperimentalLeanBuilds` property to `true` in `app.json` to opt-in to only including the Expo SDK packages that you use in your app in your Android standalone app build. This requires that you have expo-updates and expo-splash-screen installed in your project (`expo install expo-updates expo-splash-screen`), but if you use the feature we also strongly recommend that you either disable over the air updates or that you are very cautious and use release channels for updates to specific binary versions.  Note that the react-native-* packages (eg: react-native-gesture-handler) that are included in the Expo SDK are not currently eligible for exclusion using this approach, only expo-* packages.
 
 Using this approach you can get your binary size down to about 10mb on Android. There is no equivalent feature available on iOS yet, it is in progress.
 
