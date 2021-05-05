@@ -33,6 +33,8 @@ Do one of the following:
   - You can delete capabilities by pressing the "x" button in each capability's row.
   - Adding capabilities will cause Xcode to regenerate the provisioning profile.
 
+![capabilities](https://user-images.githubusercontent.com/9664363/117182439-96fea280-ad93-11eb-9539-36eee949c904.png)
+
 ### Apple Developer Portal
 
 - Go to [Apple Dev Portal > Bundle Identifiers](https://developer.apple.com/account/resources/identifiers/list)
