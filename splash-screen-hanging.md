@@ -4,7 +4,7 @@ It can be frustrating to work on your app when you can't even get it to load pas
 
 ### 1. You may have forgotten to call `SplashScreen.hideAsync()`
 
-If you have been leveraging the SplashScreen component to preload extra data and assets while your app starts up, then it's possible you simply forgot to call this method! 
+If you call `SplashScreen.preventAutoHideAsync()` to do some work while the splash screen is displayed (for example, to preload extra data and assets while your app starts up), you need to ensure that you always end up calling `SplashScreen.hideAsync()`. It's possible that you forgot to call this method!
 
 ### 2. Unresolved promise on app startup 
 
