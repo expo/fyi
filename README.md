@@ -4,7 +4,7 @@
 
 ## **What is it?**
 
-This website is a useful URL shortener that users to a markdown file on the [https://github.com/expo/fyi](https://github.com/expo/fyi) repository. For example, [https://expo.fyi/bundle-identifier](https://expo.fyi/bundle-identifier) will redirect the user to [https://github.com/expo/fyi/blob/master/bundle-identifier.md](https://github.com/expo/fyi/blob/master/bundle-identifier.md).
+This website is a useful URL shortener that redirects users to a markdown file on the [https://github.com/expo/fyi](https://github.com/expo/fyi) repository. For example, [https://expo.fyi/bundle-identifier](https://expo.fyi/bundle-identifier) will redirect the user to [https://github.com/expo/fyi/blob/master/bundle-identifier.md](https://github.com/expo/fyi/blob/master/bundle-identifier.md).
 
 It is useful to remove any friction to creating a shareable link to a persistent explanation of some piece of knowledge that is useful to developers using Expo tools.
 
