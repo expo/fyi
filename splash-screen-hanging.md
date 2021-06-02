@@ -8,6 +8,18 @@ If you call `SplashScreen.preventAutoHideAsync()` to do some work while the spla
 
 ### 2. An error may have prevented `SplashScreen.hideAsync()` from being called
 
-If you have an unresolved promise that prevents `hideAsync()` from being called, then you'll be stuck on the splash screen indefinitely. You can verify what is going wrong by checking the terminal logs: 
+Let's say you structure your code like this:
+
+```js
+async function loadResourcesAsync() {
+  await loadStoredDataAsync();
+  await loadFontsAsync();
+  SplashScreen.hideAsync();
+}
+```
+
+If either `await loadStoredDataAsync()` or `await loadFontsAsync()` throw an exception, you will never reach the `SplashScreen.hideAsync()` call.
+
+In other words, if you have an unresolved promise or anything that will prevent `hideAsync()` from being called, then you'll be stuck on the splash screen indefinitely. Often, you can verify what is going wrong by checking the terminal logs: 
 
 <img src="./assets/splash-screen-hanging/error-console.png" width="300" alt="Error Console" />
