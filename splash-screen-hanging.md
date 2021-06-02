@@ -6,7 +6,7 @@ It can be frustrating to work on your app when you can't even get it to load pas
 
 If you call `SplashScreen.preventAutoHideAsync()` to do some work while the splash screen is displayed (for example, to preload extra data and assets while your app starts up), you need to ensure that you always end up calling `SplashScreen.hideAsync()`. It's possible that you forgot to call this method!
 
-### 2. Unresolved promise on app startup 
+### 2. An error may have prevented `SplashScreen.hideAsync()` from being called
 
 If you have an unresolved promise that prevents `hideAsync()` from being called, then you'll be stuck on the splash screen indefinitely. You can verify what is going wrong by checking the terminal logs: 
 
