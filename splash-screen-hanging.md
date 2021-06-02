@@ -21,5 +21,7 @@ async function loadResourcesAsync() {
 If either `await loadStoredDataAsync()` or `await loadFontsAsync()` throw an exception, you will never reach the `SplashScreen.hideAsync()` call.
 
 In other words, if you have an unresolved promise or anything that will prevent `hideAsync()` from being called, then you'll be stuck on the splash screen indefinitely. Often, you can verify what is going wrong by checking the terminal logs: 
+### Still stuck?
 
+Refer to the ["Manual debugging" guide](https://expo.fyi/manual-debugging) to learn more about how you can go about narrowing down the root cause of the problem in your unique circumstances.
 <img src="./assets/splash-screen-hanging/error-console.png" width="300" alt="Error Console" />
