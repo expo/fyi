@@ -9,7 +9,7 @@ yarn expo-splash-screen -p ios -i splash.png -b "#ffffff"
 
 ### 1. Your device or simulator is caching the previously configured splash screen
 
-If you've manually added your own splash image to `Images.xcassets`, then you might need to restart your simulator. 
+If you've manually added your own splash image to `Images.xcassets`, then you might need to restart your simulator or device. 
 
 ### 2. There might be something wrong with your asset
 
