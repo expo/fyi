@@ -11,7 +11,7 @@ yarn expo-splash-screen -p ios -i splash.png -b "#ffffff"
 
 If you've manually added your own splash image to `Images.xcassets`, then you might need to restart your simulator or device. 
 
-### 2. There might be something wrong with your asset
+### 2. The provided asset may be invalid
 
 If you never see your splash screen image i.e the app launch transitions from black screen to your app, then there might be a problem with your image.
 
