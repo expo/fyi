@@ -7,7 +7,7 @@ Sometimes you might encounter a black screen before your launch screen on iOS. W
 yarn expo-splash-screen -p ios -i splash.png -b "#ffffff"
 ```
 
-### 1. Xcode + Simulator is being buggy
+### 1. Your device or simulator is caching the previously configured splash screen
 
 If you've manually added your own splash image to `Images.xcassets`, then you might need to restart your simulator. 
 
@@ -22,4 +22,3 @@ One quick and easy way to verify that it is indeed a problem with your asset is 
 ### 3. Sometimes you might have to restart Xcode
 
 It's not uncommon for your app to get into a state where the black screen doesn't seem to go away, or your app never launches. Restarting Xcode usually fixes this.
-
