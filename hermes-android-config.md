@@ -1,11 +1,12 @@
-# Hermes Android Config
+# Configuring Hermes on Android
 
-While Expo managed workflow supports Hermes, the `jsEngine` value in app config (`app.json` or `app.config.js`) is the single source to determine the JavaScript executor for React Native.
-For bare workflow apps, please make sure the Android native project is set up as following patches.
+The `jsEngine` value in app config (`app.json` or `app.config.js`) is the single source to determine the JavaScript executor for your Expo app, but if you use the bare workflow for your project, please make sure the Android native project is set up as following patches.
 
-## Patches for Native Project
+> This configuration is automatic for projects initialized with SDK 42 and higher.
 
-Adding `expo-jsEngine=hermes` in `android/gradle.properties`
+## Patches for the Android native project
+
+### Add `expo-jsEngine=hermes` in `android/gradle.properties`
 
 ```diff
 --- a/android/gradle.properties
@@ -20,7 +21,7 @@ Adding `expo-jsEngine=hermes` in `android/gradle.properties`
 +expo.jsEngine=hermes
 ```
 
-Making `enableHermes` to reference gradle property in `android/app/build.gradle`
+### Make `enableHermes` reference the `expo.jsEngine` gradle property in `android/app/build.gradle`
 
 ```diff
 --- a/android/app/build.gradle
@@ -36,30 +37,12 @@ Making `enableHermes` to reference gradle property in `android/app/build.gradle`
  apply from: '../../node_modules/react-native-unimodules/gradle.groovy'
 ```
 
-## How it works for building
+## How this works for standalone apps on EAS Build
 
-In ["Prebuilding"](https://expo.fyi/prebuilding) stage, config plugins will read `jsEngine` value in app config and replace `expo.jsEngine` value in `android/gradle.properties`.
-This makes gradle to build apps with correct jsEngine.
+During the ["prebuild"](https://expo.fyi/prebuilding) stage for managed apps, config plugins will read `jsEngine` value in app config and replace `expo.jsEngine` value in `android/gradle.properties`. This makes gradle build apps with the specified JavaScript engine.
 
-## How it works for bundle publishing
+## How this works for publishing updates
 
-Both `expo publish` and `expo export` reference `jsEngine` value in app config.
-If the `jsEngine` is hermes, the generated JavaScript bundle will be a Hermes bytecode bundle.
+Both `expo publish` and `expo export` reference `jsEngine` value in app config.  If the `jsEngine` is set to `"hermes"`, then the generated JavaScript bundle will be a Hermes bytecode bundle.
 
-Since in bundle publishing stage, we don't go over prebuilding and building.
-For bare workflow apps, please make sure the jsEngine value to be consistent between app config (`app.json` or `app.config.js`) and `android/gradle.properties`.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+For bare workflow apps, please make sure the `jsEngine` value is consistent between app config (`app.json` or `app.config.js`) and `android/gradle.properties`.
