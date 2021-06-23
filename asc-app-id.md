@@ -1,6 +1,6 @@
 # App Store Connect app ID
 
-An unique ID for every application existing in App Store Connect. It is typically a 10-digit number.
+A unique ID for every application existing in App Store Connect. It is typically a 10-digit number.
 
 ### How do I find my App ID?
 
