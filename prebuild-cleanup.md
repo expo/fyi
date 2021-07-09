@@ -26,5 +26,3 @@ You can delete the `ios` and `android` directories, delete any other untracked f
 ## Using `.gitignore` to ignore files instead of deleting and reverting
 
 In addition to the values added to your existing `.gitignore`, you may want to add entries for both `ios` and `android` to ignore those directories entirely.
-
-> ⚠️ Note that you may encounter issues when using EAS Build with `ios` and `android` directories in your project if your `workflow` is set to `managed`, if the values in the native projects don't match those in your app config. Work is in progress to solve this, part of the solution will be to detect if the projects are ignored by source control.
