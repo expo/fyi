@@ -1,6 +1,6 @@
 # iPad requires full screen
 
-When submitting your app to App Store, you may encounter an error saying that your app orientation doesn't support iPad multitasking. This happens, because Expo apps do not support multitasking by default and, in that case, your app has to be open in fullscreen. 
+When submitting your app to App Store, you may encounter an error saying that your app orientation doesn't support iPad multitasking. This happens because Expo apps do not support multitasking by default and, when multitasking isn't supported, Apple requires that your app is opened in fullscreen.
 
 To fix this, you have to force your app to require fullscreen.
 - If you're using `expo build` / `expo run` / `eas build` to build your app, please set the [`expo.ios.requireFullScreen`](https://docs.expo.io/versions/latest/config/app/#requirefullscreen) to `true` in `app.json`.
