@@ -2,7 +2,7 @@
 
 You are here because we detected a mismatch between the values set in the `Expo.plist`/`AndroidManifest.xml` and the values set in the [app.json/app.config.js](https://docs.expo.dev/versions/v42.0.0/config/app/#updates) or with command line flags.
 
-This suggests you are publishing to a different build that you intend!
+This suggests you are publishing to a different build than you intend!
 
 To fix the warnings you should decide which values are correct and sync them.
 
