@@ -14,12 +14,12 @@ The following credentials are required:
 
 ### Distribution Certificate
 
-You need to set the `--dist-p12-path` and `--team-id` flags in addition to the `EXPO_IOS_DIST_P12_PASSWORD` env var. See full documentation [here](https://docs.expo.io/versions/latest/workflow/expo-cli/)
+You need to set the `--dist-p12-path` and `--team-id` flags in addition to the `EXPO_IOS_DIST_P12_PASSWORD` env var. See full documentation [here](https://docs.expo.dev/versions/latest/workflow/expo-cli/)
 
 ### Push Key
 
-You need to set the `--push-id`, `--push-p8-path` and `--team-id` flags. See full documentation [here](https://docs.expo.io/versions/latest/workflow/expo-cli/)
+You need to set the `--push-id`, `--push-p8-path` and `--team-id` flags. See full documentation [here](https://docs.expo.dev/versions/latest/workflow/expo-cli/)
 
 ### Provisioning Profile
 
-You need to set the `--provisioning-profile-path` and `--team-id` flags. See full documentation [here](https://docs.expo.io/versions/latest/workflow/expo-cli/)
+You need to set the `--provisioning-profile-path` and `--team-id` flags. See full documentation [here](https://docs.expo.dev/versions/latest/workflow/expo-cli/)

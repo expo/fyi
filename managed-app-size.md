@@ -1,12 +1,12 @@
 # App size in the managed workflow
 
-Using `expo build:[ios|android]` to build your managed apps can result in 15mb to 20mb base install sizes. To understand why this is the case, please refer to [this post](https://blog.expo.io/expo-managed-workflow-in-2021-5b887bbf7dbb), which explains how the build process works. Long story short, the entire Expo SDK is included in your build.
+Using `expo build:[ios|android]` to build your managed apps can result in 15mb to 20mb base install sizes. To understand why this is the case, please refer to [this post](https://blog.expo.dev/expo-managed-workflow-in-2021-5b887bbf7dbb), which explains how the build process works. Long story short, the entire Expo SDK is included in your build.
 
 The primary benefit of including the entire Expo SDK is that you can confidently update your app over-the-air and know that the JavaScript bits will be compatible with the native bits, because the native bits are all the same for a given SDK version. You can add a capability to your app such as using the camera where you had not before and do so safely with an over-the-air update.
 
 ## Use EAS Build instead of `expo build` for smaller app sizes
 
-If app size is more important to you than easier over-the-air-updates, you may want to consider using [EAS Build](https://docs.expo.io/build/introduction/) instead. You can still use over-the-air updates in your apps built with EAS Build, you just need to [be a bit more careful](https://docs.expo.io/build/updates/). As of April, 2021, you can build your managed apps with EAS Build to get up to a 10x reduction in download and install size. [Learn more in this post](https://blog.expo.io/eas-build-april-preview-update-ebd7dff9dd25), and refer to [this guide for migrating from `expo build`](https://docs.expo.io/build-reference/migrating/).
+If app size is more important to you than easier over-the-air-updates, you may want to consider using [EAS Build](https://docs.expo.dev/build/introduction/) instead. You can still use over-the-air updates in your apps built with EAS Build, you just need to [be a bit more careful](https://docs.expo.dev/build/updates/). As of April, 2021, you can build your managed apps with EAS Build to get up to a 10x reduction in download and install size. [Learn more in this post](https://blog.expo.dev/eas-build-april-preview-update-ebd7dff9dd25), and refer to [this guide for migrating from `expo build`](https://docs.expo.dev/build-reference/migrating/).
 
 ## Other tips
 

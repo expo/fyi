@@ -5,7 +5,7 @@ This often means that we tried to load your application JavaScript code and it t
 Some common reasons for this type of error:
 
 - Multiple versions of a JavaScript package that includes native dependencies. You may see an error like "Invariant violation: Tried to register two views with the same name ....." if this is the case.
-- The entry point of your application was modified and you are calling `AppRegistry.registerComponent` manually, rather than depending on the default app entry configuration. You should use [registerRootComponent](https://docs.expo.io/versions/latest/sdk/register-root-component/) instead of `AppRegistry`.
+- The entry point of your application was modified and you are calling `AppRegistry.registerComponent` manually, rather than depending on the default app entry configuration. You should use [registerRootComponent](https://docs.expo.dev/versions/latest/sdk/register-root-component/) instead of `AppRegistry`.
 - A runtime error occurred in your code before mounting the application, for example `JSON.parse(undefined);` will throw an exception, and any code that does this at the top level of your application code will lead to this situation.
 
-To resolve the issue, follow the debugging instructions that we provided in the [debugging documentation](https://docs.expo.io/workflow/debugging/#development-errors).
+To resolve the issue, follow the debugging instructions that we provided in the [debugging documentation](https://docs.expo.dev/workflow/debugging/#development-errors).

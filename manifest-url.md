@@ -1,7 +1,7 @@
 # Manifest URL
 
 An Expo app manifest is similar to a [web app manifest](https://developer.mozilla.org/en-US/docs/Web/Manifest) -
-it provides information that Expo needs to know how to run the app and other relevant data. [Read more in "How Expo Works"](https://docs.expo.io/versions/latest/workflow/how-expo-works/#expo-manifest).
+it provides information that Expo needs to know how to run the app and other relevant data. [Read more in "How Expo Works"](https://docs.expo.dev/versions/latest/workflow/how-expo-works/#expo-manifest).
 
 When you publish a project you are given a manifest URL. This is where your app will look for updates in the future.
 The URL you are given is not directly accessible in the web browser without adding some additional headers or parameters.

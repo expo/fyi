@@ -98,7 +98,7 @@ After the user selects the folder, you will receive a URI that is compatible wit
 
 > If you want to know more about scoped storage on Android, please check out the [documentation](https://developer.android.com/about/versions/11/privacy/storage).
 
-> To get more information about the new API, check out [expo-media-library](https://docs.expo.io/versions/latest/sdk/media-library/) and [expo-file-system](https://docs.expo.io/versions/latest/sdk/filesystem/) documentation.
+> To get more information about the new API, check out [expo-media-library](https://docs.expo.dev/versions/latest/sdk/media-library/) and [expo-file-system](https://docs.expo.dev/versions/latest/sdk/filesystem/) documentation.
 
 ## MAC Address
 
