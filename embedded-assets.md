@@ -8,7 +8,7 @@ If you're running `expo-updates@0.2.x` or above, you no longer have to worry abo
 
 ## `expo-updates@0.1.x`
 
-> If you're still running expo-updates@0.1.x, we recommmend you upgrade to 0.2.x or later as soon as possible! More information [here](https://blog.expo.io/over-the-air-updates-from-expo-are-now-even-easier-to-use-376e2213fabf).
+> If you're still running expo-updates@0.1.x, we recommmend you upgrade to 0.2.x or later as soon as possible! More information [here](https://blog.expo.dev/over-the-air-updates-from-expo-are-now-even-easier-to-use-376e2213fabf).
 
 When you run `expo export` or `expo publish` with `expo-updates` installed, Expo CLI will make local copies of the update's manifest (`app.manifest`) and JavaScript bundle (`app.bundle`) so they can be included in the Xcode and Android Studio projects and embedded in release-mode application binaries.
 

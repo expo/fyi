@@ -37,4 +37,4 @@ This page will guide you through setting a privacy policy in Google Play Console
 #### ... or Customize App Permissions
 
 If your app is not using the permissions that Google Play Store detects, you can customize them, rebuild the app and submit it again.
-Learn more [how to customize permissions here](https://docs.expo.io/distribution/app-stores/#android-permissions).
+Learn more [how to customize permissions here](https://docs.expo.dev/distribution/app-stores/#android-permissions).

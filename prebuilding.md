@@ -51,7 +51,7 @@ Next, setup version control for your project, we recommend using git. This will 
 
 <!-- TODO: Automate this step -->
 
-Create an `app.config.js` or `app.json` in your project root folder. Manually define [all of the value](https://docs.expo.io/versions/latest/config/app/) in your app.json that align with your native app. This is the hardest step. You can test your changes by running `expo prebuild` and seeing if anything critical in your `ios` or `android` folders is changing (especially in the `Info.plist` or `AndroidManifest.xml`).
+Create an `app.config.js` or `app.json` in your project root folder. Manually define [all of the value](https://docs.expo.dev/versions/latest/config/app/) in your app.json that align with your native app. This is the hardest step. You can test your changes by running `expo prebuild` and seeing if anything critical in your `ios` or `android` folders is changing (especially in the `Info.plist` or `AndroidManifest.xml`).
 
 Now open your `package.json` and take note of any package in your `dependencies` object that has native code. You can check [reactnative.directory](https://reactnative.directory/) and see if they say "Expo Go", if they don't then they might need extra setup.
 
@@ -113,5 +113,5 @@ This means if you want to add some quick native file to your project your best b
 
 If you want to do something like modifying the gradle properties file, you'll have to write a plugin for that [example](https://github.com/expo/expo/blob/1c994bb042ad47fbf6878e3b5793d4545f2d1208/apps/native-component-list/app.config.js#L21-L28). Of course this could be easily automated with helper plugin libraries, but it is a bit slower if you need to do it often. If your native project requires many custom changes, then your best bet might be to drop down to bare, and take another look at custom managed workflow in a couple months.
 
-[config-plugins]: https://docs.expo.io/guides/config-plugins/
+[config-plugins]: https://docs.expo.dev/guides/config-plugins/
 [native-template]: https://github.com/expo/expo/tree/master/templates/expo-template-bare-minimum
