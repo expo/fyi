@@ -6,6 +6,8 @@ This suggests you are publishing to a different build than you intend!
 
 To fix the warnings you should decide which values are correct and sync them.
 
+To publish an update to an existing build with different values for any of these fields, we recommend checking out an older commit or branch in your repository where these values match the build you're targeting. Always be sure to publish an update to a test or staging channel before publishing to production.
+
 ### Update URL
 
 The URL from which expo-updates will fetch update manifests.
