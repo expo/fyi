@@ -13,4 +13,4 @@ EAS Update is a service that will allow developers to deploy updates to builds t
 
 We're currently working hard on developing EAS Update. It's currently in closed alpha.
 
-To hear more about EAS Update as we develop it, fill out this form: https://forms.gle/nN9nkSbcopA5g9mv7.
+To hear more about EAS Update as we develop it, fill out this form: https://forms.gle/aerz7iVp9wzh3WwYA.
