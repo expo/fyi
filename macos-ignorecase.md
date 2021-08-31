@@ -1,4 +1,4 @@
-# case-insensitive filesystem on macOS
+# Default macOS filesystem is case-insensitive 
 
 The default macOS filesystem is case-insensitive. This means that for any new file or directory (explicitly created or copied/moved), the casing is preserved when listing files but it's ignored when you want to access the file. The situation might be a bit different when you refer to the file in your code, e.g. imports in React Native are case-sensitive. If you create file `Example.tsx` and import it as `'./example'`, it won't work in React Native. However, it would work in node.
 
