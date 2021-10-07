@@ -12,6 +12,8 @@ Installing this new module system starts by removing `react-native-unimodules` i
 expo upgrade 43
 ```
 
+> 💡 Do you want to integrate Expo modules in a React Native project without Unimodules? Add the `"expo": "~43.0.0"` dependency in `package.json` first.
+
 ## Automatic configuration
 
 If you have limited or no changes in your native code, you can automatically set up the new module system with [prebuild][expo-cli-prebuild]. Remove both `/android` and `/ios` directories, run the command below, and re-apply any changes you made manually.
@@ -21,6 +23,8 @@ expo prebuild
 ```
 
 ## Manual configuration
+
+These changes are based on the Expo SDK 42 project files. If you have a React Native project without Expo, you might not have the exact same code to change. Make sure you have all added lines in your code.
 
 ### Android
 
