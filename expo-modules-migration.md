@@ -32,6 +32,9 @@ Apply all changes listed below to the files in `/android`.
 ```diff
 package com.helloworld;
 
+-import android.content.res.Configuration;
+-import android.content.Intent;
+-
 import android.os.Bundle;
 
 import com.facebook.react.ReactActivity;
@@ -44,6 +47,15 @@ import com.swmansion.gesturehandler.react.RNGestureHandlerEnabledRootView;
 +import expo.modules.ReactActivityDelegateWrapper;
 
 public class MainActivity extends ReactActivity {
+-  // Added automatically by Expo Config
+-  @Override
+-  public void onConfigurationChanged(Configuration newConfig) {
+-    super.onConfigurationChanged(newConfig);
+-    Intent intent = new Intent("onConfigurationChanged");
+-    intent.putExtra("newConfig", newConfig);
+-    sendBroadcast(intent);
+-  }
+-
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     // Set the theme to AppTheme BEFORE onCreate to support
@@ -51,9 +63,11 @@ public class MainActivity extends ReactActivity {
     // This is required for expo-splash-screen.
     setTheme(R.style.AppTheme);
     super.onCreate(null);
+-    // @generated begin expo-splash-screen-mainActivity-onCreate-show-splash - expo prebuild (DO NOT MODIFY) sync-XXXXXXXX
 -    // SplashScreen.show(...) has to be called after super.onCreate(...)
 -    // Below line is handled by '@expo/configure-splash-screen' command and it's discouraged to modify it manually
 -    SplashScreen.show(this, SplashScreenImageResizeMode.CONTAIN, ReactRootView.class, false);
+-    // @generated end expo-splash-screen-mainActivity-onCreate-show-splash
   }
 
   /**
@@ -80,7 +94,8 @@ public class MainActivity extends ReactActivity {
 +        protected ReactRootView createRootView() {
 +          return new RNGestureHandlerEnabledRootView(MainActivity.this);
 +        }
-+    });
++      }
++    );
   }
 }
 ```
@@ -105,6 +120,7 @@ public class MainActivity extends ReactActivity {
  import com.facebook.react.ReactNativeHost;
  import com.facebook.react.ReactPackage;
  import com.facebook.soloader.SoLoader;
+-import com.helloworld.generated.BasePackageList;
 
 -import org.unimodules.adapters.react.ReactAdapterPackage;
 -import org.unimodules.adapters.react.ModuleRegistryAdapter;
@@ -300,7 +316,7 @@ public class MainActivity extends ReactActivity {
      debugImplementation("com.facebook.flipper:flipper-fresco-plugin:${FLIPPER_VERSION}") {
          exclude group:'com.facebook.flipper'
      }
-     addUnimodulesDependencies()
+-    addUnimodulesDependencies()
 
      if (enableHermes) {
 -        def hermesPath = "../../node_modules/hermes-engine/android/";
@@ -404,7 +420,7 @@ public class MainActivity extends ReactActivity {
 <summary><strong>/settings.gradle</strong></summary>
 
 ```diff
- rootProject.name = 'sdk42'
+ rootProject.name = 'helloworld'
 
 -apply from: '../node_modules/react-native-unimodules/gradle.groovy'
 -includeUnimodulesProjects()
