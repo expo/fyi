@@ -24,7 +24,7 @@ expo prebuild
 
 ## Manual configuration
 
-These changes are based on the Expo SDK 42 project files. If you have a React Native project without Expo, you might not have the exact same code to change. Make sure you have all added lines in your code.
+These changes are based on the Expo SDK 42 project files. If you have a React Native project without `react-native-unimodules` installed, the code that you need to change will be slightly different but the added lines will be the same.
 
 ### Android
 
