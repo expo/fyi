@@ -686,7 +686,16 @@ Apply all changes listed below to the files in `/ios`.
 
 </details>
 
-Make sure your project uses `IPHONEOS_DEPLOYMENT_TARGET = 12.0;`, instead of `= 11.0;`, in your `project.pbxproj`. Use the pod-install and run commands to test if the applied changes are working.
+Make sure your project uses `IPHONEOS_DEPLOYMENT_TARGET = 12.0;`, instead of `= 11.0;`, in your `project.pbxproj`.
+
+<details>
+<summary><strong>See how you can do this with Xcode</strong></summary>
+
+![Change deployment target in Xcode](./assets/expo-modules-migration/xcode-iphoneos-deployment-target.png)
+
+</details>
+
+Use the pod-install and run commands to test if the applied changes are working.
 
 ```bash
 npx pod-install
