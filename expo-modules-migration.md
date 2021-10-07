@@ -12,6 +12,8 @@ Installing this new module system starts by removing `react-native-unimodules` i
 expo upgrade 43
 ```
 
+> 💡 Do you want to integrate Expo modules in a React Native project without Unimodules? Add the `"expo": "~43.0.0"` dependency in `package.json` first.
+
 ## Automatic configuration
 
 If you have limited or no changes in your native code, you can automatically set up the new module system with [prebuild][expo-cli-prebuild]. Remove both `/android` and `/ios` directories, run the command below, and re-apply any changes you made manually.
@@ -21,6 +23,8 @@ expo prebuild
 ```
 
 ## Manual configuration
+
+These changes are based on the Expo SDK 42 project files. If you have a React Native project without `react-native-unimodules` installed, the code that you need to change will be slightly different but the added lines will be the same.
 
 ### Android
 
@@ -32,6 +36,9 @@ Apply all changes listed below to the files in `/android`.
 ```diff
 package com.helloworld;
 
+-import android.content.res.Configuration;
+-import android.content.Intent;
+-
 import android.os.Bundle;
 
 import com.facebook.react.ReactActivity;
@@ -44,6 +51,15 @@ import com.swmansion.gesturehandler.react.RNGestureHandlerEnabledRootView;
 +import expo.modules.ReactActivityDelegateWrapper;
 
 public class MainActivity extends ReactActivity {
+-  // Added automatically by Expo Config
+-  @Override
+-  public void onConfigurationChanged(Configuration newConfig) {
+-    super.onConfigurationChanged(newConfig);
+-    Intent intent = new Intent("onConfigurationChanged");
+-    intent.putExtra("newConfig", newConfig);
+-    sendBroadcast(intent);
+-  }
+-
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     // Set the theme to AppTheme BEFORE onCreate to support
@@ -51,9 +67,11 @@ public class MainActivity extends ReactActivity {
     // This is required for expo-splash-screen.
     setTheme(R.style.AppTheme);
     super.onCreate(null);
+-    // @generated begin expo-splash-screen-mainActivity-onCreate-show-splash - expo prebuild (DO NOT MODIFY) sync-XXXXXXXX
 -    // SplashScreen.show(...) has to be called after super.onCreate(...)
 -    // Below line is handled by '@expo/configure-splash-screen' command and it's discouraged to modify it manually
 -    SplashScreen.show(this, SplashScreenImageResizeMode.CONTAIN, ReactRootView.class, false);
+-    // @generated end expo-splash-screen-mainActivity-onCreate-show-splash
   }
 
   /**
@@ -80,7 +98,8 @@ public class MainActivity extends ReactActivity {
 +        protected ReactRootView createRootView() {
 +          return new RNGestureHandlerEnabledRootView(MainActivity.this);
 +        }
-+    });
++      }
++    );
   }
 }
 ```
@@ -105,6 +124,7 @@ public class MainActivity extends ReactActivity {
  import com.facebook.react.ReactNativeHost;
  import com.facebook.react.ReactPackage;
  import com.facebook.soloader.SoLoader;
+-import com.helloworld.generated.BasePackageList;
 
 -import org.unimodules.adapters.react.ReactAdapterPackage;
 -import org.unimodules.adapters.react.ModuleRegistryAdapter;
@@ -300,7 +320,7 @@ public class MainActivity extends ReactActivity {
      debugImplementation("com.facebook.flipper:flipper-fresco-plugin:${FLIPPER_VERSION}") {
          exclude group:'com.facebook.flipper'
      }
-     addUnimodulesDependencies()
+-    addUnimodulesDependencies()
 
      if (enableHermes) {
 -        def hermesPath = "../../node_modules/hermes-engine/android/";
@@ -404,7 +424,7 @@ public class MainActivity extends ReactActivity {
 <summary><strong>/settings.gradle</strong></summary>
 
 ```diff
- rootProject.name = 'sdk42'
+ rootProject.name = 'helloworld'
 
 -apply from: '../node_modules/react-native-unimodules/gradle.groovy'
 -includeUnimodulesProjects()
@@ -467,7 +487,7 @@ Apply all changes listed below to the files in `/ios`.
 -#import <UMReactNativeAdapter/UMModuleRegistryAdapter.h>
 -#import <EXSplashScreen/EXSplashScreenService.h>
 -#import <UMCore/UMModuleRegistryProvider.h>
-
+-
  #if defined(FB_SONARKIT_ENABLED) && __has_include(<FlipperKit/FlipperClient.h>)
  #import <FlipperKit/FlipperClient.h>
  #import <FlipperKitLayoutPlugin/FlipperKitLayoutPlugin.h>
@@ -545,7 +565,7 @@ Apply all changes listed below to the files in `/ios`.
 -
 -  return bridge;
 - }
-
+-
  - (NSArray<id<RCTBridgeModule>> *)extraModulesForBridge:(RCTBridge *)bridge
  {
 -  NSArray<id<RCTBridgeModule>> *extraModules = [_moduleRegistryAdapter extraModulesForBridge:bridge];
@@ -568,7 +588,7 @@ Apply all changes listed below to the files in `/ios`.
 -  EXSplashScreenService *splashScreenService = (EXSplashScreenService *)[UMModuleRegistryProvider getSingletonModuleForClass:[EXSplashScreenService class] ];
 -  [splashScreenService showSplashScreenFor:self.window.rootViewController];
 -}
-
+-
  // Linking API
  - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options {
    return [RCTLinkingManager application:application openURL:url options:options];
@@ -663,6 +683,15 @@ Apply all changes listed below to the files in `/ios`.
 +  "expo.jsEngine": "jsc"
 +}
 ```
+
+</details>
+
+Make sure your project uses `IPHONEOS_DEPLOYMENT_TARGET = 12.0;`, instead of `= 11.0;`, in your `project.pbxproj`.
+
+<details>
+<summary><strong>See how you can do this with Xcode</strong></summary>
+
+![Change deployment target in Xcode](./assets/expo-modules-migration/xcode-iphoneos-deployment-target.png)
 
 </details>
 
