@@ -2,6 +2,8 @@
 
 Starting from SDK 43, `react-native-unimodules` has been replaced by `expo`. This change represents a number of massive improvements to our module system, such as better autolinking, monorepo support, and modular hooks that allow for a cleaner integration of libraries like [expo-updates][expo-sdk-updates], [expo-constants][expo-sdk-constants], and [expo-splash-screen][expo-sdk-splash-screen].
 
+> 💡 Read more [about our new infrastructure here][expo-blog-modules]
+
 ## Installation
 
 Installing this new module system starts by removing `react-native-unimodules` in your `package.json` and upgrading to Expo SDK 43. You can upgrade the Expo SDK by running the upgrade command inside your project.
@@ -671,6 +673,7 @@ npx pod-install
 expo run:ios (--device <uuid>)
 ```
 
+[expo-blog-modules]: https://blog.expo.dev/whats-new-in-expo-modules-infrastructure-7a7cdda81ebc
 [expo-cli-prebuild]: ./prebuilding.md
 [expo-sdk-constants]: https://docs.expo.dev/versions/latest/sdk/constants/
 [expo-sdk-splash-screen]: https://docs.expo.dev/versions/latest/sdk/splash-screen/
