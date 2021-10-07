@@ -483,7 +483,7 @@ Apply all changes listed below to the files in `/ios`.
 -#import <UMReactNativeAdapter/UMModuleRegistryAdapter.h>
 -#import <EXSplashScreen/EXSplashScreenService.h>
 -#import <UMCore/UMModuleRegistryProvider.h>
-
+-
  #if defined(FB_SONARKIT_ENABLED) && __has_include(<FlipperKit/FlipperClient.h>)
  #import <FlipperKit/FlipperClient.h>
  #import <FlipperKitLayoutPlugin/FlipperKitLayoutPlugin.h>
@@ -561,7 +561,7 @@ Apply all changes listed below to the files in `/ios`.
 -
 -  return bridge;
 - }
-
+-
  - (NSArray<id<RCTBridgeModule>> *)extraModulesForBridge:(RCTBridge *)bridge
  {
 -  NSArray<id<RCTBridgeModule>> *extraModules = [_moduleRegistryAdapter extraModulesForBridge:bridge];
@@ -584,7 +584,7 @@ Apply all changes listed below to the files in `/ios`.
 -  EXSplashScreenService *splashScreenService = (EXSplashScreenService *)[UMModuleRegistryProvider getSingletonModuleForClass:[EXSplashScreenService class] ];
 -  [splashScreenService showSplashScreenFor:self.window.rootViewController];
 -}
-
+-
  // Linking API
  - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options {
    return [RCTLinkingManager application:application openURL:url options:options];
@@ -682,7 +682,7 @@ Apply all changes listed below to the files in `/ios`.
 
 </details>
 
-Use the pod-install and run commands to test if the applied changes are working.
+Make sure your project uses `IPHONEOS_DEPLOYMENT_TARGET = 12.0;`, instead of `= 11.0;`. Use the pod-install and run commands to test if the applied changes are working.
 
 ```bash
 npx pod-install
