@@ -14,7 +14,7 @@ expo upgrade 43
 
 ## Automatic configuration
 
-If you limited or no changes in your native code, you can automatically set up the new module system with [prebuild][expo-cli-prebuild]. Remove both `/android` and `/ios` directories, run the command below, and re-apply any changes you made manually.
+If you have limited or no changes in your native code, you can automatically set up the new module system with [prebuild][expo-cli-prebuild]. Remove both `/android` and `/ios` directories, run the command below, and re-apply any changes you made manually.
 
 ```bash
 expo prebuild
