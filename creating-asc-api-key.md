@@ -25,6 +25,6 @@ If you’d like to submit your iOS app to the Apple App Store with `eas submit`,
 
 These can be found in the red boxes in the picture below:
 
-[<img src="./assets/creating-asc-api-key/05-other-info.png" width="800" />](./assets/creating-asc-api-key/04-other-info.png)
+[<img src="./assets/creating-asc-api-key/05-other-info.png" width="800" />](./assets/creating-asc-api-key/05-other-info.png)
 
 6. That's all! From now on, you can use the generated App Store Api key to submit your app with `eas submit`.
