@@ -1,12 +1,12 @@
 # Configuring Hermes on iOS
 
-The `jsEngine` value in app config (`app.json` or `app.config.js`) is the single source to determine the JavaScript executor for your Expo app, but if you use the bare workflow for your project, please make sure the native project setup as following patches.
+The `jsEngine` value in app config (`app.json` or `app.config.js`) is the single source to determine the JavaScript executor for your Expo app, but if you use the bare workflow for your project, please make sure the native project is set up with the following patches.
 
 > This configuration is automatic for projects initialized with SDK 43 and higher.
 
 ## Patches for the iOS native project
 
-### Add `ios/Podfile.properties.json` with the following content
+### Create `ios/Podfile.properties.json`
 
 ```json
 {
@@ -14,7 +14,7 @@ The `jsEngine` value in app config (`app.json` or `app.config.js`) is the single
 }
 ```
 
-### Update `ios/Podfile` to reference the hermes setting from `ios/Podfile.properties.json`
+### Update `ios/Podfile` to reference the Hermes setting from `ios/Podfile.properties.json`
 
 ```diff
 --- a/ios/Podfile
