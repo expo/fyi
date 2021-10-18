@@ -31,7 +31,7 @@ The `jsEngine` value in app config (`app.json` or `app.config.js`) is the single
    config = use_native_modules!
 
    use_react_native!(
-     :path => config["reactNativePath"],
+     :path => config[:reactNativePath],
 -    :hermes_enabled => false
 +    :hermes_enabled => podfile_properties['expo.jsEngine'] == 'hermes'
    )
