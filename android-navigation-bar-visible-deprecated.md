@@ -8,6 +8,8 @@ Below we've translated some of the [tips provided by Google](https://developer.a
 
 None of the options will show the initial overlay that the deprecated API will, that must be implemented in user-space.
 
+First install `expo-navigation-bar` (available in Expo Go after SDK +44), and `expo-status-bar`.
+
 ## `leanback`
 
 > `leanback` results in the navigation bar being hidden until the first touch gesture is registered.
