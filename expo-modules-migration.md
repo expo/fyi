@@ -642,7 +642,7 @@ Apply all changes listed below to the files in `/ios`.
 
 -  use_react_native!(:path => config["reactNativePath"])
 +  use_react_native!(
-+    :path => config["reactNativePath"],
++    :path => config[:reactNativePath],
 +    :hermes_enabled => podfile_properties['expo.jsEngine'] == 'hermes'
 +  )
 
