@@ -7,7 +7,7 @@ EAS CLI provides out of the box integration with [Git](https://git-scm.com/) to 
 - It uploads a copy of your working directory to EAS Build.
 - It respects `.gitignore` files (with some exceptions, see the [migration notes](#migration-notes)) or `.easignore` files.
 
-## Alternative Workflows for working with VCS
+## Alternative workflows for working with VCS
 
 There are two alternative ways to integrate with version control systems built-in to EAS CLI: you can either integrate more deeply with Git, or not integrate with Git at all.
 
