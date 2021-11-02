@@ -42,7 +42,7 @@ If you are switching to the new default, you should consider the following limit
   - If you have multiple `.gitignore` files, they are applied in isolation starting from the root, so if you have an ignore rule like `test/example` in the parent directory and `!example/example1` in the `test` directory then the entire `example` directory will still be ignored.
   - The `node_modules` directory is ignored by default.
   - Even if you are using `git-crypt`, all the files are uploaded as they are in your project directory. This means all sensitive files could be uploaded to EAS Build in a non-encrypted state.
-  - After upload to EAS Build your `.git` directory won't exists, so if you are using any tools that read your vcs information when building that information won't be included (e.g. sentry can read commit hash when uploading sourcemaps).
+  - The `.git` directory is not uploaded to EAS Build. So if you are using any tools that depend on the state of the Git repository, this might result in unexpected behavior (e.g. sentry reads the commit hash when uploading the source maps).
   - The content of the submodules will be included as they are in your working directory.
 - When EAS Build processes your build in the cloud, the `.git` directory is not present there. This might affect some of the tools that rely on git to read certain values, e.g. Sentry includes the commit hash when uploading source maps.
 - [macOS case-sensitivity issues](https://github.com/expo/fyi/blob/master/macos-ignorecase.md) won't affect you when you use this workflow, but it will still affect anyone that clones that repository.
