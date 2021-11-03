@@ -4,11 +4,11 @@ When you run `eas build`, we need to get your source code from your development 
 
 ## What files are included in the archive?
 
-You likely do not want to upload your `node_modules` directory, or maybe you have a `.env` file that is ignored by source control. EAS CLI is always respecting `.gitignore` files, but depending on your configuration there might be certain edge cases where eas behavior is not 100% compliant with git.
+You likely do not want to upload your `node_modules` directory, or maybe you have a `.env` file that is ignored by source control. EAS CLI always respects `.gitignore` files, but depending on your configuration there might be certain edge cases where EAS behavior is not 100% compliant with git.
 
 #### EAS CLI 
 
-By default, or if you set the `EAS_NO_VCS` environment variable, EAS CLI will use its own implementation to package the repository, as a result, files uploaded to EAS Build might be a bit different than what is stored in git:
+By default, or if you set the `EAS_NO_VCS` environment variable, EAS CLI will use its own packaging algorithm that approximates `git clone --depth 1 ...` and allows you to build with a dirty git working tree. The following limitations apply when using this approach: 
   - If you have multiple `.gitignore` files, they are applied in isolation starting from the root, so if you have an ignore rule like `test/example` in the parent directory and `!example/example1` in the `test` directory then the entire `example` directory will still be ignored.
   - The `node_modules` directory is ignored by default.
   - Even if you are using `git-crypt`, all the files are uploaded as they are in your project directory. This means all sensitive files could be uploaded to EAS Build in a non-encrypted state.
