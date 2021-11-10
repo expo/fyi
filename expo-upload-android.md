@@ -13,3 +13,28 @@ We haven't improved or upgraded `expo upload:android` in over a year whereas `ea
 We plan to eventually move all cloud service related functionality out of Expo CLI and into EAS related tooling like EAS CLI, this is akin to modern web development tooling where local dev server tooling is separate from cloud/hosting tooling. This will help us land better features faster for both categories of tooling, and drastically improve install times.
 
 Sorry for any inconveniences this may have caused. You can always downgrade your local version of Expo CLI but this isn't recommended as EAS Submit should act as a 100% drop-in replacement.
+
+## Migration
+
+Configuration in `eas submit -p android` is done using a [`eas.json` config](https://docs.expo.dev/submit/eas-json/#android-specific-options) file in addition to CLI arguments.
+
+| `expo upload:android`      | `eas submit` |
+| -------------------------- | ------------ |
+| `--latest`                 | `--latest`   |
+| `--id`                     | `--id`       |
+| `--path`                   | `--path`     |
+| `--url`                    | `--url`      |
+| `--verbose`                | `--verbose`  |
+| `--android-package`        | Automatic    |
+| `--type`                   | Automatic    |
+| `--use-submission-service` | N/A          |
+| `--config`                 | N/A          |
+
+**Migrating to `eas.json`**
+
+| `expo upload:android` | `eas.json`                |
+| --------------------- | ------------------------- |
+| `--key`               | `serviceAccountKeyPath`   |
+| `--track`             | `track`                   |
+| `--track`             | `track`                   |
+| N/A                   | `changesNotSentForReview` |
