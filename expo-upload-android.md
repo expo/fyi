@@ -32,9 +32,14 @@ Configuration in `eas submit -p android` is done using a [`eas.json` config](htt
 
 **Migrating to `eas.json`**
 
-| `expo upload:android` | `eas.json`                |
-| --------------------- | ------------------------- |
-| `--key`               | `serviceAccountKeyPath`   |
-| `--track`             | `track`                   |
-| `--track`             | `track`                   |
-| N/A                   | `changesNotSentForReview` |
+| `expo upload:android` | `eas.json`                           |
+| --------------------- | ------------------------------------ |
+| `--key`               | [`serviceAccountKeyPath`][sakp-l]    |
+| `--track`             | [`track`][t-l]                       |
+| `--release-status`    | [`releaseStatus`][rs-l]              |
+| N/A                   | [`changesNotSentForReview`][cnsfr-l] |
+
+[sakp-l]: https://docs.expo.dev/submit/eas-json/#serviceaccountkeypath
+[t-l]: https://docs.expo.dev/submit/eas-json/#track
+[rs-l]: https://docs.expo.dev/submit/eas-json/#releasestatus
+[cnsfr-l]: https://docs.expo.dev/submit/eas-json/#changesnotsentforreview
