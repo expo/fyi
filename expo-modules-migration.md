@@ -268,14 +268,16 @@ public class MainActivity extends ReactActivity {
 
  project.ext.react = [
      enableHermes: (findProperty('expo.jsEngine') ?: "jsc") == "hermes",
-+    cliPath: new File(["node", "--print", "require.resolve('react-native/package.json')"].execute().text.trim(), "../cli.js"),
++    cliPath: new File(["node", "--print", "require.resolve('react-native/package.json')"].execute(null, rootDir).text.trim()).getParentFile().getAbsolutePath() + "/cli.js",
++    hermesCommand: new File(["node", "--print", "require.resolve('hermes-engine/package.json')"].execute(null, rootDir).text.trim()).getParentFile().getAbsolutePath() + "/%OS-BIN%/hermesc",
++    composeSourceMapsPath: new File(["node", "--print", "require.resolve('react-native/package.json')"].execute(null, rootDir).text.trim()).getParentFile().getAbsolutePath() + "/scripts/compose-source-maps.js",
  ]
 
 -apply from: '../../node_modules/react-native-unimodules/gradle.groovy'
 -apply from: "../../node_modules/react-native/react.gradle"
 -apply from: "../../node_modules/expo-constants/scripts/get-app-config-android.gradle"
 -apply from: "../../node_modules/expo-updates/scripts/create-manifest-android.gradle"
-+apply from: new File(["node", "--print", "require.resolve('react-native/package.json')"].execute().text.trim(), "../react.gradle")
++apply from: new File(["node", "--print", "require.resolve('react-native/package.json')"].execute(null, rootDir).text.trim(), "../react.gradle")
 
  ...
 
@@ -326,8 +328,8 @@ public class MainActivity extends ReactActivity {
 -        def hermesPath = "../../node_modules/hermes-engine/android/";
 -        debugImplementation files(hermesPath + "hermes-debug.aar")
 -        releaseImplementation files(hermesPath + "hermes-release.aar")
-+        debugImplementation files(new File(["node", "--print", "require.resolve('hermes-engine/package.json')"].execute().text.trim(), "../android/hermes-debug.aar"))
-+        releaseImplementation files(new File(["node", "--print", "require.resolve('hermes-engine/package.json')"].execute().text.trim(), "../android/hermes-release.aar"))
++        debugImplementation files(new File(["node", "--print", "require.resolve('hermes-engine/package.json')"].execute(null, rootDir).text.trim(), "../android/hermes-debug.aar"))
++        releaseImplementation files(new File(["node", "--print", "require.resolve('hermes-engine/package.json')"].execute(null, rootDir).text.trim(), "../android/hermes-release.aar"))
      } else {
          implementation jscFlavor
      }
@@ -341,7 +343,7 @@ public class MainActivity extends ReactActivity {
  }
 
 -apply from: file("../../node_modules/@react-native-community/cli-platform-android/native_modules.gradle"); applyNativeModulesAppBuildGradle(project)
-+apply from: new File(["node", "--print", "require.resolve('@react-native-community/cli-platform-android/package.json')"].execute().text.trim(), "../native_modules.gradle");
++apply from: new File(["node", "--print", "require.resolve('@react-native-community/cli-platform-android/package.json')"].execute(null, rootDir).text.trim(), "../native_modules.gradle");
 +applyNativeModulesAppBuildGradle(project)
 ```
 
@@ -379,12 +381,12 @@ public class MainActivity extends ReactActivity {
          maven {
              // All of React Native (JS, Obj-C sources, Android binaries) is installed from npm
 -            url("$rootDir/../node_modules/react-native/android")
-+            url(new File(["node", "--print", "require.resolve('react-native/package.json')"].execute().text.trim(), "../android"))
++            url(new File(["node", "--print", "require.resolve('react-native/package.json')"].execute(null, rootDir).text.trim(), "../android"))
          }
          maven {
              // Android JSC is installed from npm
 -            url("$rootDir/../node_modules/jsc-android/dist")
-+            url(new File(["node", "--print", "require.resolve('jsc-android/package.json')"].execute().text.trim(), "../dist"))
++            url(new File(["node", "--print", "require.resolve('jsc-android/package.json')"].execute(null, rootDir).text.trim(), "../dist"))
          }
 
          google()
@@ -428,11 +430,11 @@ public class MainActivity extends ReactActivity {
 
 -apply from: '../node_modules/react-native-unimodules/gradle.groovy'
 -includeUnimodulesProjects()
-+apply from: new File(["node", "--print", "require.resolve('expo/package.json')"].execute().text.trim(), "../scripts/autolinking.gradle");
++apply from: new File(["node", "--print", "require.resolve('expo/package.json')"].execute(null, rootDir).text.trim(), "../scripts/autolinking.gradle");
 +useExpoModules()
 
 -apply from: file("../node_modules/@react-native-community/cli-platform-android/native_modules.gradle");
-+apply from: new File(["node", "--print", "require.resolve('@react-native-community/cli-platform-android/package.json')"].execute().text.trim(), "../native_modules.gradle");
++apply from: new File(["node", "--print", "require.resolve('@react-native-community/cli-platform-android/package.json')"].execute(null, rootDir).text.trim(), "../native_modules.gradle");
  applyNativeModulesSettingsGradle(settings)
 
  include ':app'
