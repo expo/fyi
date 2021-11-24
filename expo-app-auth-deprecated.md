@@ -7,7 +7,7 @@ In May 2020 we rewrote [`expo-auth-session`](https://docs.expo.dev/versions/late
 - Many authentication providers require nonstandard customizations which weren't possible with the existing native API.
 - `expo-app-auth` includes heavy native packages which weren't fully exposed, resulting in larger than necessary build sizes.
 - Debugging `expo-app-auth` proved to be very difficult.
-- `expo-app-auth` didn't include web support and the native interface wasn't very cross platform.
+- `expo-app-auth` didn't include web support and the native interface wasn't cross platform.
 - `expo-app-auth` extends a native library from Google which mostly just worked with the Google authentication.
 
 ## Migration
@@ -18,7 +18,7 @@ You will probably want to migrate to the Hooks API provided by `expo-auth-sessio
 
 ### `issuer`
 
-An "issuer" is a URL to a server that returns an object of URLs that are used for interacting with the authentication service. For example, Google uses `https://accounts.google.com/.well-known/openid-configuration`.
+An "issuer" is a URL for a server that returns an object of URLs that are used for interacting with the authentication service. For example, Google uses `https://accounts.google.com/.well-known/openid-configuration`.
 
 In `expo-app-auth` you can pass either the `issuer` (service discovery URL) or the `serviceConfiguration` (service object) to the native methods. Internally, the `issuer` would be resolved automatically, this means a single native function has a higher chance of failing (due to network issues, service connection, etc.) and throwing errors that would not be easy to distinguish.
 
@@ -60,7 +60,7 @@ function App() {
 
 ### `AppAuth.authAsync`
 
-The `authAsync` method contains a lot of complexity for things like auto exchanging client side secrets (never store your secrets in the client!). This functionality has been divided across a couple of different methods and classes in `expo-auth-session`. It is highly recommended that you use the React Hooks API for performing authentication in `expo-auth-session` via `AuthSession.useAuthRequest()`.
+The `authAsync` method encapsulates a lot of functionality, such as auto exchanging client side secrets (never store your secrets in the client!). This functionality has been divided across a couple of different methods and classes in `expo-auth-session`. It is highly recommended that you use the React Hooks API for performing authentication in `expo-auth-session` via `AuthSession.useAuthRequest()`.
 
 For examples of performing authentication with `expo-auth-session`, check out the [Authentication guide](https://docs.expo.dev/guides/authentication/).
 
