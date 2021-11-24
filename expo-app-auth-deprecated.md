@@ -5,7 +5,7 @@ In May 2020 we rewrote [`expo-auth-session`](https://docs.expo.dev/versions/late
 **AuthSession** solves the following issues with `expo-app-auth`:
 
 - Many authentication providers require nonstandard customizations which weren't possible with the existing native API.
-- `expo-app-auth` includes heavy native packages which weren't fully exposed, meaning the builds were needlessly larger.
+- `expo-app-auth` includes heavy native packages which weren't fully exposed, resulting in larger than necessary build sizes.
 - Debugging `expo-app-auth` proved to be very difficult.
 - `expo-app-auth` didn't include web support and the native interface wasn't very cross platform.
 - `expo-app-auth` extends a native library from Google which mostly just worked with the Google authentication.
