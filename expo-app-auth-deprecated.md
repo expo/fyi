@@ -14,7 +14,7 @@ In May 2020 we rewrote [`expo-auth-session`](https://docs.expo.dev/versions/late
 
 Many auth providers have robust documentation for integrating with `expo-auth-session` making it easier to move over: [Learn more](https://docs.expo.dev/guides/authentication/).
 
-You will probably want to migrate to the Hooks API provided by `expo-auth-session` which has no comparable API in `expo-app-auth`, but if you'd like to migrate one to one, here is the closest estimation:
+You will probably want to migrate to the Hooks API provided by `expo-auth-session` which has no comparable API in `expo-app-auth`. Below we've listed the closest API estimations for each core topic.
 
 ### `issuer`
 
