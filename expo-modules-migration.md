@@ -1,18 +1,19 @@
 # Migrating to Expo modules
 
-Starting from SDK 43, `react-native-unimodules` has been replaced by `expo`. This change represents a number of massive improvements to our module system, such as better autolinking, monorepo support, and modular hooks that allow for a cleaner integration of libraries like [expo-updates][expo-sdk-updates], [expo-constants][expo-sdk-constants], and [expo-splash-screen][expo-sdk-splash-screen].
+Starting from SDK 43, `react-native-unimodules` has been replaced by `expo`. This change represents a number of massive improvements to our module system, such as better autolinking, monorepo support, and modular hooks that allow for a cleaner integration of libraries like [expo-updates][expo-sdk-updates], [expo-constants][expo-sdk-constants], and [expo-splash-screen][expo-sdk-splash-screen]. This guide explains how to migrate from SDK 42 and `react-native-unimodules` to the `expo` package.
 
 > 💡 Read more [about our new infrastructure here][expo-blog-modules]
 
 ## Installation
 
-Installing this new module system starts by removing `react-native-unimodules` in your `package.json` and upgrading to Expo SDK 43. You can upgrade the Expo SDK by running the upgrade command inside your project.
+Installing this new module system starts by removing `react-native-unimodules` in your `package.json` and upgrading to Expo SDK 43. If you don't have the `expo` package installed in your project, install it: `npm install expo`. You can upgrade the Expo SDK by running the upgrade command inside your project.
 
 ```bash
+# If you see "You are already using the latest SDK version ..." you can answer Y to proceed and it will ensure package versions are all aligned
 expo upgrade 43
 ```
 
-> 💡 Do you want to integrate Expo modules in a React Native project without Unimodules? Add the `"expo": "~43.0.0"` dependency in `package.json` first.
+> 💡 Do you want to integrate Expo modules in a React Native project without Unimodules? [Refer to the "Installing Expo modules" guide](https://docs.expo.dev/bare/installing-expo-modules/).
 
 ## Automatic configuration
 
