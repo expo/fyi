@@ -2,7 +2,7 @@
 
 #### 🤔 What Happened
 
-If you're submitting your Android app to Google Play Store **for the first time**, Google requires that you manually upload it through their web user interface. After you have submitted it once through the web user interface, you will be able to use `expo upload:android` for subsequent submissions.
+If you're submitting your Android app to Google Play Store **for the first time**, Google requires that you manually upload it through their web user interface. After you have submitted it once through the web user interface, you will be able to use `eas submit -p android` for subsequent submissions.
 
 #### 💡 Solution
 
