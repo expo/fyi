@@ -38,17 +38,19 @@ This page will guide you through creating an app in Google Play Console and uplo
 
 [<img src="./assets/first-android-submission/07-google-app-signing.png" width="800" />](./assets/first-android-submission/07-google-app-signing.png)
 
-8. Click **BROWSE FILES** and choose the `.apk` (or `.aab`) file from your computer to upload the archive.
+8. Click **BROWSE FILES** and choose the `.aab` file from your computer to upload the app bundle. (From August 2021, new apps are required to publish with the Android App Bundle on Google Play. Upload of APK is not allowed now. [Link](https://developer.android.com/studio/publish) )
 
-[<img src="./assets/first-android-submission/08-upload-apk.png" width="800" />](./assets/first-android-submission/08-upload-apk.png)
+![1](https://user-images.githubusercontent.com/35087196/152039437-340cf53b-ad1e-4310-9aa8-a6ce2b5040ff.JPG)
 
 9. Once the upload completes, you'll see the archive type along with the **Version code**. The **Version code** is used to identify your app's releases. Each new release needs to have a unique **Version code**. If you're using the Expo Managed Workflow you can set this value in `app.json` - `expo.android.versionCode`.
 
-[<img src="./assets/first-android-submission/09-uploaded-apk.png" width="800" />](./assets/first-android-submission/09-uploaded-apk.png)
+![2](https://user-images.githubusercontent.com/35087196/152039843-8cbfc759-a4fe-4513-b707-2eeabdc36b03.JPG)
+
 
 10. You'll need to fill the **Release name** input and click on the button **Review release**.
 
-[<img src="./assets/first-android-submission/10-submitting-release.png" width="800" />](./assets/first-android-submission/10-submitting-release.png)
+![3](https://user-images.githubusercontent.com/35087196/152039861-0766bf8f-b2c5-4e38-bf59-94a9e97a3090.JPG)
+
 
 11. You'll be redirected to the **Review summary** subpage. If you're using the Expo Managed Workflow you'll see the **Errors** section. Click **Show more** to find out that you are required to have a privacy policy set. See another guide to learn how to do it - [expo.fyi/missing-privacy-policy](https://expo.fyi/missing-privacy-policy).
 
