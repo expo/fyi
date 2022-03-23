@@ -2,6 +2,8 @@
 
 A unique ID for every application existing in App Store Connect. It is typically a 10-digit number.
 
+`ascAppId` can be configured per Submit Profile in [`eas.json` config](https://docs.expo.dev/submit/eas-json/#ios-specific-options).
+
 ### How do I find my App ID?
 
 If your application is already on App Store Connect, please follow these steps:
