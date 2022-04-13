@@ -1,8 +1,8 @@
 # Creating an App Store Connect Api Key
 
-If you’d like to submit your iOS app to the Apple App Store with `eas submit`, you'll need an App Store Connect Api key **or** an App Specific Password. This page will guide you through the process of creating an App Store Connect Api key.
+If you’d like to submit your iOS app to the Apple App Store with `eas submit`, you'll need an App Store Connect Api key **or** an App Specific Password. This page will guide you through the process of creating an App Store Connect Api key. 
 
-1. Open the [App Store Connect Portal](https://appstoreconnect.apple.com/access/users) and go to the **Keys** tab under the Users and Access section.
+1. Open the [App Store Connect Portal](https://appstoreconnect.apple.com/access/users) and go to the **Keys** tab under the Users and Access section. We recommend browsing this UI in Safari as there have been known issues in other browsers.
 
 [<img src="./assets/creating-asc-api-key/01-open-app-store-connect-portal.png" width="800" />](./assets/creating-asc-api-key/01-open-app-store-connect-portal.png)
 
