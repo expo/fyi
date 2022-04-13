@@ -45,7 +45,7 @@ If your project has native folder `/ios` or `/android`, and those projects have 
 
 Project migration depends on the packages your project is using. All Expo packages support prebuild as of SDK 41, switching to Expo packages can make migration much smoother.
 
-The first step is to ensure your iOS and Android projects build when correctly when running `yarn ios` or `yarn android`. Ensure your app is in a working state before continuing.
+The first step is to ensure your iOS and Android projects build correctly when running `yarn ios` or `yarn android`. Ensure your app is in a working state before continuing.
 
 Next, setup version control for your project, we recommend using git. This will help you revert changes if anything goes wrong.
 
@@ -69,7 +69,7 @@ Run `expo config --type prebuild` to ensure the plugins actually exists and no e
 
 Finally, you can clear your `/ios` and `/android` folders, then regenerating them by running: `expo prebuild --clean`
 
-Running `yarn ios` and `yarn android` should build successfully build the native projects. You can keep modifying the `app.json` and config plugins, then running `expo prebuild` or `expo prebuild --clean` to sync up changes until it works.
+Running `yarn ios` and `yarn android` should successfully build the native projects. You can keep modifying the `app.json` and config plugins, then running `expo prebuild` or `expo prebuild --clean` to sync up changes until it works.
 
 If you have an issue, you can always revert changes in git to undo.
 
