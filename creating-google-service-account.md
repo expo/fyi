@@ -2,17 +2,17 @@
 
 If you’d like to submit your Android app to Google Play Store with `eas submit` you need to create a Google Service Account key. This page will guide you through this process.
 
-1. Open [Google Play Console](https://play.google.com/apps/publish/) and go to the **Settings** tab.
+1. Open [Google Play Console](https://play.google.com/apps/publish/), expand **Setup**, and choose **API access**.
 
 [<img src="./assets/creating-google-service-account/01-open-google-play-console.png" width="800" />](./assets/creating-google-service-account/01-open-google-play-console.png)
 
-2. Choose **API access** from the sidebar. If you see a message saying API access is not enabled for your account, you must first link your Google Play developer account with a Google Developer Project. On this page, select **Choose a project to link**, then either link it to an existing project if you have one, or select **Create new project** and then click **Link project**.
+2. If you see a message saying API access is not enabled for your account, you must first link your Google Play developer account with a Google Developer Project. On this page, select **Choose a project to link**, then either link it to an existing project if you have one, or select **Create new project** and then click **Link project**.
 
 [<img src="./assets/creating-google-service-account/02-api-access.png" width="800" />](./assets/creating-google-service-account/02-api-access.png)
 
 [<img src="./assets/creating-google-service-account/03-create-new-project.png" width="800" />](./assets/creating-google-service-account/03-create-new-project.png)
 
-3. Click **create new service account** and follow the **Google Cloud Platform** link in the dialog.
+3. Click **Create new service account** and follow the **Google Cloud Platform** link in the dialog.
 
 [<img src="./assets/creating-google-service-account/04-create-new-service-account.png" width="800" />](./assets/creating-google-service-account/04-create-new-service-account.png)
 
@@ -30,12 +30,13 @@ If you’d like to submit your Android app to Google Play Store with `eas submit
 
 [<img src="./assets/creating-google-service-account/08-service-account-permissions.png" width="800" />](./assets/creating-google-service-account/08-service-account-permissions.png)
 
-7. Select **Create key** from the options button for your newly created Service Account. Choose **JSON** and then the **CREATE** button. Download the `.json` file and store it in a safe place.
+7. Select **Manage keys** from the options button for your newly created Service Account, then **Create new key**. Choose **JSON** and then the **CREATE** button. Download the `.json` file and store it in a safe place.
 
-[<img src="./assets/creating-google-service-account/09-create-key.png" width="800" />](./assets/creating-google-service-account/09-create-key.png)
+[<img src="./assets/creating-google-service-account/09-a-create-key.png" width="800" />](./assets/creating-google-service-account/09-a-create-key.png)
+[<img src="./assets/creating-google-service-account/09-b-create-key.png" width="800" />](./assets/creating-google-service-account/09-b-create-key.png)
 [<img src="./assets/creating-google-service-account/10-create-json-key.png" width="800" />](./assets/creating-google-service-account/10-create-json-key.png)
 
-8. Return to the **API access page** on the Google Play Console and ensure it shows your new service account. Click on **Grant access** for the newly added service account.
+8. Return to the **API access page** on the Google Play Console and ensure it shows your new service account. Click on **Grant permissions** for the newly added service account.
 
 [<img src="./assets/creating-google-service-account/11-grant-access.png" width="800" />](./assets/creating-google-service-account/11-grant-access.png)
 
@@ -43,4 +44,8 @@ If you’d like to submit your Android app to Google Play Store with `eas submit
 
 [<img src="./assets/creating-google-service-account/12-invite-user.png" width="800" />](./assets/creating-google-service-account/12-invite-user.png)
 
-10. That's all! From now on, you can use the generated Google Service Account to upload your app with `eas submit`.
+10. Click **Send invitation**,
+
+[<img src="./assets/creating-google-service-account/13-send-invitation.png" width="800" />](./assets/creating-google-service-account/13-send-invitation.png)
+
+11. That's all! From now on, you can use the generated Google Service Account to upload your app with `eas submit`.
