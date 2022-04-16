@@ -579,7 +579,7 @@ Apply all changes listed below to the files in `/ios`.
 
  - (NSURL *)sourceURLForBridge:(RCTBridge *)bridge {
   #ifdef DEBUG
-   return [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index" fallbackResource:nil];
+   return [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index"];
   #else
 -  return [[EXUpdatesAppController sharedInstance] launchAssetUrl];
 +  return [[NSBundle mainBundle] URLForResource:@"main" withExtension:@"jsbundle"];
