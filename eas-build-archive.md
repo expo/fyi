@@ -6,6 +6,8 @@ When you run `eas build`, we need to get your source code from your development 
 
 You likely do not want to upload your `node_modules` directory, or maybe you have a `.env` file that is ignored by source control. EAS CLI always respects `.gitignore` files, but depending on your configuration there might be certain edge cases where EAS behavior is not 100% compliant with git.
 
+You can run `eas build:inspect --platform [ios|android] --stage archive --output ~/target/output/path --profile production` and inspect the output directory (in this case `~/target/output/path`) to see which files are included.
+
 #### EAS CLI 
 
 By default, or if you set the `EAS_NO_VCS` environment variable, EAS CLI will use its own packaging algorithm that approximates `git clone --depth 1 ...` and allows you to build with a dirty git working tree. The following limitations apply when using this approach: 
