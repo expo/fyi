@@ -34,4 +34,4 @@ In these cases, you can encode the contents of the file with `base64`, save that
 
 ## How do I opt out of using Git?
 
-The default workflow does not require that you commit your changes, but `git` itself is still used to read some metadata about the repository. You can set the `EAS_NO_VCS=1` environment variable to skip using Git for all EAS CLI commands.
+The default workflow does not require that you commit your changes, but `git` itself is still used to read some metadata about the repository. You can set the `EAS_NO_VCS=1` environment variable to skip using Git for all EAS CLI commands and optionally `EAS_PROJECT_ROOT` to define the root of your project if it is different than location of your `eas.json` file.
