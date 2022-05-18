@@ -38,17 +38,15 @@ This page will guide you through creating an app in Google Play Console and uplo
 
 [<img src="./assets/first-android-submission/07-google-app-signing.png" width="800" />](./assets/first-android-submission/07-google-app-signing.png)
 
-8. **Create .aab file** You can generate an `.aab` file and download it from https://expo.dev
-
-9. Click **BROWSE FILES** and choose the `.aab` file from your computer to upload the archive.
+8. Click **BROWSE FILES** and choose the `.aab` file from your computer to upload the archive. If you haven't created your build yet, [you can do this with `eas build`](https://docs.expo.dev/build/introduction/). 
 
 [<img src="./assets/first-android-submission/08-upload-apk.png" width="800" />](./assets/first-android-submission/08-upload-apk.png)
 
-10. Once the upload completes, you'll see the archive type along with the **Version code**. The **Version code** is used to identify your app's releases. Each new release needs to have a unique **Version code**. If you're using the Expo Managed Workflow you can set this value in `app.json` - `expo.android.versionCode`.
+9. Once the upload completes, you'll see the archive type along with the **Version code**. The **Version code** is used to identify your app's releases. Each new release needs to have a unique **Version code**. If you're using the Expo Managed Workflow you can set this value in `app.json` - `expo.android.versionCode`.
 
 [<img src="./assets/first-android-submission/09-uploaded-apk.png" width="800" />](./assets/first-android-submission/09-uploaded-apk.png)
 
-11. You'll need to fill the **Release name** input and click on the button **Review release**.
+10. You'll need to fill the **Release name** input and click on the button **Review release**.
 
 [<img src="./assets/first-android-submission/10-submitting-release.png" width="800" />](./assets/first-android-submission/10-submitting-release.png)
 
