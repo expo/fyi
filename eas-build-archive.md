@@ -2,6 +2,8 @@
 
 When you run `eas build`, we need to get your source code from your development machine to one of our macOS or Linux build workers. In order to do this, EAS CLI will collect and compress project files into a single archive, and then upload that archive to private cloud storage that is accessible only to the build worker. By default, EAS CLI will produce the archive by copying all files starting from the root of the git repository with the exception of `.git`, `node_modules`, and all files matched by rules from `.gitignore` (or `.easignore` if it exists).
 
+> `.easignore` supports the same format as `.gitignore` files, but it can only be located in the root of your git repository and if it is present non of the existing `.gitignore` files will be respected.
+
 ## What files are included in the archive?
 
 You likely do not want to upload your `node_modules` directory, or maybe you have a `.env` file that is ignored by source control. EAS CLI always respects `.gitignore` files, but depending on your configuration there might be certain edge cases where EAS behavior is not 100% compliant with git.
@@ -18,6 +20,8 @@ By default, or if you set the `EAS_NO_VCS` environment variable, EAS CLI will us
   - The content of the submodules will be included as they are in your working directory.
 
 If you set `{ "cli": { "requireCommit": true } }` at the root level of your `eas.json`, EAS CLI will use the `git clone --depth 1 ...` command to create a shallow clone of your repository. With this approach, the project uploaded to EAS Build will be exactly the same as in Git - including information like the branch, commit hash, and so on.
+
+> Note: `.easignore` files are not supported if you set `requireCommit: true` in your eas.json
 
 You can test this on your development machine against your local project directory by running the following command:
 
@@ -37,3 +41,5 @@ In these cases, you can encode the contents of the file with `base64`, save that
 ## How do I opt out of using Git?
 
 The default workflow does not require that you commit your changes, but `git` itself is still used to read some metadata about the repository. You can set the `EAS_NO_VCS=1` environment variable to skip using Git for all EAS CLI commands and optionally `EAS_PROJECT_ROOT` to define the root of your project if it is different than location of your `eas.json` file.
+
+If you want to use `.easignore` file in this mode, you need to place it in the directory pointed by `EAS_PROJECT_ROOT` env if it's set or in directery with `eas.json` otherwise.
