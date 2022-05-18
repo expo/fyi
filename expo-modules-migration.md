@@ -1,6 +1,6 @@
 # Migrating to Expo modules
 
-Starting from SDK 43, `react-native-unimodules` has been replaced by `expo`. This change represents a number of massive improvements to our module system, such as better autolinking, monorepo support, and modular hooks that allow for a cleaner integration of libraries like [expo-updates][expo-sdk-updates], [expo-constants][expo-sdk-constants], and [expo-splash-screen][expo-sdk-splash-screen]. This guide explains how to migrate from SDK 42 and `react-native-unimodules` to the `expo` package.
+Starting from SDK 43, `react-native-unimodules` has been replaced by `expo`. This change represents a number of massive improvements to our module system, such as better autolinking, monorepo support, and modular hooks that allow for a cleaner integration of libraries like [expo-updates][expo-sdk-updates], [expo-constants][expo-sdk-constants], and [expo-splash-screen][expo-sdk-splash-screen]. This guide explains how to migrate from SDK 42 and `react-native-unimodules` to the `expo` package and SDK 43. SDK 43 targets React Native 0.64; if you are using a more recent version of React Native (such as React Native 0.68 with Expo SDK 45) you should cross-reference the information below with the ["Installing Expo modules" guide](https://docs.expo.dev/bare/installing-expo-modules/) because the diffs below will not apply directly except to SDK 43 / React Native 0.64 projects.
 
 > 💡 Read more [about our new infrastructure here][expo-blog-modules]
 
