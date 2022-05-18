@@ -46,7 +46,7 @@ setStatusBarHidden(true, "none");
 ```json
 {
   "androidStatusBar": {
-    "hidden": "true"
+    "hidden": true
   },
   "plugins": [
     [
@@ -95,7 +95,7 @@ setStatusBarHidden(true, "none");
 ```json
 {
   "androidStatusBar": {
-    "hidden": "true"
+    "hidden": true
   },
   "plugins": [
     [
@@ -167,7 +167,7 @@ function useStickyImmersiveReset() {
 ```json
 {
   "androidStatusBar": {
-    "hidden": "true"
+    "hidden": true
   },
   "plugins": [
     [
