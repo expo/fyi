@@ -1,16 +1,9 @@
 # EAS Update
 
-EAS Update is a service that will allow developers to deploy updates to builds that are currently running on end-user's devices. Our goal is to make iterating on your project incredibly fast and easy. With EAS Update, you'll be able to:
+EAS Update is a hosted service that serves updates for projects using the expo-updates library.
 
-- Take advantage of new, more stable release flows that will allow you to deploy in milliseconds.
-- Roll out updates incrementally.
-- Preview every change with Expo Go or a custom dev client, across your organization.
-- View and manage updates in a website interface.
-- Automatically publish new updates with CI actions.
-- Customize when your end-users receive updates.
+It makes fixing small bugs and pushing quick fixes a snap in between app store submissions. It accomplishes this by allowing an end-user's app to swap out the non-native parts of their app (for example, JS, styling, and image changes) with a new update that contains bug fixes and other updates.
 
 ## How can I use EAS Update in my projects?
 
-We're currently working hard on developing EAS Update. It's currently in closed alpha.
-
-To hear more about EAS Update as we develop it, fill out this form: https://forms.gle/aerz7iVp9wzh3WwYA.
+Learn more at https://docs.expo.dev/eas-update/introduction/
