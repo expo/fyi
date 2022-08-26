@@ -1,25 +1,21 @@
 # App size in the managed workflow
 
-Using `expo build:[ios|android]` to build your managed apps can result in 15mb to 20mb base install sizes. To understand why this is the case, please refer to [this post](https://blog.expo.dev/expo-managed-workflow-in-2021-5b887bbf7dbb), which explains how the build process works. Long story short, the entire Expo SDK is included in your build.
+> Note: [the classic build service, `expo build:[ios|android]` is sunset and will run only until 2023](https://blog.expo.dev/turtle-goes-out-to-sea-d334db2a6b60). We do not recommend using it for any new apps, and we recommend all apps migrate to [EAS Build](https://docs.expo.dev/build/introduction/) now.
 
-The primary benefit of including the entire Expo SDK is that you can confidently update your app over-the-air and know that the JavaScript bits will be compatible with the native bits, because the native bits are all the same for a given SDK version. You can add a capability to your app such as using the camera where you had not before and do so safely with an over-the-air update.
+## App size with `expo build`
 
-## Use EAS Build instead of `expo build` for smaller app sizes
+Using `expo build:[ios|android]` to build your managed apps can result in 15mb to 20mb base install sizes on the App Store / Play Store. To understand why this is the case, please refer to [this post](https://blog.expo.dev/expo-managed-workflow-in-2021-5b887bbf7dbb), which explains how the build process works. Long story short, the entire Expo SDK is included in your build.
 
-If app size is more important to you than easier over-the-air-updates, you may want to consider using [EAS Build](https://docs.expo.dev/build/introduction/) instead. You can still use over-the-air updates in your apps built with EAS Build, you just need to [be a bit more careful](https://docs.expo.dev/build/updates/). As of April, 2021, you can build your managed apps with EAS Build to get up to a 10x reduction in download and install size. [Learn more in this post](https://blog.expo.dev/eas-build-april-preview-update-ebd7dff9dd25), and refer to [this guide for migrating from `expo build`](https://docs.expo.dev/build-reference/migrating/).
+## App size with EAS Build
 
-## Other tips
+[EAS Build](https://docs.expo.dev/build/) will ship only the code that you include in your app. In pure JavaScript projects, it will [run prebuild](https://docs.expo.dev/workflow/prebuild/) in order to compile the project. This generates the native projects and links the dependencies that you have installed in your **package.json**. Minimum app sizes are roughly 2mb to 3mb (this changes slightly depending on the Expo SDK / React Native version).
 
 ### Use the App Store and Play Store data rather than the binary size as your benchmark
 
-Let's address a common question: "Why is my app 50mb? I thought it was supposed to be around 20mb!"
+Let's address a common question: a developer runs a build then looks at the resulting artifact that they have downloaded and asks something like "why is my app 50mb? that's huge!"
 
-Developers are often confused when they do a build of their app and see that the file we produce is actually in the order of 50mb rather than 20mb. The reason is that both Apple and Google have techniques for slicing your binaries up into binaries intended specifically for certain devices. We enable this on iOS automatically by building your standalone app with [bitcode enabled](https://developer.apple.com/documentation/xcode/reducing_your_app_s_size/doing_basic_optimization_to_reduce_your_app_s_size). On Android, we recommend that you build an [Android App Bundle (.aab)](https://developer.android.com/platform/technology/app-bundle) rather than an Android Application Package (.apk). Only once you have submitted the binaries to their respective stores will you be able to see the download size for various different device types.
+The reason is that this is not actually the size of your app, in the way that you care about that. Typically you care about the "download size" on the App Store or Play Store, and you can think of this as the "upload size" *to* the App Store and Play Store instead. Both Apple and Google have techniques for slicing your build up into binaries intended specifically for certain devices. We enable this on iOS automatically by building your standalone app with [bitcode enabled](https://developer.apple.com/documentation/xcode/reducing_your_app_s_size/doing_basic_optimization_to_reduce_your_app_s_size).
 
-### Use Android App Bundles
+On Android, we recommend that you build an [Android App Bundle (.aab)](https://developer.android.com/platform/technology/app-bundle) rather than an Android Application Package (.apk). Only once you have submitted the binaries to their respective stores will you be able to see the download size for various different device types.
 
-Building an APK does not allow Google to optimize your binary for different devices. Using an Android App Bundle will cut your size in the store listing nearly in half.
-
-### Optimize image assets
-
-Run `npx expo-optimize` in your project to automatically compress all of your image assets with minimal quality loss.
+The only truly accurate way to see what your final app size will be shipped to users is to upload your app to the stores and view the information on your developer dashboard.
