@@ -7,11 +7,11 @@ Your JavaScript code tried to access a native module, <ModuleName>, that isn't s
 To continue development with <ModuleName>, you need to create a development build of your app.
 ```
 
-you probably added an npm package to your project that isn't supported in Expo Go. Expo Go includes support for the modules that make up the [Expo SDK](https://docs.expo.dev/versions/latest/), but if you need to develop using a native module outside of this set, you'll need to make a development build.
+you probably added an npm package to your project that isn't supported in Expo Go. Expo Go includes support for the modules in the [Expo SDK](https://docs.expo.dev/versions/latest/), and if you need to develop using a native module outside of this set, you'll need to make a development build.
 
-A development build is essentially like a version of Expo Go that's customized for your project and includes all the customizations, like native modules, that you need for development. You can read more about development builds and get started [here](https://docs.expo.dev/development/introduction/).
+A development build is like a version of Expo Go that's customized for your project. It includes all the customizations, like native modules, that you need for development. [Read more about development builds](https://docs.expo.dev/development/introduction/).
 
-If you've installed a new native module in your project, but you want to continue developing other parts of your project in Expo Go, you can also disable these errors as shown below (more info on this workflow [here](https://docs.expo.dev/bare/using-expo-client/)).
+If you've installed a new native module in your project and you want to continue developing other parts of your project in Expo Go, then you can also disable these errors as explained below. [Learn more about providing fallbacks for custom native modules in Expo Go](https://docs.expo.dev/bare/using-expo-client/).
 
 ### I'm already running a development build
 
