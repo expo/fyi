@@ -10,7 +10,7 @@ Usage of EAS Build tends to peak during the middle of the business day in North 
 
 - [Upgrade to a Production or Enterprise accounts](https://expo.dev/pricing)
 - Run your build locally (or on other hosted infrastructure) with `eas build --local`. [Learn more](https://docs.expo.dev/build-reference/local-builds/)
-- Run your build locally by running `expo prebuild` and then manually archiving and signing it. [Learn more about prebuild](https://docs.expo.dev/workflow/prebuild/).
+- Run your build locally by running `expo prebuild` and then manually archiving and signing it. [Learn more about prebuild](https://docs.expo.dev/workflow/prebuild/)
 - Work around peak times and build at slower times of the day. You can see detailed charts about usage on the [EAS Build - Service Status Page](https://expo.dev/eas-build-status) to help decide what times are best.
 
 ## Frequently asked questions
