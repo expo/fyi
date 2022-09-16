@@ -11,7 +11,7 @@ Modules with prebuilt binaries will not expose implementation files to your Xcod
 Just set the global Ruby variable at the top of your `Podfile` and list all the packages that you want to build from sources by their NPM package name, as below:
 
 ```ruby
-$ExpoUseSources = ['expo-camera', 'expo-notifications', '@unimodules/code']
+$ExpoUseSources = ['expo-camera', 'expo-notifications']
 ```
 
 and run `pod install` after all.
