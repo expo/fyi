@@ -1,8 +1,5 @@
 # Expo Development Client
 
-The Expo Development Client (or dev client) is a React Native library that aims to bring the speed and convenience of the Expo Managed workflow to projects that wish to leverage native modules not included in the Expo SDK.
+Development builds of your app are Debug builds of your project. To create a Development build, expo-dev-client library is used, which allows you to develop and debug projects from Expo CLI or a compatible server.
 
-## How can I use the dev client in my projects?
-
-The dev client is currently in a closed beta.
-To get early access and help shape the future of the project, please fill out this survey: https://forms.gle/sxdSuLax7uCBGLd7A
+Learn more: https://docs.expo.dev/development/introduction/
