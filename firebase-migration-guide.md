@@ -9,7 +9,7 @@ In this guide, we will migrate from the Expo Firebase packages to React Native F
 
 > This guide is intended for those who have been previously using the Expo Firebase packages successfully and are running on SDK's 46, 47, or 48. If you're adding Firebase to your app for the first time, see the [Using Firebase](https://docs.expo.dev/guides/using-firebase/) guide.
 
-### Setup React Native Firebase
+### Set up React Native Firebase
 On your terminal, run the following commands to remove `expo-firebase-analytics` and install the React Native Firebase packages and other dependencies:
 - `npm remove expo-firebase-analytics`
 - `npm add @react-native-firebase/app @react-native-firebase/analytics`
