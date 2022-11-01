@@ -6,9 +6,9 @@ There are two queue types: normal and priority. The normal queue is available to
 
 Usage of EAS Build tends to peak during the middle of the business day in North American timezones, and during that time, priority builds will typically use up most of the available capacity. The normal queue time during peak will frequently grow to an hour or more. If you find yourself in this situation, you have the following options.
 
-## Alternatives to waiting in queue
+## Alternatives to waiting in free tier queue
 
-- [Upgrade to a Production or Enterprise accounts](https://expo.dev/pricing)
+- [Upgrade to a Production or Enterprise accounts](https://expo.dev/pricing) for priority queue access
 - Run your build locally (or on other hosted infrastructure) with `eas build --local`. [Learn more](https://docs.expo.dev/build-reference/local-builds/)
 - Run your build locally by running `expo prebuild` and then manually archiving and signing it. [Learn more about prebuild](https://docs.expo.dev/workflow/prebuild/)
 - Work around peak times and build at slower times of the day. You can see detailed charts about usage on the [EAS Build - Service Status Page](https://expo.dev/eas-build-status) to help decide what times are best.
