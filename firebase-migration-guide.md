@@ -85,8 +85,6 @@ React Native Firebase only supports iOS and Android. If you previously used `exp
 ```js
 import analytics from "@react-native-firebase/analytics";
 
-const app = initializeApp(firebaseConfig);
-
 export async function sendAnalyticsEventAsync() {
   await analytics().logEvent("test_analytics_event", {
     additionaParam: "test",
@@ -111,6 +109,7 @@ const firebaseConfig = {
   measurementId: 'G-measurement-id',
 };
 
+const app = initializeApp(firebaseConfig);
 const webAnalytics = getAnalytics(app);
 
 export async function sendAnalyticsEventAsync() {
