@@ -48,7 +48,7 @@ Set (or update) the `expo.modules.updates.EXPO_UPDATE_URL"` metadata in the `And
 ```diff
   ...
   <application android:name=".MainApplication" android:label="@string/app_name" android:icon="@mipmap/ic_launcher" android:roundIcon="@mipmap/ic_launcher_round" android:allowBackup="true" android:theme="@style/AppTheme" android:usesCleartextTraffic="true">
-+   <meta-data android:name="expo.modules.updates.EXPO_UPDATE_URL" android:value=https://u.expo.dev/${projectID}"/>
++   <meta-data android:name="expo.modules.updates.EXPO_UPDATE_URL" android:value="https://u.expo.dev/${projectID}"/>
 +   <meta-data android:name="expo.modules.updates.EXPO_RUNTIME_VERSION" android:value="${runtimeVersion}"/>
     ...
 ```
