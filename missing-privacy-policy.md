@@ -2,7 +2,7 @@
 
 #### 🤔 What Happened
 
-If you're submitting your Android app to Google Play Store using `expo upload:android`, `eas upload`, or the Google Play console, you may encounter an error saying you need to have a privacy policy set for your app. It would look something like this on the Google Play Console:
+If you're submitting your Android app to Google Play Store using `expo upload:android`, `eas submit -p android`, or the Google Play console, you may encounter an error saying you need to have a privacy policy set for your app. It would look something like this on the Google Play Console:
 
 [<img src="./assets/missing-privacy-policy/01-privacy-policy-error.png" width="800" />](./assets/missing-privacy-policy/01-privacy-policy-error.png)
 
