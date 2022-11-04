@@ -1,4 +1,4 @@
-# Android build errors starting November 4, 2022 after React Native 0.71-rc release
+# Android build errors after React Native 0.71-rc release
 
 On November 4, 2022, React Native 0.71-rc was released, which introduced an issue for projects using libraries that depend on `'com.facebook.react:react-native:+'`.
 
@@ -19,7 +19,7 @@ There is no single error message that will surface in every project when this ha
 **If you have a bare project**, then you can either regenerate your `android` directory with `prebuild` or you can manually apply the following patch to your `android/build.gradle`:
 
 ```diff
-+def REACT_NATIVE_VERSION = new File(['node', '--print',"JSON.parse(require('fs').readFileSync(require.resolve('react-native/package.json'), 'utf-8')).version"].execute(null, rootDir).text.trim())
++def REACT_NATIVE_VERSION = new File(['node', '--print', "JSON.parse(require('fs').readFileSync(require.resolve('react-native/package.json'), 'utf-8')).version"].execute(null, rootDir).text.trim())
 +
  allprojects {
 +    configurations.all {
