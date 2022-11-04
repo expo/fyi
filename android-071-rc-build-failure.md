@@ -1,6 +1,6 @@
 # Android build errors after React Native 0.71-rc release
 
-On November 4, 2022, React Native 0.71-rc was released, which introduced an issue for projects using libraries that depend on `'com.facebook.react:react-native:+'`.
+On November 4, 2022, React Native 0.71-rc was released, which introduced an issue for projects using libraries that depend on `'com.facebook.react:react-native:+'`. **This impacted Android builds across every version of react-native**.
 
 There is no single error message that will surface in every project when this happens. If you are using react-native-reanimated, you may see the following:
 
