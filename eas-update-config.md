@@ -24,7 +24,7 @@ Set the `updates.url` field in the `app.json`/`app.config.js` to the `UPDATE_URL
 
 A runtime is a specific JS–native interface. Updates can only run on compatible runtimes. See [runtime version docs](https://docs.expo.dev/distribution/runtime-versions/) for more information.
 
-If you are using the managed workflow (not changing native code), than the runtime version is just the sdk version. Add the following to your `app.json`/`app.config.js`:
+If you are using the managed workflow (not changing native code), then the runtime version is just the sdk version. Add the following to your `app.json`/`app.config.js`:
 
 ```diff
 "expo": {
