@@ -1,6 +1,6 @@
 # Migrating from Expo Firebase to React Native Firebase
 
-The `expo-firebase-analytics` and `expo-firebase-recaptcha` packages allowed the use of some Firebase features on Classic Builds, Expo Go, and Expo for Web, but developers often encountered version conflicts when trying to use them alongside the rest of the Firebase suite. With EAS Build and development builds, it is much easier to use [React Native Firebase](https://rnfirebase.io/) directly in your entire development workflow, so these packages have been deprecated and will be removed in SDK 48.
+The `expo-firebase-analytics` and `expo-firebase-recaptcha` packages allowed the use of some Firebase features on Classic Builds, Expo Go, and Expo for Web, but developers often encountered version conflicts when trying to use them alongside the rest of the Firebase suite. With EAS Build and development builds, it is much easier to use [React Native Firebase](https://rnfirebase.io/) directly in your entire development workflow, so these `expo-firebase-*` packages have been deprecated and will be removed in SDK 48.
 
 In this guide, we will migrate from the Expo Firebase packages to React Native Firebase by:
 - Replacing the Expo Firebase packages with their React Native Firebase equivalents
