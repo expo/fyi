@@ -122,3 +122,7 @@ export async function sendAnalyticsEventAsync() {
 ### Migrating from expo-firebase-recaptcha
 
 This migration guide demonstrates specifically migrating Firebase Analytics usage from `expo-firebase-analytics` to React Native Firebase. If you are migrating from `expo-firebase-recaptcha`, follow the steps above to add React Native Firebase, create a development build, and then see React Native Firebase's [Phone Authentication](https://rnfirebase.io/auth/phone-auth) documentation for configuring app verification. With the full native capabilities of React Native Firebase now at your disposal, your app can generally use automatic app verification, which uses reCAPTCHA as a fallback mechanism.
+
+### Remove expo-firebase-core
+
+If your project has `expo-firebase-core` excplicitly installed (see `"dependencies"` in **package.json** to check), then you'll need to uninstall it. No additional step is required for migration.
