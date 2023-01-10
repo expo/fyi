@@ -25,7 +25,7 @@ For example:
     },
     "production": {
       "extends": "fast"
-		}
+    }
   }
 }
 ```
