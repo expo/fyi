@@ -95,7 +95,7 @@ export async function sendAnalyticsEventAsync() {
 #### analytics.web.js
 ```js
 import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
+import { getAnalytics, logEvent } from "firebase/analytics";
 
 // configure and initialize Firebase for web (copy this from the Firebase Console Project Settings for the exact values)
 const firebaseConfig = {
@@ -113,7 +113,7 @@ const app = initializeApp(firebaseConfig);
 const webAnalytics = getAnalytics(app);
 
 export async function sendAnalyticsEventAsync() {
-  await webAnalytics.logEvent("test_analytics_event", {
+  await logEvent(webAnalytics, "test_analytics_event", {
     additionaParam: "test",
   });
 }
