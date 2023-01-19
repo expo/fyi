@@ -34,6 +34,10 @@ For example:
 
 macOS images for Monterey (12.x) and newer are available on M1 workers. You can find more information about available build images here: https://docs.expo.dev/build-reference/infrastructure/
 
+### 2.3 Update `node` version to Node 16 (or greater) if needed
+
+Node ≤ 15 is not supported on M1 workers, so if you specify a `node` version explicitly on your build profile, you will need to either remove that field to use the default version ([the exact version depends on the `image`](https://docs.expo.dev/build-reference/infrastructure/#ios-server-images)), or update the `node` field to a more recent version.
+
 ## 3. Run your first M1 build
 
 For most projects on SDK 47 and greater, a build that succeeds on Intel workers will also succeed on M1 workers.
