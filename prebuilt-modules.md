@@ -1,5 +1,9 @@
 # Prebuilt modules
 
+> **Note**
+>
+> For SDK 48 and above, we do not ship modules prebuilt with iOS binaries anymore. Previously, an iOS binary for a module was prebuilt for a specific SDK and it had issues with different Xcode or React Native versions that the binary was not prebuilt against. Modules that are now built with [Expo Modules API](https://docs.expo.dev/modules/overview/) compile faster and are more lightweight in general.
+
 As we care about the compilation time of your apps using Expo modules, we've started shipping most of them with prebuilt iOS binaries instead of just the source code. If only you use CocoaPods version `1.10.0` or higher, Xcode will use these binaries by default.
 
 Even so, as always, there is a risk that it will lead to some unexpected issues—especially when the versions of dependent modules are incompatible with each other. We do our best in order not to lead to such a situation, but if you encounter any related issues during build time or crashes in the runtime, we kindly ask you to report this to us by [creating an issue on our monorepo](https://github.com/expo/expo/issues/new?labels=needs+review&template=bug_report.md) and to build affected modules from sources (you can find the guide below).
