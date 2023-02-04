@@ -7,7 +7,7 @@ In order to build an iOS app with custom entitlements, you'll need to setup _cod
 ![code-signing-page](https://user-images.githubusercontent.com/9664363/112059266-db521e00-8b18-11eb-9538-2a31c6bd6e39.png)
 
 
-1. Open your iOS project in Xcode by running `xed ios` or `open ios/<yourproject>.xcworkspace` in your Terminal. If your Expo project doesn't have an `ios` folder, run `expo prebuild -p ios` to generate one locally.
+1. Open your iOS project in Xcode by running `xed ios` or `open ios/<yourproject>.xcworkspace` in your Terminal. If your Expo project doesn't have an `ios` folder, run `npx expo prebuild -p ios` to generate one locally.
 2. Select the first project in the **navigator** then the target with the matching native in the "project and targets list".
 3. Select "Signing & Capabilities", ensure you have "Automatically manage signing" selected.
 4. Ensure a "Development Team" is selected, this may require that you sign-in to your Apple Developer account.
@@ -18,4 +18,6 @@ In order to build an iOS app with custom entitlements, you'll need to setup _cod
    2. Navigate: Settings > General > Device Management > [your new certificate] > Trust.
       Learn more: [Apple docs (MaintainingCertificates)](https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingCertificates/MaintainingCertificates.html).
 
-Now you can return to Expo CLI and build your project locally with `expo run:ios`. This process only needs to be done once per computer / account, you don't need to do this for every new native project.
+Now you can return to Expo CLI and build your project locally with `npx expo run:ios`. This process only needs to be done once per computer / account, you don't need to do this for every new native project.
+
+> Simulators require code signing when certain entitlements are enabled, e.g. Associated Domains.
