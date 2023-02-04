@@ -1,6 +1,6 @@
 # Setup Code Signing Certificates in Xcode for Development
 
-In order to build an iOS app onto a physical device (not a simulator) you'll need to setup _code signing certificates_ which Apple uses to track all of the software installed on iOS devices. This means you'll need to connect your Apple developer account to Xcode, Xcode can use this to automatically create an _iOS Development Certificate_ and _Provisioning Profile_ for your project.
+In order to build an iOS app with custom entitlements, you'll need to setup _code signing certificates_ which Apple uses to track all of the software installed on iOS devices. This means you'll need to connect your Apple developer account to Xcode, Xcode can use this to automatically create an _iOS Development Certificate_ and _Provisioning Profile_ for your project.
 
 > 💡 Certificates are saved to your local Keychain so you don't need to set them up often.
 
