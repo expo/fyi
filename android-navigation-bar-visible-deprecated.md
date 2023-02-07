@@ -120,7 +120,7 @@ import { setStatusBarHidden } from "expo-status-bar";
 
 NavigationBar.setPositionAsync("absolute");
 NavigationBar.setVisibilityAsync("hidden");
-NavigationBar.setBehaviorAsync("inset-swipe");
+NavigationBar.setBehaviorAsync("overlay-swipe");
 NavigationBar.setBackgroundColorAsync("#00000080"); // `rgba(0,0,0,0.5)`
 setStatusBarHidden(true, "none");
 ```
@@ -175,7 +175,7 @@ function useStickyImmersiveReset() {
       {
         "position": "absolute",
         "visibility": "hidden",
-        "behavior": "inset-swipe",
+        "behavior": "overlay-swipe",
         "backgroundColor": "#00000080"
       }
     ]
