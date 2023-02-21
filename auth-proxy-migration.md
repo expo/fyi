@@ -100,5 +100,5 @@ Never put any secret keys inside your application code. There is no secure way t
 
 For some popular providers, we have created guides that show how to set up authentication with them:
 
-- [Google]()
-- [Facebook]()
+- [Google](https://docs.expo.dev/guides/google-authentication)
+- [Facebook](https://docs.expo.dev/guides/facebook-authentication)
