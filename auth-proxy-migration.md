@@ -1,6 +1,6 @@
 # Migrating from auth proxy and Expo Go to Development builds
 
-`[expo-auth-session](https://docs.expo.dev/versions/latest/sdk/auth-session)` API allows [browser-based authentication](https://docs.expo.dev/versions/latest/sdk/auth-session/#how-web-browser-based-authentication-flows-work) (using OAuth or OpenID Connect) to your project for Android and iOS. This guide provides a general overview of configuring and using the API with a [development build](/development/create-development-builds/).
+[`expo-auth-session`](https://docs.expo.dev/versions/latest/sdk/auth-session) API allows [browser-based authentication](https://docs.expo.dev/versions/latest/sdk/auth-session/#how-web-browser-based-authentication-flows-work) (using OAuth or OpenID Connect) to your project for Android and iOS. This guide provides a general overview of configuring and using the API with a [development build](/development/create-development-builds/).
 
 Using AuthSession API proxy (`auth.expo.io`) with Expo Go to implement sign-in functionality using a third-party provider such as Google and Facebook is not recommended for security reasons. This is because the AuthSession API uses a proxy to redirect the user to the third-party provider's website. This proxy is not secure and can be used to steal the user's credentials.
 
