@@ -37,7 +37,7 @@ This URI is used to redirect the user back to the app after the authorization pr
 
 The `manifestUrl` parameter requires adding your project's EAS project ID and the channel name. If you don't have a channel name specified, the default value is `main`.
 
-Learn more about the [manifestUrl](/development/development-workflows/#deep-linking-urls).
+Learn more about the [manifestUrl](https://docs.expo.dev/development/development-workflows/#deep-linking-urls).
 
 ## Update `useAuthRequest` hook
 
