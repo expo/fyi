@@ -15,7 +15,7 @@ For example:
  "build": {
     "fast": {
       "ios": {
-        "resourceClass": "m1-medium"
+        "resourceClass": "m-medium"
       }
     },
     "development": {
