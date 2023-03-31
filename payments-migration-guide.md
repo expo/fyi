@@ -1,10 +1,14 @@
 ## How to migrate from `expo-payments-stripe` to the new `@stripe/stripe-react-native` library
 
-`expo-payments-stripe` is being deprecated in favor of the brand new `@stripe/stripe-react-native` library, and besides new features and better reliability, this module is supported in the managed workflow! To use it, make sure you download the newest version of Expo Go from the App Store or Play Store.
+`expo-payments-stripe` is deprecated in favor of the `@stripe/stripe-react-native` library, and besides new features and better reliability, this module is supported in the managed workflow! To use it, make sure you download the newest version of Expo Go from the Play Store or App Store.
 
 ### Set up
 
-Run `expo install @stripe/stripe-react-native`.
+Install the library by running the following command:
+
+```shell
+npx expo install @stripe/stripe-react-native
+```
 
 > If you're using the bare workflow, you'll also need to run `npx pod-install`.
 
