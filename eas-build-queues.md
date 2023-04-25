@@ -23,4 +23,4 @@ Running builds is expensive! If a build takes 20 minutes, that's 20 minutes of c
 
 ### If I urgently need to get a build completed, can I pay for just that build?
 
-We may offer this in the future, currently it is not possible.
+You can do this with [the On-demand plan](https://expo.dev/pricing#pay-as-you-grow).
