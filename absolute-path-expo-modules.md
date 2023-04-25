@@ -19,19 +19,20 @@ To do this you need to include the `paths.*` wildcard in [your tsconfig file](ht
   "extends": "expo/tsconfig.base"
 }
 ```
->
+
 And change the `metro.config.js` file to the following:
->
+
 ```metro.config.js
 // Learn more https://docs.expo.io/guides/customizing-metro
-const { getDefaultConfig } = require('expo/metro-config');
-const path = require('path');
+const { getDefaultConfig } = require("expo/metro-config");
+const path = require("path");
 
 const defaultConfig = getDefaultConfig(__dirname);
 
-defaultConfig.extraNodeModules = {
-  modules: path.resolve(__dirname, 'modules'),
-};
-
+defaultConfig.resolver.nodeModulesPaths = [
+  ...defaultConfig.resolver.nodeModulesPaths,
+  path.resolve(__dirname, "modules"),
+];
 module.exports = defaultConfig;
+
 ```
