@@ -7,11 +7,16 @@ You can use an absolute import path in place of a regular relative import:
 `import module from "my-module";`,
 
 
-To do this you need to include the following wildcard in [your tsconfig file](https://www.typescriptlang.org/tsconfig#paths).
+To do this you need to include the `paths.*` wildcard in [your tsconfig file](https://www.typescriptlang.org/tsconfig#paths).
 >
 ```tsconfig.json
-"paths": {
-  "*": ["./modules/*"]
+{
+  "compilerOptions": {
+    "paths": {
+      "*": ["./modules/*"]
+    }
+  },
+  "extends": "expo/tsconfig.base"
 }
 ```
 >
