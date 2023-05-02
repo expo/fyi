@@ -6,7 +6,7 @@ If you’d like to submit your Android app to Google Play Store with `eas submit
 
 [<img src="./assets/creating-google-service-account/01-open-google-play-console.png" width="800" />](./assets/creating-google-service-account/01-open-google-play-console.png)
 
-2. If you see a message saying API access is not enabled for your account, you must first link your Google Play developer account with a Google Developer Project. On this page, select **Choose a project to link**, then either link it to an existing project if you have one, or select **Create new project** and then click **Link project**.
+2. If you see a message saying API access is not enabled for your account, you must first link your Google Play developer account with a Google Developer Project. On this page, select **Choose a project to link**, then either link it to an existing project if you have one, or select **Create new project** and then click **Link project**. If you are linking an existing project, that project must have the Google Play Android Developer API enabled in Google Cloud.
 
 [<img src="./assets/creating-google-service-account/02-api-access.png" width="800" />](./assets/creating-google-service-account/02-api-access.png)
 
