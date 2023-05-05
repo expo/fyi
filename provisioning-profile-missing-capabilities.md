@@ -16,7 +16,7 @@ Do one of the following:
 
 - Ensure you have the latest version of `eas-cli` installed.
 - Ensure your entitlements are defined:
-  - **Managed:** Run `expo config --type prebuild` and ensure the `ios.entitlements` has all of your capabilities defined.
+  - **Managed:** Run `npx expo config --type prebuild` and ensure the `ios.entitlements` has all of your capabilities defined.
   - **Bare:** Check that your `ios/*/*.entitlements` file has all of the desired entitlements defined. Alternatively you can open Xcode, go to the "Signing & Capabilities" tab, and check there.
 - Create a new iOS build with `eas build -p ios`
   - You should see a step **✔ Synced capabilities** which will automatically sync the entitlements with Apple Dev Portal.

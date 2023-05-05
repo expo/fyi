@@ -1,19 +1,17 @@
 # Bumping Android Version Code
 
-#### 🤔 What Happened
+## 🤔 What Happened
 
-If you're submitting your Android app to Google Play Store using the `expo upload:android` command, you may encounter the error saying you've already submitted a particular version of the app.
+If you're submitting your Android app to Google Play Store using the `eas submit` command, you may encounter the error saying you've already submitted a particular version of the app.
 
-#### 💡 Solution
+## 💡 Solution
 
-1. Increment the value for the `expo.android.versionCode` key in `app.json`. Optionally, commit this change. Then, build a new app archive with `expo build:android`. Wait for the build to finish.
+### Configure automatic version management
+
+EAS Build can manage your version code for you and increment on every build, so you never have to think about it again. Learn more in the ["App version management" guide](https://docs.expo.dev/build-reference/app-versions/).
+
+### Manually increment version code
+
+Increment the value for the `android.versionCode` key in `app.json`. Optionally, commit this change. Then, build a new app archive with `eas build`. Wait for the build to finish and run `eas submit`, or use `eas build --auto-submit`.
 
 [<img src="./assets/bumping-android-version-code/01-bumping-android-version-code.png" width="800" />](./assets/bumping-android-version-code/01-bumping-android-version-code.png)
-
-2. Run `expo upload:android --use-submission-service` to upload your app to Google Play Store. Wait for the submission to complete.
-
-[<img src="./assets/bumping-android-version-code/02-upload-with-submission-service.png" width="800" />](./assets/bumping-android-version-code/02-upload-with-submission-service.png)
-
-3. You can verify that the app has been submitted by visiting [Google Play Console](https://play.google.com/apps/publish/).
-
-[<img src="./assets/bumping-android-version-code/03-check-release-page.png" width="800" />](./assets/bumping-android-version-code/03-check-release-page.png)

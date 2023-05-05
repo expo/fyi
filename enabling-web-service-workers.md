@@ -5,7 +5,7 @@
 Expo's Webpack config has is capable of generating icons, splash screens, manifests, and metadata for your [progressive web app](https://developers.google.com/web/progressive-web-apps/) based on the app.json and other configuration used for your native app. However, the offline support must be added to your Webpack config manually.
 
 1. Install the required Workbox dependencies: [package.json](https://github.com/expo/examples/blob/cfb044b07385773fac2247be968cc5c0b13be8bf/with-workbox/package.json#L16-L28)
-2. Create a local `webpack.config.js` in your project: `expo customize:web`
+2. Create a local `webpack.config.js` in your project: `npx expo customize webpack.config.js`
 3. Copy the template [webpack.config.js](https://github.com/expo/examples/blob/master/with-workbox/webpack.config.js)
 4. Create the [`src/service-worker.js`](https://github.com/expo/examples/blob/master/with-workbox/src/service-worker.js) and [`src/serviceWorkerRegistration.js`](https://github.com/expo/examples/blob/master/with-workbox/src/serviceWorkerRegistration.js) (the file path is important).
 
@@ -19,7 +19,7 @@ The service worker is disabled in development and requires that you build the ap
 
 - Check to make sure you are invoking `serviceWorkerRegistration.register();` and not `serviceWorkerRegistration.unregister();` in your `./App.js`.
 
-- `expo build:web`
+- `npx expo export -p web`
 - Host the files locally with `npx serve web-build`
   - This uses serve CLI to host your `/web-build` folder.
 - Open: http://localhost:5000/
@@ -39,9 +39,8 @@ Expo's Webpack config has all the required plugins for building a [progressive w
 
 To enable offline support you can do the following:
 
-- Eject the Webpack config:
-  - Run `expo customize:web`
-  - Select `webpack.config.js`
+- Generate the Webpack config:
+  - Run `npx expo customize webpack.config.js`
 - Modify the config file and pass the option `offline: true` to the creator method.
 
 ```js

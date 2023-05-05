@@ -4,9 +4,6 @@
 
 If you're using or want to update to **SDK 41** or **higher**, you should check if you're using expo-location or expo-media-library and follow the instructions below.
 
-You may also observe in SDK <= 40 projects running the latest Play Store version of Expo Go that some functionality doesn't work as intended when using a device with Android R or higher. That's because we didn't backport changes required by the newest Android to the older SDKs. We didn't backport the changes because that would have broken existing applications on already-released SDKs and forced developers to change their code even when they didn't update the SDK version.
-When you building your app using SDK <= 40 with the `expo build:android` service, everything should work as it used to. For development purposes, rather than using the Expo Go app from the Play Store you can install an older version of Expo Go by running `expo client:install:android` in your project directory.
-
 ## A new way of handling location permissions
 
 To protect user privacy the Android team changed how an app requests access to location in the background. To address those changes in the Expo SDK, we split location permissions into `foreground` and `background`.

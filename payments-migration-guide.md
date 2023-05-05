@@ -89,7 +89,7 @@ Once you have your merchant identifier, add:
 }
 ```
 
-to your `app.json` file, where `merchantIdentifier` is the Apple merchant ID obtained [here](https://stripe.com/docs/apple-pay?platform=react-native). Otherwise, Apple Pay will not work as expected. If you have multiple `merchantIdentifier`s, you can provide them all in an array. If you're in the bare workflow, you'll need to run `expo eject` or `expo prebuild` to apply the native project configuration.
+to your `app.json` file, where `merchantIdentifier` is the Apple merchant ID obtained [here](https://stripe.com/docs/apple-pay?platform=react-native). Otherwise, Apple Pay will not work as expected. If you have multiple `merchantIdentifier`s, you can provide them all in an array. If you use Continuous Native Generation with [prebuild](https://docs.expo.dev/workflow/prebuild/), you'll need to run `npx expo prebuild --clean` to apply the native project configuration.
 
 Then, in the `StripeProvider` component, specify the same Apple Merchant ID:
 

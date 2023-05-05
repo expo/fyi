@@ -6,7 +6,7 @@ If you're still using the `LegacyNotifications` library, it's time for you to mi
 
 ### Set up
 
-Run `expo install expo-notifications`. 
+Run `npx expo install expo-notifications`. 
 
 > If you're using the bare workflow, you'll need to follow [these additional instructions](https://github.com/expo/expo/tree/master/packages/expo-notifications#installation-in-bare-react-native-projects).
 

@@ -1,8 +1,8 @@
-# Migration off the expo file extension
+# Migration off the ".expo" file extension
 
-> TL;DR: Starting in Expo SDK 40, the `.expo.js` extension is deprecated in favor of optional imports.
+> Note: this document is intended for outdated versions of Expo tools, and it refers to the classic build service and the global Expo CLI. These tools have both been replaced, by EAS Build and Expo CLI respectively. If you are reading this document and this note, there is a good chance that the contents here do not apply to you.
 
-Files with the `.expo.*` extension will no longer be used in SDK 41+, the `EXPO_TARGET` environment variable, and the `--target` flag on `expo publish`, and `expo export` are all deprecated.
+Starting in Expo SDK 40, the `.expo.js` extension is deprecated in favor of optional imports. Files with the `.expo.*` extension will no longer be used in SDK 41+, the `EXPO_TARGET` environment variable, and the `--target` flag on `expo publish`, and `expo export` are all deprecated.
 
 ## Background
 

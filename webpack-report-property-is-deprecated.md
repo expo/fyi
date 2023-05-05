@@ -47,7 +47,7 @@ The optimal approach is to simply install the package when you need it, then add
 1. Install `yarn add -D webpack-bundle-analyzer`
 2. Customize the Webpack config:
 
-   - `expo customize:web`
+   - `npx expo customize`
    - Select `webpack.config.js`
    - If you've already installed the [`@expo/webpack-config`][webpack-config] package, ensure it's updated.
 

@@ -1,10 +1,10 @@
-# Cleanup after `expo run` and `expo prebuild` commands
+# Cleanup after `npx expo run:[android|ios]` and `npx expo prebuild` commands
 
-If your project is built entirely in JavaScript, you can run them outside of Expo Go on your computer or device with the `expo run` commands. `expo run:ios` and `expo run:android` modify some files in your project and generate iOS and/or Android native project files in order to be able to build and run them on your machine. The modifications are made by running `expo prebuild` behind the scenes prior to building and running the project. This is the same process that occurs when running a build for your app on EAS Build.
+If your project is built entirely in JavaScript, you can run them outside of Expo Go on your computer or device with the `npx expo run:*` commands. `npx expo run:ios` and `npx expo run:android` modify some files in your project and generate iOS and/or Android native project files in order to be able to build and run them on your machine. The modifications are made by running `npx expo prebuild` behind the scenes prior to building and running the project. This is the same process that occurs when running a build for your app on EAS Build.
 
-It can sometimes be helpful to use `expo run` commands to build and test your app locally; but, if you typically do your development in Expo Go or in a custom development client built with EAS Build, you probably don't want to keep the modifications and generated files around after you are done testing. The iOS and Android projects include many files and directories and can make your diffs more noisy than needed if you aren't actually using them for anything except `expo run`.
+It can sometimes be helpful to use `npx expo run:*` commands to build and test your app locally; but, if you typically do your development in Expo Go or in a custom development client built with EAS Build, you probably don't want to keep the modifications and generated files around after you are done testing. The iOS and Android projects include many files and directories and can make your diffs more noisy than needed if you aren't actually using them for anything except `npx expo run:*`.
 
-**To clean up after `expo run` and `expo prebuild` commands**, you can either add the generated files to your `.gitignore` or manually delete them. The following files/directories are modified or generated when these commands are invoked:
+**To clean up after `npx expo run:[android|ios]` and `npx expo prebuild` commands**, you can either add the generated files to your `.gitignore` or manually delete them. The following files/directories are modified or generated when these commands are invoked:
 
 ## Modified and generates files and directories
 
@@ -21,7 +21,7 @@ It can sometimes be helpful to use `expo run` commands to build and test your ap
 
 You can delete the `ios` and `android` directories, delete any other untracked files and revert other changes with `git checkout`. If you revert the changes to `package.json`, then run `npm install` or `yarn` again afterwards.
 
-> 💡 Most additional weight and code added to your repository would come from the `ios/` and `android/` directories. You can delete those and commit the rest of the side effects of `expo run` / `expo prebuild` if you want, in order to minimize side effects of subsequent use of the command.
+> 💡 Most additional weight and code added to your repository would come from the `ios/` and `android/` directories. You can delete those and commit the rest of the side effects of `npx expo run:*` / `npx expo prebuild` if you want, in order to minimize side effects of subsequent use of the command.
 
 ## Using `.gitignore` to ignore files instead of deleting and reverting
 

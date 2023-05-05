@@ -1,5 +1,7 @@
 # Migrating away from `--config` in Expo CLI
 
+> Note: this document is intended for outdated versions of Expo tools, and it refers to the classic build service and the global Expo CLI. These tools have both been replaced, by EAS Build and Expo CLI respectively. If you are reading this document and this note, there is a good chance that the contents here do not apply to you.
+
 The `--config` flag for commands like `expo start` and `expo publish` was added to provide developers with a mechanism to switch between different `app.json` configuration files to support use cases like staging environments and white labeling.
 
 At the time the flag was introduced, dynamic configuration with `app.config.js` was not possible. Now that it is, we are deprecating the `--config` flag in favor of using `app.config.js`. The `--config` flag will continue to work for existing use cases, but it won't be supported in new scenarios, such as on EAS Build and embedding app config when building native projects locally.

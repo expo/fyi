@@ -12,7 +12,7 @@ All of these APIs have since been extracted from the `expo` package itself and o
 
 **If you are an app developer** and you just want to find out how to get rid of this warning, you should first determine if you are using the global object directly in your own codebase, and if not then it is likely from one of your dependencies.
 
-If it's in your own codebase, then install the corresponding package and import from it instead of using the global. For example, for `Constants (expo-constants)` you would run `expo install expo-constants` and then change `global.__expo.Constants` to `import Constants from 'expo-constants';`.
+If it's in your own codebase, then install the corresponding package and import from it instead of using the global. For example, for `Constants (expo-constants)` you would run `npx expo install expo-constants` and then change `global.__expo.Constants` to `import Constants from 'expo-constants';`.
 
 If it's not in your own codebase, then you can search your `node_modules` directory for `__expo.[API_NAME]` - for example `__expo.Icon`, and also `Expo.[API_NAME]`. You can then check if the library has updated to remove the dependency on the global, or use [patch-package](https://www.npmjs.com/package/patch-package) to patch the issue directly in your `node_modules` and open an issue or pull request to resolve it. If you don't have time and you just want to ignore the warning, use `LogBox.ignoreLogs(...)` from react-native.
 
