@@ -16,18 +16,20 @@ Before a native app can be compiled, the native source code must be generated. E
 [Learn more about prebuilding](https://docs.expo.dev/workflow/prebuild/)
 
 To run the application on Android:
-```
+
+```sh
 npx expo install expo-face-detector
 npx expo run:android 
 ```
 
-```
+```sh
 npx expo install expo-face-detector
 npx expo run:ios 
 ```
+
 ## Development builds and EAS Build
 
-If you can't run iOS applications locally, you can still use EAS build and development builds.
+If you can't run iOS applications locally, you can still use EAS Build and development builds.
 
 https://docs.expo.dev/build/introduction/
 
