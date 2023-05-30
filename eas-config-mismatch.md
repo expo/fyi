@@ -29,9 +29,9 @@ It's not correct to run `APP=app1 eas build --profile production` where **eas.js
 
 ```json
 {
-    "build": {
-        "production": {}
-    }
+  "build": {
+    "production": {}
+  }
 }
 ```
 
@@ -40,18 +40,18 @@ Instead you should run `eas build --profile production-app1` where **eas.json** 
 
 ```json
 {
-    "build": {
-        "production-app1": {
-            "env": {
-                "APP": "app1"
-            }
-        },
-        "production-app2": {
-            "env": {
-                "APP": "app2"
-            }
-        }
+  "build": {
+    "production-app1": {
+      "env": {
+        "APP": "app1"
+      }
+    },
+    "production-app2": {
+      "env": {
+        "APP": "app2"
+      }
     }
+  }
 }
 ```
 
@@ -71,9 +71,9 @@ Example configuration could look like this:
 ```js
 let projectId;
 if (process.env.APP === 'app1') {
-    projectId = '23847707-bf15-424c-b1dc-7a57fc34a23d';
+  projectId = '23847707-bf15-424c-b1dc-7a57fc34a23d';
 } else if (process.env.APP === 'app2') {
-    projectId = 'db096609-2c67-431d-b83d-88cabf8511b1';
+  projectId = 'db096609-2c67-431d-b83d-88cabf8511b1';
 }
 export default {
   name: 'testapp',
@@ -88,18 +88,18 @@ export default {
 
 ```json
 {
-    "build": {
-        "production-app1": {
-            "env": {
-                "APP": "app1"
-            }
-        },
-        "production-app2": {
-            "env": {
-                "APP": "app2"
-            }
-        }
+  "build": {
+    "production-app1": {
+      "env": {
+        "APP": "app1"
+      }
+    },
+    "production-app2": {
+      "env": {
+        "APP": "app2"
+      }
     }
+  }
 }
 ```
 
