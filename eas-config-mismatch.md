@@ -18,9 +18,11 @@ if (process.env.APP === 'app1') {
 }
 export default {
   name: 'testapp',
-  slug: process.env.APP
+  slug: process.env.APP,
   extra: {
-    projectId,
+    eas:  {
+      projectId
+    }
   }
 }
 ```
@@ -77,9 +79,11 @@ if (process.env.APP === 'app1') {
 }
 export default {
   name: 'testapp',
-  slug: process.env.APP
+  slug: process.env.APP,
   extra: {
-    projectId,
+    eas: {
+      projectId
+    }
   }
 }
 ```
