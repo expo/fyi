@@ -10,7 +10,6 @@ Usage of EAS Build tends to peak during the middle of the business day in North 
 
 - [Upgrade to a Production or Enterprise accounts](https://expo.dev/pricing) for priority queue access
 - [Use the On-demand plan](https://expo.dev/pricing#pay-as-you-grow) for priority queue access, and pay per build 
-- If you are still using Intel workers for your iOS builds, then [migrate to the much faster Apple Silicon workers](https://expo.fyi/intel-to-m1). [Learn more](https://blog.expo.dev/m1-workers-on-eas-build-dcaa2c1333ad)
 - Run your build locally (or on other hosted infrastructure) with `eas build --local`. [Learn more](https://docs.expo.dev/build-reference/local-builds/)
 - Run your build locally by running `npx expo prebuild` and then manually archiving and signing it. [Learn more about prebuild](https://docs.expo.dev/workflow/prebuild/)
 - Work around peak times and build at slower times of the day. You can see detailed charts about usage on the [EAS Build - Service Status Page](https://expo.dev/eas-build-status) to help decide what times are best.
