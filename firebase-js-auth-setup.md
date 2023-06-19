@@ -59,3 +59,24 @@ initializeAuth(app,
   }
 )
 ```
+
+## Web Compatiblity
+The above setup works for web when **web.bundler** is set to "metro" in your Expo Config, in addition to iOS and Android. If you're using Webpack, the `getReactNativePersistence` import will not work. You can instead initialize Firebase as such:
+```js
+import { initializeApp } from "firebase/app";
+import { initializeAuth, browserLocalPersistence } from "firebase/auth"
+
+const firebaseConfig = {
+  // config copied from Firebase console when creating a web app
+};
+
+const app = initializeApp(firebaseConfig);
+
+initializeAuth(app,
+   {
+    persistence: browserLocalPersistence
+  }
+)
+```
+
+Note that `browserLocalPersistence` will not exist when running on iOS and Android, so you will need to use `Platform` to switch between configuration methods for web and native.
