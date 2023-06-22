@@ -37,23 +37,33 @@ If you are using the managed workflow (not changing native code), then the runti
 
 If you wish to use custom native code the `runtimeVersion` can be set to any string conforming to this [format](https://docs.expo.dev/versions/latest/config/app/#runtimeversion), or you can have us manage it for you with the `nativeVersion` policy.
 
-
 ## Native Configuration
+
 If your project has native files, you will also need to configure them:
 
 ### Android
 
-Set (or update) the `expo.modules.updates.EXPO_UPDATE_URL"` metadata in the `AndroidManifest.xml`:
+Set (or update) the `expo.modules.updates.EXPO_UPDATE_URL` and `expo.modules.updates.EXPO_RUNTIME_VERSION` metadata in the `AndroidManifest.xml`:
 
 ```diff
   ...
   <application android:name=".MainApplication" android:label="@string/app_name" android:icon="@mipmap/ic_launcher" android:roundIcon="@mipmap/ic_launcher_round" android:allowBackup="true" android:theme="@style/AppTheme" android:usesCleartextTraffic="true">
 +   <meta-data android:name="expo.modules.updates.EXPO_UPDATE_URL" android:value="https://u.expo.dev/${projectID}"/>
-+   <meta-data android:name="expo.modules.updates.EXPO_RUNTIME_VERSION" android:value="${runtimeVersion}"/>
++   <meta-data android:name="expo.modules.updates.EXPO_RUNTIME_VERSION" android:value="@string/expo_runtime_version"/>
     ...
 ```
 
+Then add the `expo_runtime_version` string value in `android/app/src/main/res/values/strings.xml`
+
+```diff
+ <resources>
+     <string name="app_name">MyApp</string>
++    <string name="expo_runtime_version">1.0.0</string>
+ </resources>
+```
+
 ### iOS
+
 Set (or update) the `EXUpdatesURL` in the `Expo.plist`:
 
 ```diff
