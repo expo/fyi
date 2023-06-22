@@ -1,6 +1,6 @@
 # Missing Headers in EAS Update
 
-You've made a request to the EAS Update without the required headers.
+You've made a request to EAS Update without the required headers.
 
 ## Fetching manually
 
