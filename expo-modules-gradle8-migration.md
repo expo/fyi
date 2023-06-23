@@ -62,7 +62,7 @@ Please instead set the namespace (or testNamespace) in the module's build.gradle
 This migration can be done automatically using the AGP Upgrade Assistant, please refer to https://developer.android.com/studio/build/agp-upgrade-assistant for more information.
 ```
 
-Please note that this warning will become an error starting from React Native 0.73. To address the issue in advance, you can follow these steps:
+Please note that [this warning will become an error starting from React Native 0.73](https://github.com/react-native-community/discussions-and-proposals/issues/671). To address the issue in advance, you can follow these steps:
 
 1. Open your module's **build.gradle** file.
 2. Locate the `android` block and add the following line:
