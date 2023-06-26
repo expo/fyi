@@ -1,4 +1,4 @@
-# App size when using prebuild (e.g., "managed workflow")
+# App size when using prebuild (i.e., "managed workflow")
 
 [EAS Build](https://docs.expo.dev/build/) will ship only the code that you include in your app. In pure JavaScript projects, it will [run prebuild](https://docs.expo.dev/workflow/prebuild/) in order to compile the project. This generates the native projects and links the dependencies that you have installed in your **package.json**. Minimum app sizes are roughly 2mb to 3mb (this changes slightly depending on the Expo SDK / React Native version).
 
