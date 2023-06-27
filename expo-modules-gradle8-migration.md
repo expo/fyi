@@ -1,6 +1,6 @@
 # Gradle 8 Migration for Custom Expo Modules
 
-Starting from Expo SDK 49 (React Native 0.72), the Android project uses Gradle 8 as the default version. If your project includes custom Expo Modules, you might encounter build errors or warnings. This migration guide provides step-by-step instructions to resolve any issues and ensure Gradle 8 compatibility.
+Starting from Expo SDK 49 (React Native 0.72), the React Native Android project uses Gradle 8 as the default version. If your project includes custom Expo Modules, you might encounter build errors or warnings related to this change. This migration guide provides step-by-step instructions to resolve any issues and ensure Gradle 8 compatibility.
 
 ## Error: Unknown property `classifier`
 
