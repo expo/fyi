@@ -36,8 +36,10 @@ You can apply the following patch to your module's **build.gradle** file to reso
 -        artifact(androidSourcesJar)
        }
      }
-     repositories {
-@@ -79,6 +71,11 @@ android {
+   }
+ }
+ 
+ android {
    lintOptions {
      abortOnError false
    }
