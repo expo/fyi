@@ -1,7 +1,7 @@
-# Recommended Additional Setup for Firebase Authentication (JS SDK)
-Authentication with the Firebase JS SDK will work in your Expo app, but you may notice that your auth session is not persisted between app reloads. This is because Firebase Auth defaults to the in-memory persistence manager.
+# Recommended Additional Setup for Firebase Authentication (Firebase JS SDK >v10 only)
+With the release of Firebase JS SDK `v10.0.0` (package [`firebase`](https://npmjs.com/firebase) on npm), React Native Persistence is now built directly into the library. That means that if you are using any version **above** `v10.0.0` (inclusive) of Firebase JS SDK, you **do not need to follow any of the steps on this page**, as they will not work, because persistence is now included in the SDK out of the box. If you are running a version below `v10.0.0` of the SDK, then continue reading.
 
-## Switching to the React Native Persistence Manager
+## Switching to the React Native Persistence Manager (Firebase JS SDK >v10 only)
 The Firebase JS SDK has a persistence manager that uses local storage in React Native. You can update your initialization code as such:
 ```js
 import { initializeApp } from "firebase/app";
@@ -22,7 +22,7 @@ initializeAuth(app,
 ```
 Depending on your version of Firebase and React Native, you may see deprecation warnings or failures, as Firebase uses React Native core local storage. If that is the case, the instructions for using a custom persistence manager can help.
 
-## Using a Custom Persistence Manager
+## Using a Custom Persistence Manager (Firebase JS SDK >v10 only)
 Firebase Auth can be initialized with a custom persistence manager in cases where it doesn't support `@react-native-async-storage/async-storage`:
 ```js
 import { initializeApp } from "firebase/app";
@@ -60,7 +60,7 @@ initializeAuth(app,
 )
 ```
 
-## Web Compatiblity
+## Web Compatiblity (Firebase JS SDK >v10 only)
 The above setup works for web when **web.bundler** is set to "metro" in your Expo Config, in addition to iOS and Android. If you're using Webpack, the `getReactNativePersistence` import will not work. You can instead initialize Firebase as such:
 ```js
 import { initializeApp } from "firebase/app";
