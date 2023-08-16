@@ -1,5 +1,7 @@
-# Recommended Additional Setup for Firebase Authentication (JS SDK)
-Authentication with the Firebase JS SDK will work in your Expo app, but you may notice that your auth session is not persisted between app reloads. This is because Firebase Auth defaults to the in-memory persistence manager.
+# Recommended Additional Setup for Firebase Authentication
+With the release of [Firebase JS SDK `v10.0.0`](https://npmjs.com/firebase), React Native Persistence is now built directly into the library. If you are using any version **above** `v10.0.0` of Firebase JS SDK, you **do not need to follow any of the steps on this page**.
+
+If you are using a version below `v10.0.0` of the SDK, follow the steps described in this guide.
 
 ## Switching to the React Native Persistence Manager
 The Firebase JS SDK has a persistence manager that uses local storage in React Native. You can update your initialization code as such:
