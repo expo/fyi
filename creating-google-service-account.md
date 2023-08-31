@@ -12,7 +12,7 @@ If you’d like to submit your Android app to Google Play Store with `eas submit
 
 [<img src="./assets/creating-google-service-account/03-create-new-project.png" width="800" />](./assets/creating-google-service-account/03-create-new-project.png)
 
-3. Click **Create new service account** and follow the **Google Cloud Platform** link in the dialog.
+3. Click **Learn how to create service accounts** and follow the **Google Cloud Platform** link in the dialog.
 
 [<img src="./assets/creating-google-service-account/04-create-new-service-account.png" width="800" />](./assets/creating-google-service-account/04-create-new-service-account.png)
 
@@ -36,7 +36,7 @@ If you’d like to submit your Android app to Google Play Store with `eas submit
 [<img src="./assets/creating-google-service-account/09-b-create-key.png" width="800" />](./assets/creating-google-service-account/09-b-create-key.png)
 [<img src="./assets/creating-google-service-account/10-create-json-key.png" width="800" />](./assets/creating-google-service-account/10-create-json-key.png)
 
-8. Return to the **API access page** on the Google Play Console and ensure it shows your new service account. Click on **Grant permissions** for the newly added service account.
+8. Return to the **API access page** on the Google Play Console and ensure it shows your new service account. Click on **Manage Play Console permissions** for the newly added service account.
 
 [<img src="./assets/creating-google-service-account/11-grant-access.png" width="800" />](./assets/creating-google-service-account/11-grant-access.png)
 
