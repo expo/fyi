@@ -28,7 +28,7 @@ const auth = initializeAuth(app, {
 
 ## For Firebase JS SDK version 9 and below
 
-### Switching to the React Native Persistence Manager
+### Switch to the React Native Persistence Manager
 
 The Firebase JS SDK has a persistence manager that uses local storage in React Native. You can update your initialization code as such:
 
@@ -50,7 +50,7 @@ initializeAuth(app, {
 
 Depending on your version of Firebase and React Native, you may see deprecation warnings or failures, as Firebase uses React Native core local storage. If that is the case, the instructions for using a custom persistence manager can help.
 
-### Using a Custom Persistence Manager
+### Use a Custom Persistence Manager
 
 Firebase Auth can be initialized with a custom persistence manager in cases where it doesn't support `@react-native-async-storage/async-storage`:
 
