@@ -1,6 +1,6 @@
 # Start with a development build
 
-Development builds of your app are Debug builds of your project that has the `expo-dev-client` library installed in your project's dependencies.
+[Development builds](https://docs.expo.dev/develop/development-builds/introduction/) of your app are Debug builds of your project that has the `expo-dev-client` library installed in your project's dependencies.
 
 To learn more, see [Create a development build using EAS](https://docs.expo.dev/develop/development-builds/create-a-build/).
 
