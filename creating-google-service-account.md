@@ -1,51 +1,45 @@
-# Creating Google Service Account
+# Creating a Google Service Account
 
-If you’d like to submit your Android app to Google Play Store with `eas submit` you need to create a Google Service Account key. This page will guide you through this process.
+If you’d like to submit your Android app to Google Play Store with `eas submit` you need to create a Google Service Account key. To do this, the following steps are required:
 
-1. Open [Google Play Console](https://play.google.com/apps/publish/), expand **Setup**, and choose **API access**.
+- Create a Google Cloud project (optional if you already have one)
+- Create a Google Service Account and create and download the JSON key file
+- Enable the Google Play Android Developer API
+- Invite the Google Service Account to your Google Play Console account
 
-[<img src="./assets/creating-google-service-account/01-open-google-play-console.png" width="800" />](./assets/creating-google-service-account/01-open-google-play-console.png)
+1. If you don't have a Google Cloud project yet, create one in the [Google Cloud Console](https://console.cloud.google.com/projectcreate). If you already have a project, you can skip this step.
 
-2. If you see a message saying API access is not enabled for your account, you must first link your Google Play developer account with a Google Developer Project. On this page, select **Choose a project to link**, then either link it to an existing project if you have one, or select **Create new project** and then click **Link project**. If you are linking an existing project, that project must have the Google Play Android Developer API enabled in Google Cloud.
+[<img src="./assets/creating-google-service-account/01-new-google-cloud-project.png" width="800" />](./assets/creating-google-service-account/01-new-google-cloud-project.png)
 
-[<img src="./assets/creating-google-service-account/02-api-access.png" width="800" />](./assets/creating-google-service-account/02-api-access.png)
+2. Open the [Service Accounts page](https://console.cloud.google.com/iam-admin/serviceaccounts) in the Google Cloud Console and click **CREATE SERVICE ACCOUNT**.
 
-[<img src="./assets/creating-google-service-account/03-create-new-project.png" width="800" />](./assets/creating-google-service-account/03-create-new-project.png)
+[<img src="./assets/creating-google-service-account/02-service-accounts.png" width="800" />](./assets/creating-google-service-account/02-service-accounts.png)
 
-3. Click **Learn how to create service accounts** and follow the **Google Cloud Platform** link in the dialog.
+3. Enter a name for your service account. We recommend a name that will make it easy for you to remember that it is for your Google Play Console account. Optionally, enter the service account ID and description of your choice. Click the **DONE** button.
 
-[<img src="./assets/creating-google-service-account/04-create-new-service-account.png" width="800" />](./assets/creating-google-service-account/04-create-new-service-account.png)
+[<img src="./assets/creating-google-service-account/03-create-service-account.png" width="800" />](./assets/creating-google-service-account/03-create-service-account.png)
 
-[<img src="./assets/creating-google-service-account/05-service-account-dialog.png" width="800" />](./assets/creating-google-service-account/05-service-account-dialog.png)
+4. On the newly created service account, select **Manage keys** from the options button, then **Create new key**. Choose **JSON** and then the **CREATE** button. Download the `.json` file and store it in a safe place.
 
-4. Click another **CREATE SERVICE ACCOUNT** button.
+[<img src="./assets/creating-google-service-account/04-manage-keys.png" width="800" />](./assets/creating-google-service-account/04-manage-keys.png)
+[<img src="./assets/creating-google-service-account/05-create-new-key.png" width="800" />](./assets/creating-google-service-account/05-create-new-key.png)
+[<img src="./assets/creating-google-service-account/06-key-type.png" width="800" />](./assets/creating-google-service-account/06-key-type.png)
+[<img src="./assets/creating-google-service-account/07-key-saved.png" width="800" />](./assets/creating-google-service-account/07-key-saved.png)
 
-[<img src="./assets/creating-google-service-account/06-google-cloud-platform.png" width="800" />](./assets/creating-google-service-account/06-google-cloud-platform.png)
+5. Open the [Google Play Android Developer API](https://console.cloud.google.com/apis/library/androidpublisher.googleapis.com) page and click **ENABLE**.
 
-5. Enter the name of this service account in the field titled "Service account name". We recommend a name that will make it easy for you to remember that it is for your Google Play Console account. Also, enter the service account ID and description of your choice. Click the **CREATE** button.
+[<img src="./assets/creating-google-service-account/08-play-developer-api.png" width="800" />](./assets/creating-google-service-account/08-play-developer-api.png)
 
-[<img src="./assets/creating-google-service-account/07-service-account-name.png" width="800" />](./assets/creating-google-service-account/07-service-account-name.png)
+6. In the Google Play Console, open the [Users & permissions](https://play.google.com/console/users-and-permissions) page and click **Invite new users**.
 
-6. Click **Select a role** and choose **Service Accounts > Service Account User**. Click **DONE**.
+[<img src="./assets/creating-google-service-account/09-users-permissions.png" width="800" />](./assets/creating-google-service-account/09-users-permissions.png)
 
-[<img src="./assets/creating-google-service-account/08-service-account-permissions.png" width="800" />](./assets/creating-google-service-account/08-service-account-permissions.png)
+7. Enter the email address of the service account you created in step 3. On the **App permissions** tab, select your app(s). If you want to apply the permissions to all apps, you can also select the permissions on the **Account permissions** tab instead
 
-7. Select **Manage keys** from the options button for your newly created Service Account, then **Create new key**. Choose **JSON** and then the **CREATE** button. Download the `.json` file and store it in a safe place.
+[<img src="./assets/creating-google-service-account/10-invite-user.png" width="800" />](./assets/creating-google-service-account/10-invite-user.png)
 
-[<img src="./assets/creating-google-service-account/09-a-create-key.png" width="800" />](./assets/creating-google-service-account/09-a-create-key.png)
-[<img src="./assets/creating-google-service-account/09-b-create-key.png" width="800" />](./assets/creating-google-service-account/09-b-create-key.png)
-[<img src="./assets/creating-google-service-account/10-create-json-key.png" width="800" />](./assets/creating-google-service-account/10-create-json-key.png)
+8. Select the required permissions to upload and manage your app, and click **Invite user**
 
-8. Return to the **API access page** on the Google Play Console and ensure it shows your new service account. Click on **Manage Play Console permissions** for the newly added service account.
+[<img src="./assets/creating-google-service-account/11-set-permissions.png" width="800" />](./assets/creating-google-service-account/11-account-permissions.png)
 
-[<img src="./assets/creating-google-service-account/11-grant-access.png" width="800" />](./assets/creating-google-service-account/11-grant-access.png)
-
-9. Click **Invite user**.
-
-[<img src="./assets/creating-google-service-account/12-invite-user.png" width="800" />](./assets/creating-google-service-account/12-invite-user.png)
-
-10. Click **Send invitation**,
-
-[<img src="./assets/creating-google-service-account/13-send-invitation.png" width="800" />](./assets/creating-google-service-account/13-send-invitation.png)
-
-11. That's all! From now on, you can use the generated Google Service Account to upload your app with `eas submit`.
+9. That's all! From now on, you can use the generated Google Service Account key to upload your app with `eas submit`.
