@@ -8,7 +8,7 @@ If you're submitting your iOS app to App Store using the `eas submit` command, y
 
 1. - **If you are building a managed Expo app**
 
-     Increment the value for the `expo.ios.buildNumber` key in `app.json`. Remember that this value must be a string. Optionally, commit this change. Then, build a new app archive with `eas build`. Wait for the build to finish.
+     Increment the value for the `expo.ios.buildNumber` key in `app.json`. This can be done manually or [automatically with app version management](https://docs.expo.dev/build-reference/app-versions/). Remember that this value must be a string. Optionally, commit this change. Then, build a new app archive with `eas build`. Wait for the build to finish.
 
      [<img src="./assets/bumping-ios-build-number/01-bumping-ios-build-number.png" width="800" />](./assets/bumping-ios-build-number/01-ios-build-number-code.png)
 
