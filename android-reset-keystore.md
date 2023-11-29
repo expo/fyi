@@ -13,7 +13,7 @@ Google provides the most up-to-date information on how to reset your key in thei
 3. Choose the correct build profile, generally your "production" build profile.
 4. Choose the "Keystore: Manage everything needed to build your project" option.
 5. Chose the option to your keystore.
-6. Now choose the option to create a new keystore.
+6. Now choose the option "Set up a new keystore".
 7. Finally, choose the option to download your new keystore. This will display fingerprint info for your keystore and download a **.jks** file.
 
 ### Reset your upload key on the Play Store
