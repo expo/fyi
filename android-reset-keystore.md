@@ -14,7 +14,7 @@ Google provides the most up-to-date information on how to reset your key in thei
 4. Choose the "Keystore: Manage everything needed to build your project" option.
 5. Chose the option to your keystore.
 6. Now choose the option "Set up a new keystore".
-7. Finally, choose the option to download your new keystore. This will display fingerprint info for your keystore and download a **.jks** file.
+7. Finally, choose "Download existing keystore" to download the latest keystore you have created in the previous step. This will display fingerprint info for your keystore and download a **.jks** file at the root of your project directory.
 
 ### Reset your upload key on the Play Store
 These directions can change at Google's discretion, so always best to check [their latest instructions](https://support.google.com/googleplay/android-developer/answer/9842756?visit_id=637973748658459850-3395295471&rd=1#reset). As of November 2023, you can reset your upload key via an option under your app in the Play Store Console:
