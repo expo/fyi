@@ -4,7 +4,7 @@
 
 With Play App Signing, Google maintains the signing key used to verify that your app is authentic. Meanwhile, when your app is built, it is signed with a separate "Upload key". Google Play checks your upload key when you are going to publish your app to ensure the app binary is from you. If you lose this key, as long as you still have access to your Play Store account, you can reset it and continue publishing your app.
 
-## Reseting your key with EAS-managed credentials
+## Reset your key with EAS-managed credentials
 Google provides the most up-to-date information how to reset your key in their [Play Console Help section on Play App Signing](https://support.google.com/googleplay/android-developer/answer/9842756?visit_id=637973748658459850-3395295471&rd=1#reset), so be sure to consult that if you have any questions. However, if you use EAS to manage your Android app credentials, the process is generally a little easier, because the EAS CLI can create the new upload keystore for you.
 
 ### Generate a new Upload keystore
