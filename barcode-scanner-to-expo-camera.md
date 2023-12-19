@@ -10,7 +10,7 @@ Install `expo-camera` by running the following command:
 npx expo install expo-camera
 ```
 
-> If you're using the bare workflow, you'll also need to run `npx pod-install`.
+[Learn more about installing and configuring expo-camera](https://docs.expo.dev/versions/latest/sdk/camera/#installation), some additional configuration is required if you don't use [CNG](https://docs.expo.dev/workflow/continuous-native-generation/).
 
 ### Usage
 
@@ -68,7 +68,7 @@ const styles = StyleSheet.create({
 });
 ```
 
-To achieve the same functionality with `expo-camera`, you can use the `CameraView` component
+To achieve the same functionality with `expo-camera`, you can use the `CameraView` component. Supported barcode formats are the same as before and can be configured using the `barcodeScannerSettings` prop.
 
 ```typescript
 import React, { useState, useEffect } from "react";
