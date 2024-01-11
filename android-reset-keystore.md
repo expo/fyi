@@ -1,4 +1,4 @@
-# Reseting your Android Upload key
+# Resetting your Android Upload key
 ## Background
 [Google Play App Signing](https://support.google.com/googleplay/android-developer/answer/9842756?hl=en) is a security service where Google manages the app signing key on behalf of you as a developer.  All newer apps (and many others) that are live on the Play Store are opted into Play App Signing.
 
