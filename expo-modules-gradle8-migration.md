@@ -53,6 +53,43 @@ You can apply the following patch to your module's **build.gradle** file to reso
  repositories {
 ```
 
+## Error: `task (current target is 17) and 'compileReleaseKotlin' task (current target is 11) jvm target compatibility should be set to the same Java version.`
+
+When upgrading Expo SDK 50 from your existing Android project, you may get a similar error:
+
+```
+> 'compileReleaseJavaWithJavac' task (current target is 17) and 'compileReleaseKotlin' task (current target is 11) jvm target compatibility should be set to the same Java version.
+  Consider using JVM toolchain: https://kotl.in/gradle/jvm/toolchain
+```
+
+Since Expo SDK 50 or React Native 0.73, the JVM target version will be setup by `@react-native/gradle-plugin` and [JVM toolchain](https://kotl.in/gradle/jvm/toolchain). You can remove the previous JVM target version in your library's **build.gradle**:
+
+```diff
+--- a/android/build.gradle
++++ b/android/build.gradle
+@@ -53,13 +53,16 @@ afterEvaluate {
+ android {
+   compileSdkVersion safeExtGet("compileSdkVersion", 34)
+ 
+-  compileOptions {
+-    sourceCompatibility JavaVersion.VERSION_11
+-    targetCompatibility JavaVersion.VERSION_11
+-  }
++  def agpVersion = com.android.Version.ANDROID_GRADLE_PLUGIN_VERSION
++  if (agpVersion.tokenize('.')[0].toInteger() < 8) {
++    compileOptions {
++      sourceCompatibility JavaVersion.VERSION_11
++      targetCompatibility JavaVersion.VERSION_11
++    }
+ 
+-  kotlinOptions {
+-    jvmTarget = JavaVersion.VERSION_11.majorVersion
++    kotlinOptions {
++      jvmTarget = JavaVersion.VERSION_11.majorVersion
++    }
+   }
+```
+
 ## Warning: `Setting the namespace via a source AndroidManifest.xml's package attribute is deprecated.`
 
 If you see a warning similar to the following:
