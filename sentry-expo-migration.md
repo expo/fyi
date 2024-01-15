@@ -4,10 +4,15 @@ As of SDK 50, `sentry-expo` has been merged into `@sentry/react-native`, and `se
 
 In this guide, we'll walk you through the steps to migrate from `sentry-expo` to `@sentry/react-native`:
 
+- Upgrade to Expo SDK 50 or higher
 - Remove `sentry-expo` and install `@sentry/react-native`
 - Update your `sentry-expo` imports to `@sentry/react-native`
 - Update your `app.json` to include the Sentry plugin and remove the hook
 - Update your **metro.config.js** to include the Sentry transformer plugin
+
+## Ugrade to Expo SDK 50 or higher
+
+Learn more in the ["Upgrade Expo SDK" doc](https://docs.expo.dev/workflow/upgrading-expo-sdk-walkthrough/) 
 
 ## Remove `sentry-expo` and install `@sentry/react-native`
 
@@ -48,7 +53,7 @@ On your terminal, run the following commands to remove `sentry-expo` and install
 
 ## Update your **metro.config.js** to include the Sentry transformer plugin
 
-Sentry hooks into Metro to inject a "debug ID" into your source maps. This debug ID is used to associate source maps with releases. To enable this, you need to add the following to your **metro.config.js** file (if you don't have the file yet, create it in the root of your project):
+To enable this, you need to add the following to your **metro.config.js** file (if you don't have the file yet, create it in the root of your project):
 
 ```js
 // This replaces `const { getDefaultConfig } = require('expo/metro-config');`
@@ -59,6 +64,8 @@ const config = getSentryExpoConfig(__dirname);
 
 module.exports = config;
 ```
+
+> Curious what this is for? Sentry hooks into Metro to inject a runtime polyfill to read your debug ID, which is generated at build time to uniquely identify the bundle, and then that debug ID is used to associate errors, source maps, and releases. This saves you needing to provide identification metadata to Sentry manually.
 
 ## What's next?
 
