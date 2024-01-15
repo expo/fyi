@@ -1,6 +1,6 @@
 # Migrating from sentry-expo to @sentry/react-native
 
-As of SDK 50, `sentry-expo` has been merged into `@sentry/react-native`, and `sentry-expo` is now deprecated. The `sentry-expo` package will continue to work in SDK 50, but we recommend moving to `@sentry/react-native`. This change allows us to deduplicate efforts and ensure a better, always up to date experience for folks that use Sentry in their projects. After migrating to `@sentry/react-native`, it is now as easy as `eas update --chanel <channel> && npx sentry-expo-upload-sourcemaps dist` to publish and update upload the corresponding sourcemaps.
+As of SDK 50, `sentry-expo` has been merged into `@sentry/react-native`, and `sentry-expo` is now deprecated. The `sentry-expo` package will continue to work in SDK 50, but we recommend moving to `@sentry/react-native`. This change allows us to deduplicate efforts and ensure a better, always up to date experience for folks that use Sentry in their projects. After migrating to `@sentry/react-native`, it is now as easy as `eas update --channel <channel> && npx sentry-expo-upload-sourcemaps dist` to publish and update upload the corresponding sourcemaps.
 
 In this guide, we'll walk you through the steps to migrate from `sentry-expo` to `@sentry/react-native`:
 
