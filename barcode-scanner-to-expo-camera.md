@@ -27,7 +27,7 @@ export default function App() {
 
   useEffect(() => {
     const getBarCodeScannerPermissions = async () => {
-      const { status } = await BarCodeScanner.requestCameraPermissionsAsync();
+      const { status } = await BarCodeScanner.requestPermissionsAsync();
       setHasPermission(status === "granted");
     };
 
@@ -49,7 +49,7 @@ export default function App() {
   return (
     <View style={styles.container}>
       <BarCodeScanner
-        onBarcodeScanned={scanned ? undefined : handleBarCodeScanned}
+        onBarCodeScanned={scanned ? undefined : handleBarCodeScanned}
         style={StyleSheet.absoluteFillObject}
       />
       {scanned && (
