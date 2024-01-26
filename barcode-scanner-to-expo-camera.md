@@ -81,7 +81,7 @@ export default function App() {
 
   useEffect(() => {
     const getCameraPermissions = async () => {
-      const { status } = await Camera.requestPermissionsAsync();
+      const { status } = await Camera.requestCameraPermissionsAsync();
       setHasPermission(status === "granted");
     };
 
@@ -103,7 +103,7 @@ export default function App() {
   return (
     <View style={styles.container}>
       <CameraView
-        onBarCodeScanned={scanned ? undefined : handleBarCodeScanned}
+        onBarcodeScanned={scanned ? undefined : handleBarCodeScanned}
         barcodeScannerSettings={{
           barCodeTypes: ["qr", "pdf417"],
         }}
