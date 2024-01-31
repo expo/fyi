@@ -13,11 +13,11 @@ Read on for how to configure the Okta application and obtain this information.
 
 1. In the Okta admin interface, select **Applications** -> **Applications** in the menu on the left:
 
-[<img src="./assets/sso-setup-okta/01-applications-menu.png" width="400" />](./assets/sso-setup-okta/01-applications-menu.png)
+[<img src="./assets/sso-setup-okta/01-applications-menu.png" height="200" />](./assets/sso-setup-okta/01-applications-menu.png)
 
 2. Then click **Create App Integration**:
 
-[<img src="./assets/sso-setup-okta/02-create-app-integration.png" width="400" />](./assets/sso-setup-okta/02-create-app-integration.png)
+[<img src="./assets/sso-setup-okta/02-create-app-integration.png" height="200" />](./assets/sso-setup-okta/02-create-app-integration.png)
 
 3. Choose **OIDC** and **Web Application**:
 
