@@ -13,27 +13,27 @@ Read on for how to configure the Okta application and obtain this information.
 
 1. In the Okta admin interface, select **Applications** -> **Applications** in the menu on the left:
 
-[<img src="./assets/sso-setup-okta/01-applications-menu.png" width="800" />](./assets/sso-setup-okta/01-applications-menu.png)
+[<img src="./assets/sso-setup-okta/01-applications-menu.png" width="400" />](./assets/sso-setup-okta/01-applications-menu.png)
 
 2. Then click **Create App Integration**:
 
-[<img src="./assets/sso-setup-okta/02-create-app-integration.png" width="800" />](./assets/sso-setup-okta/02-create-app-integration.png)
+[<img src="./assets/sso-setup-okta/02-create-app-integration.png" width="400" />](./assets/sso-setup-okta/02-create-app-integration.png)
 
 3. Choose **OIDC** and **Web Application**:
 
-[<img src="./assets/sso-setup-okta/03-oidc-web-app.png" width="800" />](./assets/sso-setup-okta/03-oidc-web-app.png)
+[<img src="./assets/sso-setup-okta/03-oidc-web-app.png" width="400" />](./assets/sso-setup-okta/03-oidc-web-app.png)
 
 4. Name the app `Expo`` and select the **Authorization Code** and **Refresh Token** options:
 
-[<img src="./assets/sso-setup-okta/04-auth-code-option.png" width="800" />](./assets/sso-setup-okta/04-auth-code-option.png)
+[<img src="./assets/sso-setup-okta/04-auth-code-option.png" width="400" />](./assets/sso-setup-okta/04-auth-code-option.png)
 
 5. Set the **Sign-in Redirect URI** to `https://expo.dev/auth/callback/okta` to and the **Sign-out URI** to `https://expo.dev`:
 
-[<img src="./assets/sso-setup-okta/05-redirect-uris.png" width="800" />](./assets/sso-setup-okta/05-redirect-uris.png)
+[<img src="./assets/sso-setup-okta/05-redirect-uris.png" width="400" />](./assets/sso-setup-okta/05-redirect-uris.png)
 
 6. Set the **Assignments** settings in a manner consistent with how your Okta organization is configured:
 
-[<img src="./assets/sso-setup-okta/06-assignments.png" width="800" />](./assets/sso-setup-okta/06-assignments.png)
+[<img src="./assets/sso-setup-okta/06-assignments.png" width="400" />](./assets/sso-setup-okta/06-assignments.png)
 
 ## Providing application info to Expo
 
@@ -49,14 +49,14 @@ Expo will need:
 
 1. Obtain client ID and secret from the **General** tab under the application::
 
-[<img src="./assets/sso-setup-okta/07-client-id.png" width="800" />](./assets/sso-setup-okta/07-client-id.png)
+[<img src="./assets/sso-setup-okta/07-client-id.png" width="400" />](./assets/sso-setup-okta/07-client-id.png)
 
 2. Obtain the subdomain from the user settings in the upper right corner:
 
-[<img src="./assets/sso-setup-okta/08-subdomain.png" width="800" />](./assets/sso-setup-okta/08-subdomain.png)
+[<img src="./assets/sso-setup-okta/08-subdomain.png" width="400" />](./assets/sso-setup-okta/08-subdomain.png)
 
 ### Obtaining Expo organization name
 
 The Expo organization name is available from the Account overview when logging into your account at [expo.dev](https://expo.dev):
 
-[<img src="./assets/sso-setup-general/01-expo-org.png" width="800" />](./assets/sso-setup-general/01-expo-org.png)
+[<img src="./assets/sso-setup-general/01-expo-org.png" width="400" />](./assets/sso-setup-general/01-expo-org.png)
