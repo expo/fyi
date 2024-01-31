@@ -13,7 +13,7 @@ Read on for how to configure the Okta application and obtain this information.
 
 1. In the Okta admin interface, select **Applications** -> **Applications** in the menu on the left:
 
-[<img src="./assets/sso-setup-okta/01-applications-menu.png" width="400" />](./assets/sso-setup-okta/01-applications-menu.png)
+[<img src="./assets/sso-setup-okta/01-applications-menu.png" width="250" />](./assets/sso-setup-okta/01-applications-menu.png)
 
 2. Then click **Create App Integration**:
 
@@ -49,7 +49,7 @@ Expo will need:
 
 1. Obtain client ID and secret from the **General** tab under the application::
 
-[<img src="./assets/sso-setup-okta/07-client-id.png" width="600" />](./assets/sso-setup-okta/07-client-id.png)
+[<img src="./assets/sso-setup-okta/07-client-id.png" width="500" />](./assets/sso-setup-okta/07-client-id.png)
 
 2. Obtain the subdomain from the user settings in the upper right corner:
 
