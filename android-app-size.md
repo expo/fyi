@@ -1,6 +1,6 @@
 # Android app size
 
-Let's address a common question: a developer runs a build for a simple app and then looks at the resulting artifact and asks something like "why is my app 50mb? that's huge!"
+Let's address a common question: a developer runs a build for a simple app and then looks at the resulting artifact and asks "why is my app 50mb? That's huge!"
 
 The reason is that **this is not actually the size of your app as it will be distributed on the Google Play Store** (or other stores). Learn more about why this is the case and how to get a more accurate picture of your app's size.
 
@@ -12,19 +12,19 @@ Of course, if you're running an incredibly popular app store that serves million
 
 ## AABs (Android App Bundles)
 
-On Android, all new apps submitted to the Play Store must be built as an [Android App Bundle (.aab)](https://developer.android.com/platform/technology/app-bundle).apk). Only once you have submitted the binaries to their respective stores will you be able to see the download size for various different device types.
+On Android, all new apps submitted to the Play Store must be built as an [Android App Bundle (.aab)](https://developer.android.com/platform/technology/app-bundle). Only once you have submitted the binaries to their respective stores will you be able to see the download size for various different device types.
 
 ## "So how big is my app?"
 
 Typically, what app developers care about the "download size" on the Play Store (what the users see in the store listing when they go to download the app). This will be the size of the APK that Google Play generates from your AAB, which is tailored to the user's device. This is the size that users will see when they go to download your app.
 
-The only truly accurate way to see what your final app size will be shipped to users is to upload your app to the stores and view the information on your developer dashboard.
+The only truly accurate way to see what your final app size will be shipped to users is to upload your app to the stores and download on a physical device. Google Play also provides a reliable estimate for the expected download size on your developer dashboard.
 
 ## FAQ
 
 ### Why did my APK size increase after upgrading to React Native 0.73?
 
-React Native 0.73 / Expo SDK 50 bumped the `minSdkVersion` to `23`. This had the side effect of making the default value of [`extractNativeLibs`](https://developer.android.com/guide/topics/manifest/application-element#extractNativeLibs`) now `false`.
+React Native 0.73 / Expo SDK 50 bumped the `minSdkVersion` to `23`. This had the side effect of making the default value of [`extractNativeLibs`](https://developer.android.com/guide/topics/manifest/application-element#extractNativeLibs`) to `false`.
 
 > If set to "false", your native libraries are stored uncompressed in the APK. Although your APK might be larger, your application loads faster because the libraries load directly from the APK at runtime.
 
