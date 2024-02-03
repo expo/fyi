@@ -64,3 +64,58 @@ TODO: I think this would go better in .bashrc, since it can change depending on 
 - Open Windows task scheduler
 - Add a task to run the script after log on
 (see screenshots)
+
+Other stuff:
+Run the script:
+```
+powershell -ExecutionPolicy Bypass -f C:\Users\keith\OneDrive\Desktop\wsl2_ports.ps1 
+```
+
+-------
+.wslconfig file
+
+Write to %USERPROFILE%/.wslconfig
+
+```
+[wsl2]
+networkingMode=mirrored
+```
+
+Open up the firewall (powershell):
+```
+ Set-NetFirewallHyperVVMSetting -Name ‘{40E0AC32-46A5-438A-A0B2-2B479E8F2E90}’ -DefaultOutboundAction Allow                
+```
+
+```
+wsl --list
+wsl --shutdown
+```
+
+-------
+
+Debugging
+
+LaunchBrowserImplWindows
+
+isSupportedBrowser() errors with spawn powershell.exe ENOENT or whatever
+
+workaround around that by commenting out `env`
+but not sure if it was just that or that I added
+`%SystemRoot%\system32\WindowsPowerShell\v1.0` to windows path
+
+But that lead to crash with `spawn chrome ENOENT` 
+at openWithSystemRootEnvironment
+
+This could be related: https://github.com/sindresorhus/open/issues/198
+But wslu didn't help
+
+Removing IS_WSL (https://github.com/expo/expo/issues/23678) did work once I got Chrome for linux installed:
+https://learn.microsoft.com/en-us/windows/wsl/tutorials/gui-apps
+
+I had to do the missing packages thing, but with sudo
+
+Also tried:
+```
+ /mnt/c/Program\ Files/Google/Chrome/Application/chrome.exe --app="https://chrome-devtools-frontend.appspot.com/serve_rev/@d9568d04d7dd79269c5a655d7ada69650c5a8336/devtools_app.html?panel=console&ws=192.168.2.106%3A8081%2Finspector%2Fdebug%3Fdevice%3Da3b9654402cf71d316fe9793c4b89780a477bb9f%26page%3D-1" --allow-running-insecure-content --user-data-dir=C:\Users\keith\AppData\Local\Temp\expo-inspector --no-first-run --no-default-browser-check
+```
+and it opened the devtools window but didn't connect to anything
