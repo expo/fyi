@@ -28,6 +28,15 @@ On your terminal, run the following commands to remove `sentry-expo` and install
 - Replace any usage of `Sentry.Native.*` with `Sentry.*`, where `Sentry` is imported from `@sentry/react-native` as above (e.g. `Sentry.Native.captureException` -> `Sentry.captureException`)
 - Replace any usage of `Sentry.Browser.*` with `Sentry.*`, where `Sentry` is imported from `@sentry/browser`.
 
+## Wrap your App with `Sentry.wrap()`:
+```javascript
+import * as Sentry from '@sentry/react-native';
+
+// Your App component here
+
+export default Sentry.wrap(App);
+```
+
 ## Update your `app.json` to include the Sentry plugin and remove the hook
 
 - Remove the the `sentry-expo` `postPublish` hook from your `app.json` if you have it.
