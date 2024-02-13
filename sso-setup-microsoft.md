@@ -1,59 +1,106 @@
-# Configuring Okta for Expo SSO
+# Configuring Microsoft Entra ID for Expo SSO
 
-In order for Expo to configure your organization to use Single Sign-On (SSO), you will need to configure a new application in Okta and then provide the Expo support team with the following information:
+In order for Expo to configure your organization to use Single Sign-On (SSO), you will need to configure a new application in Microsoft Entra ID and then provide the Expo support team with the following information:
 
-- Client ID from your Okta application
-- Client secret from Okta application
-- Okta subdomain
+- Client ID from your application
+- Client secret from application
+- Tenant ID
 - Expo organization name
 
-Read on for how to configure the Okta application and obtain this information.
+Read on for how to configure the Entra ID application and obtain this information.
 
-## Setting up the Okta application
+## Setting up the Entra ID application
 
-1. In the Okta admin interface, select **Applications** -> **Applications** in the menu on the left:
+### Creating a new application
 
-[<img src="./assets/sso-setup-okta/01-applications-menu.png" width="250" />](./assets/sso-setup-okta/01-applications-menu.png)
+1. In the [Azure portal](ttps://portal.azure.com/#home), go to **App Registrations** and choose **New Registration**:
 
-2. Then click **Create App Integration**:
+[<img src="./assets/sso-setup-microsoft/01-app-registrations.png" width="250" />](./assets/sso-setup-microsoft/01-app-registrations.png)
 
-[<img src="./assets/sso-setup-okta/02-create-app-integration.png" width="150" />](./assets/sso-setup-okta/02-create-app-integration.png)
+[<img src="./assets/sso-setup-microsoft/02-new-registration.png" width="250" />](./assets/sso-setup-microsoft/02-new-registration.png)
 
-3. Choose **OIDC** and **Web Application**:
+2. For the new registration, give it a name and set it to "single tenant." Click **Register**:
 
-[<img src="./assets/sso-setup-okta/03-oidc-web-app.png" width="600" />](./assets/sso-setup-okta/03-oidc-web-app.png)
+[<img src="./assets/sso-setup-microsoft/03-register-new-app.png" width="150" />](./assets/sso-setup-microsoft/03-register-new-app.png)
 
-4. Name the app `Expo`` and select the **Authorization Code** and **Refresh Token** options:
+3. Go back to the list of **App Registrations** and click your new registration. Click **Authentication**, **Add a platform**, and **Web**:
 
-[<img src="./assets/sso-setup-okta/04-auth-code-option.png" width="600" />](./assets/sso-setup-okta/04-auth-code-option.png)
+[<img src="./assets/sso-setup-microsoft/04-authentication.png" width="600" />](./assets/sso-setup-microsoft/04-authentication.png)
 
-5. Set the **Sign-in Redirect URI** to `https://expo.dev/auth/callback/okta` to and the **Sign-out URI** to `https://expo.dev`:
+[<img src="./assets/sso-setup-microsoft/04-new-platform.png" width="600" />](./assets/sso-setup-microsoft/04-new-platform.png)
 
-[<img src="./assets/sso-setup-okta/05-redirect-uris.png" width="600" />](./assets/sso-setup-okta/05-redirect-uris.png)
+4. Set the **Redirect URI** to `https://expo.dev/auth/callback/msentraid` and click **Configure**:
 
-6. Set the **Assignments** settings in a manner consistent with how your Okta organization is configured:
+[<img src="./assets/sso-setup-microsoft/05-configure-web.png" width="600" />](./assets/sso-setup-microsoft/05-configure-web.png)
 
-[<img src="./assets/sso-setup-okta/06-assignments.png" width="600" />](./assets/sso-setup-okta/06-assignments.png)
+5. Click **Add URI** and add `https://expo.dev`. Then click **Save**:
+
+### Granting permissions
+
+[<img src="./assets/sso-setup-microsoft/06-add-redirect-uri.png" width="600" />](./assets/sso-setup-microsoft/06-add-redirect-uri.png)
+
+6. Click **API Permissions** on the sidebar and then **Add Permission**:
+
+[<img src="./assets/sso-setup-microsoft/07-api-permissions.png" width="150" />](./assets/sso-setup-microsoft/07-api-permissions.png)
+[<img src="./assets/sso-setup-microsoft/08-add-permissions.png" width="150" />](./assets/sso-setup-microsoft/08-add-permissions.png)
+
+7. Click **Microsoft Graph**, **Delegated Permissions**, select the four OpenID permissions (email, offline_access, openid, profile), and then click **Add Permissions**:
+
+[<img src="./assets/sso-setup-microsoft/09-microsoft-graph.png" width="300" />](./assets/sso-setup-microsoft/09-microsoft-graph.png)
+
+[<img src="./assets/sso-setup-microsoft/10-openid-permissions.png" width="300" />](./assets/sso-setup-microsoft/10-openid-permissions.png)
+
+### Set an owner
+
+8. Click **Owners** on the sidebar, **Add owners**, and add an owner:
+
+[<img src="./assets/sso-setup-microsoft/11-owners.png" width="300" />](./assets/sso-setup-microsoft/11-owners.png)
+
+[<img src="./assets/sso-setup-microsoft/12-add-owners.png" width="300" />](./assets/sso-setup-microsoft/12-add-owners.png)
+
+### Create a client secret
+
+9. Click **Overview** on the sidebar and then **Add a certificate or secret**:
+
+[<img src="./assets/sso-setup-microsoft/13-overview.png" width="150" />](./assets/sso-setup-microsoft/13-overview.png)
+
+[<img src="./assets/sso-setup-microsoft/14-add-a-secret.png" width="300" />](./assets/sso-setup-microsoft/14-add-a-secret.png)
+
+10. Click **New client secret**, set a description, and create the secret:
+
+[<img src="./assets/sso-setup-microsoft/15-new-secret.png" width="600" />](./assets/sso-setup-microsoft/15-new-secret.png)
+
+Copy this secret, as it will only be available for a limited time.
+
+### Important: SSO users must have email addresses
+
+In order to login successfully to Expo with SSO, users must have an email address set. You can check this by going back to the Azure home, then to **Microsoft Entra ID**, **Users**, and then open up a user and look at their **Properties** tab.
+
+[<img src="./assets/sso-setup-microsoft/16-entra-id.png" width="150" />](./assets/sso-setup-microsoft/16-entra-id.png)
+
+[<img src="./assets/sso-setup-microsoft/17-users.png" width="150" />](./assets/sso-setup-microsoft/17-users.png)
+
+[<img src="./assets/sso-setup-microsoft/18-open-a-user.png" width="300" />](./assets/sso-setup-microsoft/18-open-a-user.png)
 
 ## Providing application info to Expo
 
-After saving the application, Okta will take you to the application screen, where you can copy information that will be needed by the Expo team in order to configure SSO on your Expo organization.
-
-Expo will need:
-- Client ID
-- Client secret
-- Okta subdomain
+To setup your account to use MS Entra ID, Expo will need:
+- Client ID from your application
+- Client secret from application
+- Tenant ID
 - Expo organization name
 
-### Obtaining Client ID / Secret / Issuer URL
+### Obtaining Client ID / Tenant ID
 
-1. Obtain client ID and secret from the **General** tab under the application::
+Client ID will be available under **Home** -> **App registrations** -> your new app:
 
-[<img src="./assets/sso-setup-okta/07-client-id.png" width="500" />](./assets/sso-setup-okta/07-client-id.png)
+[<img src="./assets/sso-setup-microsoft/19-client-and-tenant-id.png" width="300" />](./assets/sso-setup-microsoft/19-client-and-tenant-id.png)
 
-2. Obtain the subdomain from the user settings in the upper right corner:
+### Obtaining Client Secret
 
-[<img src="./assets/sso-setup-okta/08-subdomain.png" width="300" />](./assets/sso-setup-okta/08-subdomain.png)
+If you didn't copy it when creating it, for a limited time, client secret will be available next to the Client and Tenant ID's, under **Client Credentials**. If the secret is no longer visible, you can create a new one:
+
+[<img src="./assets/sso-setup-microsoft/14-add-a-secret.png" width="300" />](./assets/sso-setup-microsoft/14-add-a-secret.png)
 
 ### Obtaining Expo organization name
 
