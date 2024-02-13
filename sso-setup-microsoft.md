@@ -21,13 +21,13 @@ Read on for how to configure the Entra ID application and obtain this informatio
 
 2. For the new registration, give it a name and set it to "single tenant." Click **Register**:
 
-[<img src="./assets/sso-setup-microsoft/03-register-new-app.png" width="600" />](./assets/sso-setup-microsoft/03-register-new-app.png)
+[<img src="./assets/sso-setup-microsoft/03-register-new-app.png" width="700" />](./assets/sso-setup-microsoft/03-register-new-app.png)
 
 3. Go back to the list of **App Registrations** and click your new registration. Click **Authentication**, **Add a platform**, and **Web**:
 
 [<img src="./assets/sso-setup-microsoft/04-authentication.png" width="250" />](./assets/sso-setup-microsoft/04-authentication.png)
 
-[<img src="./assets/sso-setup-microsoft/04-new-platform.png" width="600" />](./assets/sso-setup-microsoft/04-new-platform.png)
+[<img src="./assets/sso-setup-microsoft/04-new-platform.png" width="700" />](./assets/sso-setup-microsoft/04-new-platform.png)
 
 4. Set the **Redirect URI** to `https://expo.dev/auth/callback/msentraid` and click **Configure**:
 
@@ -47,9 +47,9 @@ Read on for how to configure the Entra ID application and obtain this informatio
 
 7. Click **Microsoft Graph**, **Delegated Permissions**, select the four OpenID permissions (email, offline_access, openid, profile), and then click **Add Permissions**:
 
-[<img src="./assets/sso-setup-microsoft/09-microsoft-graph.png" width="500" />](./assets/sso-setup-microsoft/09-microsoft-graph.png)
+[<img src="./assets/sso-setup-microsoft/09-microsoft-graph.png" width="700" />](./assets/sso-setup-microsoft/09-microsoft-graph.png)
 
-[<img src="./assets/sso-setup-microsoft/10-openid-permissions.png" width="500" />](./assets/sso-setup-microsoft/10-openid-permissions.png)
+[<img src="./assets/sso-setup-microsoft/10-openid-permissions.png" width="700" />](./assets/sso-setup-microsoft/10-openid-permissions.png)
 
 ### Set an owner
 
