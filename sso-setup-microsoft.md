@@ -73,6 +73,22 @@ Read on for how to configure the Entra ID application and obtain this informatio
 
 Copy this secret, as it will only be available for a limited time.
 
+### Assigning users to the OIDC app
+
+11. Go to Azure home, then to **Microsoft Entra ID**, and click on the Expo OIDC application:
+
+[<img src="./assets/sso-setup-microsoft/16-entra-id.png" width="250" />](./assets/sso-setup-microsoft/16-entra-id.png)
+
+[<img src="./assets/sso-setup-microsoft/20-enterprise-applications.png" width="250" />](./assets/sso-setup-microsoft/20-enterprise-applications.png)
+
+[<img src="./assets/sso-setup-microsoft/21-enterprise-application.png" width="600" />](./assets/sso-setup-microsoft/20-enterprise-application.png)
+
+12. Click **Assign users and groups**, then **Add User/Group**, then **None Selected**, and then select all applicable users:
+
+[<img src="./assets/sso-setup-microsoft/22-assign-users-and-groups.png" width="250" />](./assets/sso-setup-microsoft/22-assign-users-and-groups.png)
+
+[<img src="./assets/sso-setup-microsoft/23-users-assigned.png" width="600" />](./assets/sso-setup-microsoft/users-assigned.png)
+
 ### Important: SSO users must have email addresses
 
 In order to login successfully to Expo with SSO, users must have an email address set. You can check this by going back to the Azure home, then to **Microsoft Entra ID**, **Users**, and then open up a user and look at their **Properties** tab.
