@@ -18,7 +18,7 @@ If you were able to get a previously working commit running, then you can pat yo
 
 But that is often not so helpful, because presumably you had made some changes that you wanted. So we have two options for how to proceed now: incrementally add or remove changes, or disassemble reassemble. Over time and repeated application, you’ll get an intuition for which situations are best suited for a particular approach. Regardless of the strategy, you should always be able to identify the specific changes that cause the error. You may not understand the root cause, but this information is vital for your next research steps and for getting help or reporting a bug if needed.
 
-### Incrementally and or remove changes
+### Incrementally add or remove changes
 
 Incrementally introducing changes by finding some small chunk of code in your diff and adding it to your app and then loading your app and ensuring it still works. You will have to use some judgement to determine what order you should try introducing changes in to try to keep things working at each step. At some point, you should hit the exact same error as before. If the last change you applied was big enough that you’re not exactly sure what line(s) caused the error, then undo the change and add it back line-by-line until you see the error again. You now have some incredibly useful information for reproducing the error. If you can’t figure out what is wrong with your app from this, then certainly someone will be able to help you when you file an issue.
 
