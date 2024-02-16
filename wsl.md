@@ -1,5 +1,9 @@
 # Running a local Expo development environment in Windows Subsystem for Linux (WSL)
-You can use Expo tools in Windows via the Powershell terminal, but many developers appreciate being able to develop in a Linux environment via Windows Subsystem for Linux (WSL). WSL 2 enables Windows users to run a full Linux environment alongside their Windows applications. As Expo tools support Linux, they can run inside of WSL. The primary challenge with using Expo tools inside of WSL is that WSL is virtual machine with its own separate IP address internal to your machine, and the Expo CLI runs a development server that you may want to connect to via a development build running on a mobile device on your local network. Read on about how to configure WSL so the Expo CLI's dev server is accessible from your LAN even when running in WSL, just as it would be if you were running Linux or another operating system directly.
+You can use Expo tools in Windows via the Powershell terminal, but many developers appreciate being able to develop in a Linux environment via Windows Subsystem for Linux (WSL).
+
+WSL 2 enables Windows users to run a full Linux environment alongside their Windows applications. As Expo tools support Linux, they can run inside of WSL. The primary challenge with using Expo tools inside of WSL is that WSL is a virtual machine with its own separate IP address internal to your machine, and the Expo CLI runs a development server that you may want to connect to via a development build running on a mobile device on your local network.
+
+This guide provides steps on how to configure WSL so the Expo CLI's dev server is accessible from your LAN even when running in WSL, as it would be if you were running Linux or another operating system directly.
 
 ## Recommended prerequisites
 These instructions may work with other Linux distributions, text editors, etc., but this setup is well-documented by Microsoft and we have been able to successfully configure WSL 2 to work well with Expo local development under these conditions.
