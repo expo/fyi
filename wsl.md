@@ -53,8 +53,13 @@ To enable mirrored mode, add/update the **.wslconfig** file in your **%USERPROFI
 networkingMode=mirrored
 ```
 
-WSL will need to shutdown and restart in order for this setting to take effect. You can see if WSL is still running by opening a Powershell terminal and running:
-`wsl --list`. If any are still open, run `wsl --shutdown` and then reopen a WSL terminal (via Windows Terminal or VS Code) to restart WSL.
+WSL will need to shut down and restart for this setting to take effect. You can see if WSL is still running by opening a Powershell terminal and running:
+
+```
+wsl --list
+```
+
+If any are still open, run `wsl --shutdown` and reopen a WSL terminal (via Windows Terminal or VS Code) to restart WSL.
 
 #### Opening up the Hyper-V firewall
 On recent Windows/WSL updates, you may also need to open up inbound connections on the Hyper-V firewall. [Microsoft documents a few options for this](https://learn.microsoft.com/en-us/windows/wsl/networking#mirrored-mode-networking). One option is to right-click on Windows Terminal in the Start menu, click "Open as Administrator", open a Powershell tab, and run the following command:
