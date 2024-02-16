@@ -78,7 +78,7 @@ Performing the steps in part 1 is technically enough to expose the dev server to
 However, the IP can be overridden via the `REACT_NATIVE_PACKAGER_HOSTNAME` environment variable, which we can set based on the IP address of your network adapter as reported by **netsh.exe** from the Windows side.
 
 Add the following to your scripts section of your **package.json**:
-```
+```json
 "scripts" : {
   "start:wsl": "REACT_NATIVE_PACKAGER_HOSTNAME=$(netsh.exe interface ipv4 show addresses 'Wi-Fi' | awk -F'IP Address:' '{print $2}') expo start",
   // other scripts
