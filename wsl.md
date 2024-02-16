@@ -1,5 +1,5 @@
 # Running a local Expo development environment in Windows Subsystem for Linux (WSL)
-You can use Expo tools in Windows via the Powershell terminal, but many developers appreciate being able to develop in *nix-style environment via Windows Subsystem for Linux (WSL). WSL 2 enables Windows users to run a full Linux environment alongside their Windows applications. As Expo tools support Linux, they can run inside of WSL. The primary challenge with using Expo tools inside of WSL is that WSL is virtual machine with its own separate IP address internal to your machine, and the Expo CLI runs a development server that you may want to connect to via a development build running on a mobile device on your local network. Read on about how to configure WSL so the Expo CLI's dev server is accessible from your LAN even when running in WSL, just as it would be if you were running Linux or another operating system directly.
+You can use Expo tools in Windows via the Powershell terminal, but many developers appreciate being able to develop in a Linux environment via Windows Subsystem for Linux (WSL). WSL 2 enables Windows users to run a full Linux environment alongside their Windows applications. As Expo tools support Linux, they can run inside of WSL. The primary challenge with using Expo tools inside of WSL is that WSL is virtual machine with its own separate IP address internal to your machine, and the Expo CLI runs a development server that you may want to connect to via a development build running on a mobile device on your local network. Read on about how to configure WSL so the Expo CLI's dev server is accessible from your LAN even when running in WSL, just as it would be if you were running Linux or another operating system directly.
 
 ## Recommended prerequisites
 These instructions may work with other Linux distributions, text editors, etc., but this setup is well-documented by Microsoft and we have been able to successfully configure WSL 2 to work well with Expo local development under these conditions.
@@ -21,7 +21,7 @@ If you're creating a new Expo project, open up Windows Terminal, open up a WSL t
 If you use Visual Studio Code with the WSL extension and do all your git interactions via Visual Studio Code's git integration, Visual Studio Code will detect that the project files are on the Linux filesystem, and will open the appropriate terminal and use the Linux git installation. While Visual Studio Code is a Windows app, in this scenario, it is effectively remoting into the WSL Linux environment to perform these operations.
 
 ### Warning signs that you're probably mixing Windows and Linux:
-- You run `pwd` and you see paths that start with `/mnt/c`.
+- You run `pwd` and you see paths that start with `/mnt`.
 - You are in a WSL prompt interacting with a project that you originally cloned with Github Desktop for Windows.
 
 ## Running your Expo project in WSL with no additional config
@@ -79,55 +79,6 @@ Add the following to your scripts section of your **package.json**:
 Then, run `npm run start:wsl` to start the development server. The IP address and QR code should now match your Windows host IP.
 
 If this doesn't work be aware that the "Wi-Fi" in the script above is the name of your network adapter and could vary from system to system. You can run `netsh.exe interface ipv4 show addresses` in Powershell to check the name of your network adapter and update your script accordingly.
-
-If you setup NVM, but you're just doing Expo projects, this helps:
-```
-nvm install 18
-nvm alias default 18
-```
-
-2. Setup Visual Studio Code
-- Install Visual Studio Code
-- Install the WSL extension: https://code.visualstudio.com/blogs/2019/09/03/wsl2
-
-3. Setup Git
-- Follow the directions here: https://learn.microsoft.com/en-us/windows/wsl/tutorials/wsl-git
-- Install git on Linux
-- Install git on Windows
-- Setup Git credential manager
-
-Goal:
-- Visual Studio Code should be this shell where everything happens on Linux, in the Linux filesystem and with the Linux git instance.
-
-4. Create or clone a project
-- Open an Ubuntu tab in Windows terminal
-- Run `npx create-expo-app`
-- Run `code my-app`
-
-It'll work. You can open it in web and it'll open in your Windows Chrome browser. But it'll send you a 172.x IP
-
-5. Setup a PowerShell script to open up the Expo ports from Linux to Windows
-
-This script: https://gist.github.com/kendallroth/1f4871febffa0577338214f58673cc1a#file-forward_wsl2_ports-ps1
-(consider adding additional ports for additional instances, e.g. 8082)
-
-Save it to a wsl2_ports.ps1 file
-
-Open Windows Terminal in Adminstrator mode, Open a PowerShell tab, and run:
-`powershell -ExecutionPolicy Bypass -f C:\Users\keith\OneDrive\Desktop\wsl2_ports.ps1`
-
-Goal:
-- In theory, the ports forward, and you could manually type in your Windows IP address into Expo Go / Dev Build and it'd work. But, let's fix those QR codes.
-
-6. Update Expo CLI QR codes
-- Add a script to your project's package.json:
-```
-"start:wsl": "REACT_NATIVE_PACKAGER_HOSTNAME=$(netsh.exe interface ipv4 show addresses 'Wi-Fi' | awk -F'IP Address:' '{print $2}') expo start",
-```
-
-This should update your packager hostname to your Windows IP address, instead of the WSL VM IP address. You may need to fiddle with this slightly, as it is grepping your Windows IF config for your network adapter.
-
-You can extract that inner command and test it in Windows Terminal (Ubuntu) until you get it right. I had to change the network adapter name.
 
 ## Using the JS Debugger
 We are currently looking into an [issue](https://github.com/expo/expo/issues/23678) with opening the browser for the debugger from WSL. In the meantime, you can run still debug from WSL by installing Chrome or another compatible browser inside the WSL Linux environment and patching the Expo CLI to force it to open the Linux-based browser when running in WSL instead of the Windows browser:
