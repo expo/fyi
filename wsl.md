@@ -18,11 +18,11 @@ These instructions may work with other Linux distributions, text editors, and so
 - [Windows Terminal](https://apps.microsoft.com/detail/9N0DX20HK701?hl=en-US&gl=US) is installed
 
 ## Important: Your Expo project must be entirely on the Linux filesystem
-Your Windows environment and your WSL environments each have their own filesystems, and it is possible to interact with files on the Windows side from the WSL terminal prompt. However, once you are using WSL, your Expo project needs to exist on the Linux filesystem, and any source control operations need to be performed via the Linux version of git.
+Your Windows and WSL environments each have their own filesystems, and it is possible to interact with files on the Windows side from the WSL terminal prompt. However, once you are using WSL, your Expo project needs to exist on the Linux filesystem, and any source control operations must be performed via the Linux version of git.
 
-If you're creating a new Expo project, open up Windows Terminal, open up a WSL tab, and then run `npx create-expo-app`. If you're working with an existing Expo project committed to a git repo, run `git clone` from a WSL terminal tab.
+To start a new Expo project in WSL, open Windows Terminal, open a WSL tab, and run `npx create-expo-app`. If you're working with an existing Expo project committed to a git repo, run `git clone` from a WSL terminal tab.
 
-If you use Visual Studio Code with the WSL extension and do all your git interactions via Visual Studio Code's git integration, Visual Studio Code will detect that the project files are on the Linux filesystem, and will open the appropriate terminal and use the Linux git installation. While Visual Studio Code is a Windows app, in this scenario, it is effectively remoting into the WSL Linux environment to perform these operations.
+If you use Visual Studio Code with the WSL extension and do all your git interactions via Visual Studio Code's git integration, Visual Studio Code will detect that the project files are on the Linux filesystem and will open the appropriate terminal and use the Linux git installation. While Visual Studio Code is a Windows app, in this scenario, it is effectively remoting into the WSL Linux environment to perform these operations.
 
 ### Warning signs that you're probably mixing Windows and Linux:
 - You run `pwd` and you see paths that start with `/mnt`.
