@@ -6,7 +6,7 @@ WSL 2 enables Windows users to run a full Linux environment alongside their Wind
 This guide provides steps on how to configure WSL so the Expo CLI's dev server is accessible from your LAN even when running in WSL, as it would be if you were running Linux or another operating system directly.
 
 ## Recommended prerequisites
-These instructions may work with other Linux distributions, text editors, etc., but this setup is well-documented by Microsoft and we have been able to successfully configure WSL 2 to work well with Expo local development under these conditions.
+These instructions may work with other Linux distributions, text editors, and so on. However, this setup is well-documented by Microsoft, and we have been able to successfully configure WSL 2 to work well with Expo local development under these conditions.
 
 - WSL 2 is installed on Windows 11 using the default Linux distribution (Ubuntu):
   - [Follow Microsoft's guide for installing WSL](https://learn.microsoft.com/en-us/windows/wsl/install)
