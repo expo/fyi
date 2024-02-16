@@ -5,7 +5,7 @@ WSL 2 enables Windows users to run a full Linux environment alongside their Wind
 
 This guide provides steps on how to configure WSL so the Expo CLI's dev server is accessible from your LAN even when running in WSL, as it would be if you were running Linux or another operating system directly.
 
-## Recommended prerequisites
+## Recommended setup
 These instructions may work with other Linux distributions, text editors, and so on. However, this setup is well-documented by Microsoft, and we have been able to successfully configure WSL 2 to work well with Expo local development under these conditions.
 
 - WSL 2 is installed on Windows 11 using the default Linux distribution (Ubuntu):
@@ -29,9 +29,9 @@ If you use Visual Studio Code with the WSL extension and do all your git interac
 - You are in a WSL prompt interacting with a project that you originally cloned with Github Desktop for Windows.
 
 ## Running your Expo project in WSL with no additional config
-If you have completed the setup above, you can open up a WSL terminal, navigate to your project folder, restore your dependencies, run `npx expo start`, and the Expo CLI will start up it would anywhere else. You can even press `w` to open up the web version of your app, and Chrome for Windows will open up, pointing to `http://localhost:8081`, and it will serve your app.
+If you have completed the setup above, `npx expo start` should work in a WSL terminal. You can even run the web version in your browser at this point. However, you will not yet be able to connect to a development build.
 
-However, if you look closely at the development server URL / QR code, you'll notice it starts with a `172.x` IP address, while normally you would expect an IP address on your LAN (192.168.x, typically). This IP address is internal to your machine, an address on the private network of which your Linux VM inside the WSL environment is a part of. By default, this IP address is not accessible outside of your machine. Therefore, mobile devices running development builds cannot connect the dev server, even if those devices are on your LAN.
+Notice that the development server URL / QR code starts with a `172.x` IP address, while normally you would expect an IP address on your LAN (192.168.x, typically). This IP address is internal to your machine, an address on the private network of which your Linux VM inside the WSL environment is a part of. By default, this IP address is not accessible outside of your machine. Therefore, mobile devices running development builds cannot connect the dev server, even if those devices are on your LAN.
 
 One zero-config workaround is to run `npx expo start --tunnel`. This will install ngrok and forward your development server to a pubically-accessible web address. However, this is slower to refesh, so it would be ideal if we could connect to the development server from the LAN.
 
