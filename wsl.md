@@ -11,7 +11,7 @@ These instructions may work with other Linux distributions, text editors, and so
 - WSL 2 is installed on Windows 11 using the default Linux distribution (Ubuntu):
   - [Follow Microsoft's guide for installing WSL](https://learn.microsoft.com/en-us/windows/wsl/install)
 - Your WSL environment is setup to use a supported LTS version of Node.js and Git:
-  - [Follow Microsoft's guide for using Node.js in WSL](https://learn.microsoft.com/en-us/windows/dev-environment/javascript/nodejs-on-wsl). If you install a Node version manager as they recommend, be sure to setup an **.nvmrc** in your project or set a default version to use (e.g., `nvm alias default 18`).
+  - [Follow Microsoft's guide for using Node.js in WSL](https://learn.microsoft.com/en-us/windows/dev-environment/javascript/nodejs-on-wsl). If you install a Node version manager as they recommend, set up a **.nvmrc** in your project or set a default version (for example, `nvm alias default 18`).
   - [Follow Microsoft's guide for using Git in WSL](https://learn.microsoft.com/en-us/windows/wsl/tutorials/wsl-git)
 - Visual Studio Code installed in Windows with the [WSL Extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl):
   - [Follow Microsoft's guide for using Visual Studio Code with WSL](https://code.visualstudio.com/docs/remote/wsl)
