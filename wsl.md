@@ -69,7 +69,7 @@ Set-NetFirewallHyperVVMSetting -Name â€˜{40E0AC32-46A5-438A-A0B2-2B479E8F2E90}â€
 
 These commands may change with software updates. If this does not work, check [Microsoft's documentation](https://learn.microsoft.com/en-us/windows/wsl/networking#mirrored-mode-networking).
 
-> If you do not want to enable mirrored mode, it is also possible to setup per-port forwarding of traffic from WSL to Windows manually. [Check Microsoft's documentation for how to do this.](https://learn.microsoft.com/en-us/windows/wsl/networking#accessing-a-wsl-2-distribution-from-your-local-area-network-lan)
+> If you do not want to enable mirrored mode, it is also possible to [setup per-port forwarding of traffic from WSL to Windows manually](https://learn.microsoft.com/en-us/windows/wsl/networking#accessing-a-wsl-2-distribution-from-your-local-area-network-lan).
 
 ### 2. Change the dev server IP address displayed by the Expo CLI
 
