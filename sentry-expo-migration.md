@@ -32,7 +32,7 @@ On your terminal, run the following commands to remove `sentry-expo` and install
 
 - Remove the the `sentry-expo` `postPublish` hook from your `app.json` if you have it.
 - Replace the `sentry-expo` plugin with the `@sentry/react-native/expo` plugin. Move any configuration under `config` from the `postPublish` hook to config for the plugin.
-- Do not include your auth token in the plugin configuration. Use the `SENTRY_AUTH_TOKEN` environment variable instead. Anything included in your plugin configuration will be present in your build and update bundles.
+- Do not include your auth token in the plugin configuration. Use the `SENTRY_AUTH_TOKEN` environment variable instead ([learn more](https://docs.expo.dev/guides/using-sentry/#app-configuration)). Anything included in your plugin configuration will be present in your build and update bundles.
 
 For example:
 
