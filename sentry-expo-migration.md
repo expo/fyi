@@ -31,7 +31,10 @@ On your terminal, run the following commands to remove `sentry-expo` and install
 ## Update your `app.json` to include the Sentry plugin and remove the hook
 
 - Remove the the `sentry-expo` `postPublish` hook from your `app.json` if you have it.
-- Replace the `sentry-expo` plugin with the `@sentry/react-native/expo` plugin. Move any configuration under `config` from the `postPublish` hook to config for the plugin. For example:
+- Replace the `sentry-expo` plugin with the `@sentry/react-native/expo` plugin. Move any configuration under `config` from the `postPublish` hook to config for the plugin.
+- Do not include your auth token in the plugin configuration. Use the `SENTRY_AUTH_TOKEN` environment variable instead. Anything included in your plugin configuration will be present in your build and update bundles.
+
+For example:
 
 ```json
 {
@@ -40,8 +43,7 @@ On your terminal, run the following commands to remove `sentry-expo` and install
       [
         "@sentry/react-native/expo",
         {
-          "url": "https://sentry.io/",
-          "authToken": "--",
+          // removed the "authToken" field that was set in the plugin
           "project": "--",
           "organization": "--"
         }
@@ -50,7 +52,6 @@ On your terminal, run the following commands to remove `sentry-expo` and install
   }
 }
 ```
-
 ## Update your **metro.config.js** to include the Sentry transformer plugin
 
 To enable this, you need to add the following to your **metro.config.js** file (if you don't have the file yet, create it in the root of your project):
