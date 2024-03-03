@@ -59,6 +59,9 @@ const [request, response, promptAsync] = useAuthRequest(
 
 The [`makeRedirectUri()`](https://docs.expo.dev/versions/latest/sdk/auth-session/#authsessionmakeredirecturioptions) generates a redirect URI based on the `scheme` you have defined in the **app.json**. Depending on the OAuth provider you are using, you may need to specify [additional parameters](https://docs.expo.dev/versions/latest/sdk/auth-session/#authsessionredirecturioptions).
 
+> [!NOTE]
+> If your project uses `startAsync()` which has been deprecated, you need to migrate to use `useAuthRequest`.
+
 ### Using `auth.expo.io` proxy?
 
 If you are using the `auth.expo.io` proxy, you need to update the `redirectUri` parameter to use the `expo-auth-session` package instead of the `expo` package as explained in the previous section. **You should redirect to your app with its own registered scheme rather than to the auth proxy URL.**
