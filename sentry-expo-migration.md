@@ -59,7 +59,7 @@ To enable this, you need to add the following to your **metro.config.js** file (
 
 ```js
 // This replaces `const { getDefaultConfig } = require('expo/metro-config');`
-const { getSentryExpoConfig } = require("@sentry/react-native/metro");
+const { getSentryExpoConfig } = require('@sentry/react-native/metro');
 
 // This replaces `const config = getDefaultConfig(__dirname);`
 const config = getSentryExpoConfig(__dirname);
