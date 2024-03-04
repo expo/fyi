@@ -105,7 +105,7 @@ export default function App() {
       <CameraView
         onBarcodeScanned={scanned ? undefined : handleBarCodeScanned}
         barcodeScannerSettings={{
-          barCodeTypes: ["qr", "pdf417"],
+          barcodeTypes: ["qr", "pdf417"],
         }}
         style={StyleSheet.absoluteFillObject}
       />
