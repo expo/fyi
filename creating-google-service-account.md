@@ -87,7 +87,7 @@ Here are the steps to configure a new Google Service Account Key in EAS for send
 [<img src="./assets/creating-google-service-account/fcm-v1/new-service-account/04-upload-credential-2.png" width="800" />](./assets/creating-google-service-account/fcm-v1/new-service-account/04-upload-credential-2.png)
 [<img src="./assets/creating-google-service-account/fcm-v1/new-service-account/04-upload-credential-3.png" width="800" />](./assets/creating-google-service-account/fcm-v1/new-service-account/04-upload-credential-3.png)
 
-5. You're all set! You can now send notifications to Android devices via Expo Push Notifications using the FCM v1 protocol.
+5. You're all set! You can now send notifications to Android devices via the Expo push notification service using the FCM v1 protocol.
 [<img src="./assets/creating-google-service-account/fcm-v1/new-service-account/05-upload-credential-complete.png" width="800" />](./assets/creating-google-service-account/fcm-v1/new-service-account/05-upload-credential-complete.png)
 
 
@@ -111,6 +111,6 @@ Here are the steps to configure a new Google Service Account Key in EAS for send
 [<img src="./assets/creating-google-service-account/fcm-v1/existing-service-account/03-upload-credential-2.png" width="800" />](./assets/creating-google-service-account/fcm-v1/existing-service-account/03-upload-credential-2.png)
 [<img src="./assets/creating-google-service-account/fcm-v1/existing-service-account/03-upload-credential-3.png" width="800" />](./assets/creating-google-service-account/fcm-v1/existing-service-account/03-upload-credential-3.png)
 
-4. You're all set! You can now send notifications to Android devices via the Expo push notification servuce using the FCM v1 protocol.
+4. You're all set! You can now send notifications to Android devices via the Expo push notification service using the FCM v1 protocol.
 [<img src="./assets/creating-google-service-account/fcm-v1/existing-service-account/04-upload-credential-complete.png" width="800" />](./assets/creating-google-service-account/fcm-v1/existing-service-account/04-upload-credential-complete.png)
 
