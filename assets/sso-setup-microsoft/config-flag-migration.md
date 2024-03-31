@@ -12,7 +12,7 @@ The migration process itself is quick, here's how you can do it.
 
 Imagine you have three config files: `app.json`, `app.staging.json`, and `app.production.json`. When you run your app locally for development, you run `expo start`. When you build and publish for staging, you run `expo build:[ios|android] --config app.staging.json` and `expo publish --config app.staging.json`. You'd use a similar sort of thing for `app.production.json`.
 
-Here's an example `app.json` for development, if you're reading this you probably already understand what you would change for staging and produciton.
+Here's an example `app.json` for development, if you're reading this you probably already understand what you would change for staging and production.
 
 ```
 {

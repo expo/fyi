@@ -13,7 +13,7 @@ There are two alternative ways to integrate with version control systems built-i
 
 ### Full Git Workflow
 
-This workflow is recommended for most projects because it ensures that each of your builds is associated with a Git commit, and therefore is reproducible. It also works better with third party tools that hook into Git in your project to extract metadata for their own purposes, for example error reporting services.
+This workflow is recommended for most projects because it ensures that each of your builds is associated with a Git commit, and therefore is reproducible. It also works better with third-party tools that hook into Git in your project to extract metadata for their own purposes, for example, error reporting services.
 
 - It can be enabled by adding `{ "cli": { "requireCommit": true } }` at the root level of your `eas.json`.
 - It uses `git` to find the root of the project and other useful metadata (branch, commit hash, and so on).
@@ -32,11 +32,12 @@ If you are using a different version control system, or if you are not using any
 
 ## Migration notes
 
-In `eas-cli@>=0.34.0` the default behavior in EAS CLI is no longer the "Full Git Workflow"; commiting your changes will not be required to run a build. You will be prompted to select whether you would like to migrate to the new default the first time you run a build with a new EAS CLI version.
+In `eas-cli@>=0.34.0` the default behavior in EAS CLI is no longer the "Full Git Workflow"; committing your changes will not be required to run a build. You will be prompted to select whether you would like to migrate to the new default the first time you run a build with a new EAS CLI version.
 
 That said, there are good reasons to use that workflow; please refer to the [Full Git Workflow](#full-git-workflow) section above for more information. The main motivation behind changing the default is to simplify onboarding for new users by removing the requirement to commit every time they start a build.
 
 If you are switching to the new default, you should consider the following limitations:
+
 - If EAS CLI happens to make any changes to the project, we can't show you the Git diff. You will still be prompted before we make the changes.
 - Only the Full Git Workflow uses Git for packaging (it does a shallow clone); in other cases, EAS CLI attempts to mimic this behavior, but there could be some inconsistencies between `git clone` and our algorithm.
   - If you have multiple `.gitignore` files, they are applied in isolation starting from the root, so if you have an ignore rule like `test/example` in the parent directory and `!example/example1` in the `test` directory then the entire `example` directory will still be ignored.
