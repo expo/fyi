@@ -22,4 +22,4 @@ Imagine that you're working on [Expo CLI](https://docs.expo.dev/more/expo-cli/) 
 
 - You can add any arbitrary string like `this-does-not-exist` to the URL and it will just bring you to the GitHub 404 pages: [https://expo.fyi/this-does-not-exist](https://expo.fyi/this-does-not-exist). You probably do not want to do this, so instead create a file and link to it, and don't delete the file if it's linked to from somewhere already.
 - If you go to [https://expo.fyi](https://expo.fyi) it will just redirect you to the GitHub repo.
-- You can create your own domain like this by cloning [https://github.com/expo/expo-fyi](https://github.com/expo/expo-fyi) &mdash; a small service that you can deploy to vercel.com. Customize the URLs it uses in [index.js](https://github.com/expo/expo-fyi/blob/master/index.js).
+- You can create your own domain like this by cloning [https://github.com/expo/expo-fyi](https://github.com/expo/expo-fyi) &mdash; a small service that you can deploy to, for example, Vercel or Netlify. Customize the URLs it uses in [index.js](https://github.com/expo/expo-fyi/blob/master/index.js).
