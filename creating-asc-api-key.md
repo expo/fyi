@@ -1,8 +1,8 @@
-# Creating an App Store Connect Api Key
+# Creating an App Store Connect API Key
 
-If you’d like to submit your iOS app to the Apple App Store with `eas submit`, you'll need an App Store Connect Api key **or** an App Specific Password. This page will guide you through the process of creating an App Store Connect Api key. 
+If you’d like to submit your iOS app to the Apple App Store with `eas submit`, you'll need an App Store Connect API key **or** an App Specific Password. This page will guide you through the process of creating an App Store Connect API key.
 
-1. Open the [App Store Connect Portal](https://appstoreconnect.apple.com/access/users) and go to the **Keys** tab under the Users and Access section. We recommend browsing this UI in Safari as there have been known issues in other browsers.
+1. Open the [App Store Connect Portal](https://appstoreconnect.apple.com/access/users) and go to the **Integrations** tab under the Users and Access section.
 
 [<img src="./assets/creating-asc-api-key/01-open-app-store-connect-portal.png" width="800" />](./assets/creating-asc-api-key/01-open-app-store-connect-portal.png)
 
@@ -14,7 +14,7 @@ If you’d like to submit your iOS app to the Apple App Store with `eas submit`,
 
 [<img src="./assets/creating-asc-api-key/03-key-fields.png" width="800" />](./assets/creating-asc-api-key/03-key-fields.png)
 
-4. Click the **Download API Key** button to download the .p8 file.
+4. Click the **Download** button to download the **.p8** file.
 
 [<img src="./assets/creating-asc-api-key/04-download-key.png" width="800" />](./assets/creating-asc-api-key/04-download-key.png)
 
@@ -23,8 +23,8 @@ If you’d like to submit your iOS app to the Apple App Store with `eas submit`,
 - Key ID
 - Issuer ID
 
-These can be found in the red boxes in the picture below:
+These can be found in the red boxes in the image below:
 
 [<img src="./assets/creating-asc-api-key/05-other-info.png" width="800" />](./assets/creating-asc-api-key/05-other-info.png)
 
-6. That's all! From now on, you can use the generated App Store Api key to submit your app with `eas submit`.
+6. That's all! From now on, you can use the generated App Store API key to submit your app with `eas submit`.
