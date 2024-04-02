@@ -39,7 +39,7 @@ Do one of the following:
 
 - Go to [Apple Dev Portal > Bundle Identifiers](https://developer.apple.com/account/resources/identifiers/list)
   - Or `developer.apple.com` > "Account" > "Certificates, IDs & Profiles" > "Identifiers"
-- Find the "IDENTIFIER" matching your app's bundle identifer (defined in your `app.json` (`ios.bundleIdentifer`) or Xcode project).
+- Find the "IDENTIFIER" matching your app's bundle identifier (defined in your `app.json` (`ios.bundleIdentifier`) or Xcode project).
 - Add the missing capabilities (i.e. "Associated Domains") entitlement.
   - Press "Save"
   - Acknowledge the "Modify App Capabilities" (current provisioning profiles will be invalid).

@@ -1,20 +1,23 @@
 ## How to migrate from Expo's LegacyNotifications to the new `expo-notifications` library
 
-If you're still using the `LegacyNotifications` library, it's time for you to migrate over! The new library brings plenty of new features, bug fixes, and is much more reliable and intuitive. Plus, we're actively working on it 😁
+If you're still using the `LegacyNotifications` library, it's time for you to migrate over! The new library brings plenty of new features, bug fixes, and is much more reliable and intuitive.
 
 **If you're using Expo's push notification service, you don't need to change anything on the server-side for this migration.**
 
 ### Set up
 
-Run `npx expo install expo-notifications`. 
+Run `npx expo install expo-notifications`.
 
 > If you're using the bare workflow, you'll need to follow [these additional instructions](https://github.com/expo/expo/tree/master/packages/expo-notifications#installation-in-bare-react-native-projects).
 
-Replace any occurences of 
+Replace any occurrences of:
+
 ```
 import { Notifications } from 'expo'
-``` 
-in your JS code with 
+```
+
+in your JS code with:
+
 ```
 import * as Notifications from 'expo-notifications';
 ```
@@ -45,7 +48,8 @@ Prefer to use hooks? `expo-notifications` has you covered- use the [`useLastNoti
 
 #### `LegacyNotifications.getExpoPushTokenAsync()` & `LegacyNotifications.getDevicePushTokenAsync()`
 
-Both `getExpoPushTokenAsync` and `getDevicePushTokenAsync` have the exact same methods in the new `expo-notifications` API: 
+Both `getExpoPushTokenAsync` and `getDevicePushTokenAsync` have the same methods in the new `expo-notifications` API:
+
 - [`Notifications.getExpoPushTokenAsync()`](https://docs.expo.dev/versions/latest/sdk/notifications/#getexpopushtokenasyncoptions-expotokenoptions-expopushtoken)
 - [`Notifications.getDevicePushTokenAsync()`](https://docs.expo.dev/versions/latest/sdk/notifications/#getdevicepushtokenasync-devicepushtoken)
 
@@ -55,23 +59,21 @@ The only difference is that the new methods return an object of the format `{ ty
 
 Both of these have been replaced by [`Notifications.scheduleNotificationAsync()`](https://docs.expo.dev/versions/latest/sdk/notifications/#schedulenotificationasyncnotificationrequest-notificationrequestinput-promisestring). To get the same behavior as `LegacyNotifications.presentLocalNotificationAsync` (AKA- trigger a notification instantly), just pass `null` in as the `NotificationTriggerInput`.
 
-
-#### `LegacyNotifications.dismissNotificationAsync()` 
+#### `LegacyNotifications.dismissNotificationAsync()`
 
 There is an identical method in the new `expo-notifications` module- [`Notifications.dismissNotificationAsync()`](https://docs.expo.dev/versions/latest/sdk/notifications/#dismissnotificationasyncidentifier-string-promisevoid)- no changes necessary.
 
-#### `LegacyNotifications.dismissAllNotificationsAsync()` 
+#### `LegacyNotifications.dismissAllNotificationsAsync()`
 
 There is an identical method in the new `expo-notifications` module- [`Notifications.dismissAllNotificationsAsync()`](https://docs.expo.dev/versions/latest/sdk/notifications/#dismissallnotificationsasync-promisevoid)- no changes necessary.
 
-#### `LegacyNotifications.cancelScheduledNotificationAsync()` 
+#### `LegacyNotifications.cancelScheduledNotificationAsync()`
 
 There is an identical method in the new `expo-notifications` module- [`Notifications.cancelScheduledNotificationAsync()`](https://docs.expo.dev/versions/latest/sdk/notifications/#cancelschedulednotificationasyncidentifier-string-promisevoid)- no changes necessary.
 
 #### `LegacyNotifications.cancelAllScheduledNotificationsAsync()`
 
 There is an identical method in the new `expo-notifications` module- [`Notifications.cancelAllScheduledNotificationsAsync()`](https://docs.expo.dev/versions/latest/sdk/notifications/#cancelallschedulednotificationsasync-promisevoid)- no changes necessary.
-
 
 #### `LegacyNotifications.getBadgeNumberAsync()`
 
@@ -83,15 +85,12 @@ Replace with [`Notifications.setBadgeCountAsync`](https://docs.expo.dev/versions
 
 ### Notification Categories
 
-We’ve added much more comprehensive support for categories in the new `expo-notifications` module, with plenty more customization options, so the methods and the parameters they accept are a little different. You should [read here](https://docs.expo.dev/versions/latest/sdk/notifications/#managing-notification-categories-interactive-notifications) for a complete guide. 
+We’ve added much more comprehensive support for categories in the new `expo-notifications` module, with plenty more customization options, so the methods and the parameters they accept are a little different. You should [read here](https://docs.expo.dev/versions/latest/sdk/notifications/#managing-notification-categories-interactive-notifications) for a complete guide.
 
-> Replace `LegacyNotifications.createCategoryAsync` with `Notifications.setNotificationCategoryAsync`, and `LegacyNotifications.deleteCategoryAsync` with `Notifications.deleteNotificationCategoryAsync`. 
-
+> Replace `LegacyNotifications.createCategoryAsync` with `Notifications.setNotificationCategoryAsync`, and `LegacyNotifications.deleteCategoryAsync` with `Notifications.deleteNotificationCategoryAsync`.
 
 ### Android Notification Channels
 
-We’ve added much more comprehensive support for Android’s notification channels in the new `expo-notifications` module, with plenty more customization options, so the methods and the parameters they accept are a little different. You should [read here](https://docs.expo.dev/versions/latest/sdk/notifications/#managing-notification-channels-android-specific) for a complete guide. 
+We’ve added much more comprehensive support for Android’s notification channels in the new `expo-notifications` module, with plenty more customization options, so the methods and the parameters they accept are a little different. You should [read here](https://docs.expo.dev/versions/latest/sdk/notifications/#managing-notification-channels-android-specific) for a complete guide.
 
-> Replace `LegacyNotifications.createChannelAndroidAsync` with `Notifications.setNotificationChannelAsync`, and replace `LegacyNotifications.deleteChannelAndroidAsync` with `Notifications.deleteNotificationChannelAndroidAsync`. 
-
-
+> Replace `LegacyNotifications.createChannelAndroidAsync` with `Notifications.setNotificationChannelAsync`, and replace `LegacyNotifications.deleteChannelAndroidAsync` with `Notifications.deleteNotificationChannelAndroidAsync`.

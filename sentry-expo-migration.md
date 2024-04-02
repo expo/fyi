@@ -10,7 +10,7 @@ In this guide, we'll walk you through the steps to migrate from `sentry-expo` to
 - Update your `app.json` to include the Sentry plugin and remove the hook
 - Update your **metro.config.js** to include the Sentry transformer plugin
 
-## Ugrade to Expo SDK 50 or higher
+## Upgrade to Expo SDK 50 or higher
 
 Learn more in the ["Upgrade Expo SDK" doc](https://docs.expo.dev/workflow/upgrading-expo-sdk-walkthrough/)
 
@@ -18,7 +18,7 @@ Learn more in the ["Upgrade Expo SDK" doc](https://docs.expo.dev/workflow/upgrad
 
 On your terminal, run the following commands to remove `sentry-expo` and install `@sentry/react-native`:
 
-- `npm uninstall sentry-expo` (subsitute `npm` with the package manager of your choice)
+- `npm uninstall sentry-expo` (substitute `npm` with the package manager of your choice)
 - `npx expo install @sentry/react-native`
 
 ## Update your `sentry-expo` imports to `@sentry/react-native`
@@ -30,7 +30,7 @@ On your terminal, run the following commands to remove `sentry-expo` and install
 
 ## Update your `app.json` to include the Sentry plugin and remove the hook
 
-- Remove the the `sentry-expo` `postPublish` hook from your `app.json` if you have it.
+- Remove the `sentry-expo` `postPublish` hook from your `app.json` if you have it.
 - Replace the `sentry-expo` plugin with the `@sentry/react-native/expo` plugin. Move any configuration under `config` from the `postPublish` hook to config for the plugin.
 - Do not include your auth token in the plugin configuration. Use the `SENTRY_AUTH_TOKEN` environment variable instead ([learn more](https://docs.expo.dev/guides/using-sentry/#app-configuration)). Anything included in your plugin configuration will be present in your build and update bundles.
 
@@ -59,7 +59,7 @@ To enable this, you need to add the following to your **metro.config.js** file (
 
 ```js
 // This replaces `const { getDefaultConfig } = require('expo/metro-config');`
-const { getSentryExpoConfig } = require('@sentry/react-native/metro');
+const { getSentryExpoConfig } = require("@sentry/react-native/metro");
 
 // This replaces `const config = getDefaultConfig(__dirname);`
 const config = getSentryExpoConfig(__dirname);

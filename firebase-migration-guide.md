@@ -41,7 +41,7 @@ If you are using the Bare Workflow, see [React Native Firebase's installation in
 
 ## Update analytics requests
 
-Firebase Analytics requests in React Native Firebase are almost the same - mostly, they are imported a little differently. Update your code as shown here:
+Firebase Analytics requests in React Native Firebase are almost the same &mdash; mostly, they are imported a little differently. Update your code as shown here:
 
 ```diff
 // update imports
@@ -50,10 +50,10 @@ Firebase Analytics requests in React Native Firebase are almost the same - mostl
 
 // update each `Analytics` reference to call `analytics()`
 - Analytics.logEvent("test_analytics_event", {
--  additionaParam: "test",
+-  additionalParam: "test",
 - });
 + analytics().logEvent("test_analytics_event", {
-+  additionaParam: "test",
++  additionalParam: "test",
 + });
 ```
 
@@ -85,7 +85,7 @@ Then follow the prompts on the terminal to run it on your simulator, or scan the
 
 ## Conclusion
 
-Now that you have your own development build, you can use any package from React Native Firebase library in your development and testing workflow. You're only minutes away from adding [any additional native functionality you'd like](https://docs.expo.dev/development/getting-started/#customizing-your-runtime).
+Now that you have your own development build, you can use any package from the React Native Firebase library in your development and testing workflow. You're only minutes away from adding [any additional native functionality you'd like](https://docs.expo.dev/development/getting-started/#customizing-your-runtime).
 
 ## Other migration scenarios
 
@@ -100,7 +100,7 @@ import analytics from "@react-native-firebase/analytics";
 
 export async function sendAnalyticsEventAsync() {
   await analytics().logEvent("test_analytics_event", {
-    additionaParam: "test",
+    additionalParam: "test",
   });
 }
 ```

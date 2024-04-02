@@ -26,7 +26,7 @@ Find Alpha-Channel-Remover on GitHub [here](https://github.com/bpolat/Alpha-Chan
 ImageMagick is a command line utility for editing images.
 
 - Run `brew install imagemagick`
-- Then run `convert <ORGINAL_IMAGE_NAME>.png -background black -alpha remove -alpha off <OUTPUT_IMAGE_NAME>.png`.
+- Then run `convert <ORIGINAL_IMAGE_NAME>.png -background black -alpha remove -alpha off <OUTPUT_IMAGE_NAME>.png`.
 
 ---
 
