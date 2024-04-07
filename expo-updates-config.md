@@ -17,4 +17,4 @@ The update URL can be configured in a couple of different ways, so make sure to 
   2. If no updates URL is specified, the `owner` and the `slug` fields will be used to generate one: `https://exp.host/@${owner}/${slug}`. 
   3. It can also be set by passing a URL to the `--public-url` flag of the `expo export` command.
 
-To learn more about `expo-updates` configuration look [here](https://github.com/expo/expo/blob/master/packages/expo-updates/README.md#configuration).
+To learn more about `expo-updates` configuration look [here](https://github.com/expo/expo/blob/main/packages/expo-updates/README.md#configuration).
