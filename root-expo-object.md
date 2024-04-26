@@ -1,8 +1,8 @@
-# Migrating from the root-level `expo` object in the Expo config
+# Migrating from the root-level `expo` object in the app config
 
-Previous versions of Expo CLI encouraged users to have a top-level `expo: {}` object in the project's Expo config (`app.json`), this extraneous object contained all of the project config. When support for `app.config.js` and `app.config.json` were added, the root-level `expo` object became optional.
+Previous versions of Expo CLI encouraged users to have a top-level `expo: {}` object in the project's app config (`app.json`). This extraneous object contained all of the project config. When support for `app.config.js` and `app.config.json` were added, the root-level `expo` object became optional.
 
-You can instead use the root-level object in the Expo config (`app.json`) to configure your project and [Expo CNG](https://docs.expo.dev/workflow/continuous-native-generation/):
+You can instead use the root-level object in the app config (`app.json`) to configure your project and [Expo CNG](https://docs.expo.dev/workflow/continuous-native-generation/):
 
 **app.json**
 
@@ -22,7 +22,7 @@ You can instead use the root-level object in the Expo config (`app.json`) to con
 
 ### Resolution with `expo` object
 
-If the project Expo config has a root-level `expo` object, then all other fields will be removed:
+If the project's app config has a root-level `expo` object, then all other fields will be removed:
 
 **Input app.json**
 
@@ -76,4 +76,4 @@ The new config should look as follows (`displayName` is not a supported property
 
 ### Arbitrary fields
 
-If you want to use arbitrary fields in the Expo config, use the `extra` object in the Expo config. Learn more: [Configuring the Expo config » `extra`](https://docs.expo.dev/versions/latest/config/app/#extra).
+If you want to use arbitrary fields in the app config, use the `extra` object in the app config. Learn more about [`extra` in the app config API reference](https://docs.expo.dev/versions/latest/config/app/#extra).
