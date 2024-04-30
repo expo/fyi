@@ -38,7 +38,7 @@ This page will guide you through creating an app in Google Play Console and uplo
 
 [<img src="./assets/first-android-submission/07-google-app-signing.png" width="800" />](./assets/first-android-submission/07-google-app-signing.png)
 
-8. Click **BROWSE FILES** and choose the `.aab` file from your computer to upload the archive. If you haven't created your build yet, [you can do this with `eas build`](https://docs.expo.dev/build/introduction/). 
+8. Click **BROWSE FILES** and choose the `.aab` file from your computer to upload the archive. If you haven't created your build yet, [you can do this with `eas build`](https://docs.expo.dev/build/introduction/). Make sure your [`buildType`](https://docs.expo.dev/eas/json/#buildtype) is set to `app-bundle`.
 
 [<img src="./assets/first-android-submission/08-upload-apk.png" width="800" />](./assets/first-android-submission/08-upload-apk.png)
 
