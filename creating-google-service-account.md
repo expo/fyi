@@ -6,7 +6,6 @@ EAS requires a Google Service Account Key to be uploaded and configured for subm
 
 > You can configure separate Google Service Account Keys for Play Store Submissions and [sending Android Push notifications with FCM v1 protocol](/creating-google-service-account-fcmv1.md) or you can upload a single Google Service Account Key and use it for both use cases (provided that the correct authorizations are in place for that Service Account in Google Cloud Console).
 
-The steps for each use case are detailed below.
 
 To set up a Google Service Account Key for Play Store Submissions via `eas submit`, the following steps are required:
 

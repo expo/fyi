@@ -8,7 +8,7 @@ EAS requires a Google Service Account Key to be uploaded and configured for send
 
 > You can configure separate Google Service Account Keys for [Play Store Submissions](/creating-google-service-account.md) and sending Android Push notifications with FCM v1 protocol or you can upload a single Google Service Account Key and use it for both use cases (provided that the correct authorizations are in place for that Service Account in Google Cloud Console).
 
-The steps for each use case are detailed below.
+### Configuring a new Google Service Account Key for Android Notifications using FCM v1
 
 1. (If you already have a Firebase project for your app, continue to the next step.) Create a new Firebase project for your app in the [Firebase Console](https://console.firebase.google.com)
 
