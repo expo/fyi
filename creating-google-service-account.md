@@ -4,8 +4,8 @@ A Google Service Account Key is a credential in the form of a JSON file that you
 
 EAS requires a Google Service Account Key to be uploaded and configured for submitting your Android app to the Google Play Store with `eas submit`.
 
-> You can configure separate Google Service Account Keys for Play Store Submissions and [sending Android Push notifications with FCM v1 protocol](/creating-google-service-account-fcmv1.md) or you can upload a single Google Service Account Key and use it for both use cases (provided that the correct authorizations are in place for that Service Account in Google Cloud Console).
-
+> [!NOTE]
+> Beginning in June 2024, all Android notifications must be sent using the FCM v1 protocol. EAS requires a Google Service Account Key to be uploaded and configured for sending Android push notifications via `https://exp.host/--/api/v2/push/send` using the FCM v1 protocol. You can configure separate Google Service Account Keys for Play Store Submissions and [sending Android Push notifications with FCM v1 protocol](https://docs.expo.dev/push-notifications/fcm-credentials/) or you can upload a single Google Service Account Key and use it for both use cases (provided that the correct authorizations are in place for that Service Account in Google Cloud Console).
 
 To set up a Google Service Account Key for Play Store Submissions via `eas submit`, the following steps are required:
 
