@@ -1,6 +1,6 @@
 # Configuring Microsoft Entra ID for Expo SSO
 
-In order for Expo to configure your organization to use Single Sign-On (SSO), you will need to configure a new application in Microsoft Entra ID and then provide the Expo support team with the following information:
+In order for Expo to configure your organization to use Single Sign-On (SSO), you will need to configure a new application in Microsoft Entra ID and make note of the following information:
 
 - Client ID from your application
 - Client secret from application
