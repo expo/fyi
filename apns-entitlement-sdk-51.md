@@ -19,6 +19,6 @@ Expo’s recommendations:
   - Run `eas credentials` then choose `iOS` -> `Build Credentials` -> `Provisioning Profile: Delete one from your project`
   - The next time you run `eas submit`, you will be prompted to create a new profile.
 - If you see this error and do not want notifications in your app, you should go to the Apple developer portal and delete the APNS capability from the app there, if it is present.
-  - This will not yet be sufficient to remove the warning, because of the app delegate issue described above. Once Expo has determined the right approach to avoid the notification API call in `ExpoAppDelegate`, we will update this FYI with instructions for any application code or configuration changes needed to fully resolve the issue.
+  - Note that this will not yet be sufficient to remove the warning for users who don't want to use push notifications on SDK 51, because of the app delegate issue described above. Once Expo has determined the right approach to avoid the notification API call in `ExpoAppDelegate`, we will update this FYI with instructions for any application code or configuration changes needed to fully resolve the warning.
 
 More information on how to work with Apple capabilities and entitlements can be found in our [documentation](https://docs.expo.dev/build-reference/ios-capabilities/).
