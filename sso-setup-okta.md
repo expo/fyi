@@ -1,6 +1,6 @@
 # Configuring Okta for Expo SSO
 
-In order for Expo to configure your organization to use Single Sign-On (SSO), you will need to configure a new application in Okta and then provide the Expo support team with the following information:
+In order for Expo to configure your organization to use Single Sign-On (SSO), you will need to configure a new application in Okta and make note of the following information:
 
 - Client ID from your Okta application
 - Client secret from Okta application

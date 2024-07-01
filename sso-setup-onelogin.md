@@ -1,6 +1,6 @@
 # Configuring OneLogin for Expo SSO
 
-In order for Expo to configure your organization to use Single Sign-On (SSO), you will need to configure a new application in OneLogin and then provide the Expo support team with the following information:
+In order for Expo to configure your organization to use Single Sign-On (SSO), you will need to configure a new application in OneLogin and make note of the following information:
 
 - Client ID from your OneLogin application
 - Client secret from OneLogin application
