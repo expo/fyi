@@ -2,11 +2,11 @@
 # Configuring Google WS for Expo SSO
 
 In order for Expo to configure your organization to use Single Sign-On (SSO),
-it is recommended that you create and configure a new Google Cloud Project in your Google Workspace and then provide the Expo support team with the following information:
+it is recommended that you create and configure a new Google Cloud Project in your Google Workspace and make note of the following information:
 
 - Client ID from your Google WS application
 - Client secret from Google WS application
-- Google issuer URL
+- Google issuer URL is https://accounts.google.com
 - Expo organization name
 
 Read on for how to configure the Google WS application and obtain this information.
