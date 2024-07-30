@@ -20,7 +20,9 @@ If you are already performing your own PNG optimization in advance of your build
 
 ## Disabling PNG Crunch
 
-You can disable it by adding the following to your `android/app/build.gradle` file:
+You can disable it by setting `enablePngCrunchInReleaseBuilds` to `false` on the [`android` config in expo-build-properties](https://docs.expo.dev/versions/latest/sdk/build-properties/#pluginconfigtypeandroid).
+
+Alternatively, if you do not use [CNG](https://docs.expo.dev/workflow/continuous-native-generation/), you can make the following change to your `android/app/build.gradle` file:
 
 ```diff
 android {
@@ -35,5 +37,3 @@ android {
   }
 }
 ```
-
-If you use Continuous Native Generation (CNG), you will have to use a config plugin to apply this change.
