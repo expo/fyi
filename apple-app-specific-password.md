@@ -5,7 +5,7 @@ The Apple app-specific password is a password for your Apple ID account that let
 ### Security
 
 > [!WARNING]
-> This authentication method is considered less secure than using the App Store Connect API key by the Expo team, especially for personal Apple accounts, because of the broad permissions the app-specific password grants to the actor/service who has it. We recommend using the App Store Connect API key for submitting your builds to the Apple App Store (this is default and recommended authentication method). [Learn more](https://docs.expo.dev/app-signing/security/#apple-app-specific-password).
+> This authentication method is considered less secure than using the App Store Connect API key because of the broad permissions the app-specific password grants to the actor/service who has it. We recommend using the App Store Connect API key for submitting your builds to the Apple App Store (this is default and recommended authentication method). [Learn more](https://docs.expo.dev/app-signing/security/#apple-app-specific-password).
 
 ### How do I generate an app-specific password?
 
