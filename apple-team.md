@@ -1,9 +1,11 @@
 # Apple Team
 
-You can find information about your Apple Team at the [Developer Portal](https://developer.apple.com). You'll need to navigate over to the Membership tab on the left.
+You can find information about your Apple Team at the [Developer Portal](https://developer.apple.com).
 
-[<img src="./assets/apple-team/membership-tab.png" width="800" />](./assets/apple-team/membership-tab.png)
+- Click **Membership details** from the top panel to navigate to the membership details section.
 
-Next, you will find your Apple Team ID and membership type in the details section.
+  <img src="./assets/apple-team/membership-tab.png" width="800" />
 
-[<img src="./assets/apple-team/membership-details.png" width="800" />](./assets/apple-team/membership-details.png)
+- You will find your Apple Team ID and membership type in the details section.
+
+  <img src="./assets/apple-team/membership-details.png" width="800" />
