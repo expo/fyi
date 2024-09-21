@@ -42,12 +42,9 @@ One zero-config workaround is to run `npx expo start --tunnel`. This will instal
 
 ## Connecting to an Expo dev server running from WSL (LAN-compatible)
 
-To make Expo work from WSL just like it would on any other machine connected directly to your LAN, we need to do two things:
+To make Expo work from WSL just like it would on any other machine connected directly to your LAN, we need to forward traffic from the WSL virtual machine to the host Windows environment
 
-1. Forward traffic from the WSL virtual machine to the host Windows environment
-2. Make the Expo CLI output a LAN IP address when running `npx expo start`
-
-### 1. Forwarding traffic from the WSL VM
+### Forwarding traffic from the WSL VM
 
 WSL 2 now supports a dedicated "mirrored" mode that will forward traffic from WSL to Windows. This is the easiest way to enable outside connections to your local development environment.
 
@@ -70,6 +67,9 @@ wsl --list
 
 If any are still open, run `wsl --shutdown` and reopen a WSL terminal (via Windows Terminal or VS Code) to restart WSL.
 
+> [!TIP]
+> If mirrored mode is configured correctly, when you run `npx expo start` in your project, the IP address for the QR code should match the IP address you would see if you ran `ipconfig` in PowerShell. If you see a `172.x.x.x` IP address in your WSL terminal, mirrored mode is likely not configured correctly.
+
 #### Opening up the Hyper-V firewall
 
 On recent Windows/WSL updates, you may also need to open up inbound connections on the Hyper-V firewall. [Microsoft documents a few options for this](https://learn.microsoft.com/en-us/windows/wsl/networking#mirrored-mode-networking). One option is to right-click on Windows Terminal in the Start menu, click "Open as Administrator", open a Powershell tab, and run the following command:
@@ -78,28 +78,12 @@ On recent Windows/WSL updates, you may also need to open up inbound connections 
 Set-NetFirewallHyperVVMSetting -Name ‘{40E0AC32-46A5-438A-A0B2-2B479E8F2E90}’ -DefaultOutboundAction Allow
 ```
 
+> [!TIP]
+> To test the firewall configuration, run `npx expo start` from your project and scan the QR code with your mobile device to run in either Expo Go or a development build. If you only see a blue spinner on your device, and do not see the bundling process begin in the tutorial, it's likely that this firewall change did not take effect. You can try running the above command again, consult Microsoft's documentation, or open the Firewall settings from the Start Menu to investigate further.
+
 These commands may change with software updates. If this does not work, check [Microsoft's documentation](https://learn.microsoft.com/en-us/windows/wsl/networking#mirrored-mode-networking).
 
 > If you do not want to enable mirrored mode, it is also possible to [setup per-port forwarding of traffic from WSL to Windows manually](https://learn.microsoft.com/en-us/windows/wsl/networking#accessing-a-wsl-2-distribution-from-your-local-area-network-lan).
-
-### 2. Change the dev server IP address displayed by the Expo CLI
-
-Performing the steps in part 1 is technically enough to expose the dev server to the rest of your LAN. At this point, you could connect a development build to your dev server, but you would have to manually type in your Windows host IP address into the development build, since the Expo CLI is still showing the IP address internal to WSL.
-
-However, the IP can be overridden via the `REACT_NATIVE_PACKAGER_HOSTNAME` environment variable, which we can set based on the IP address of your network adapter as reported by **netsh.exe** from the Windows side.
-
-Add the following to the scripts section of your **package.json**:
-
-```json
-"scripts" : {
-  "start:wsl": "REACT_NATIVE_PACKAGER_HOSTNAME=$(netsh.exe interface ipv4 show addresses 'Wi-Fi' | awk -F'IP Address:' '{print $2}') expo start",
-  // other scripts
-}
-```
-
-Then, run `npm run start:wsl` to start the development server. The IP address and QR code should now match your Windows host IP.
-
-If this doesn't work be aware that the "Wi-Fi" in the script above is the name of your network adapter and could vary from system to system. You can run `netsh.exe interface ipv4 show addresses` in Powershell to check the name of your network adapter and update your script accordingly.
 
 ## Using the JS Debugger
 
