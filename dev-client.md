@@ -1,5 +1,12 @@
 # Expo Development Client
 
-Development builds of your app are Debug builds of your project. To create a Development build, expo-dev-client library is used, which allows you to develop and debug projects from Expo CLI or a compatible server.
+A **development build** is a debug build of your app that contains the `expo-dev-client` package. By using development builds instead of Expo Go, you gain full control over the native runtime, so you can install any native libraries, modify any project configuration, or write your own native code.
 
-Learn more: https://docs.expo.dev/development/introduction/
+Learn more in 
+
+- [Development build documentation](https://docs.expo.dev/development/introduction/) 
+- [Blog - Expo Go vs Development Builds: Which should you use?](https://expo.dev/blog/expo-go-vs-development-builds)
+- Or watch the YouTube video below:
+
+[![Expo Go vs Development Builds: Which should you use?
+](https://img.youtube.com/vi/FdjczjkwQKE/0.jpg)](https://youtu.be/FdjczjkwQKE?si=3vYoN5SObjUEbzEP&t=429)
