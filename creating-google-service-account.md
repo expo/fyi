@@ -57,7 +57,29 @@ To set up a Google Service Account Key for Play Store Submissions via `eas submi
 
 10. Now you can upload your newly created Google Service Account Key to EAS servers and upload your app's release archive to Google Play Store using `eas submit`.
 
-### Further reading
+## Download key from an existing service account
+
+If you have already created a Google Service Account, you can create a new **JSON** key and download it.
+
+1. Open [Google Cloud Console](https://console.cloud.google.com/) and select your project.
+
+2. From the sidebar, click **Service Accounts** > click the existing service account **Email**.
+
+[<img src="./assets/creating-google-service-account/13-select-existing-service-account.png" width="800" />](./assets/creating-google-service-account/13-select-existing-service-account.png)
+
+3. Click **Keys** > **ADD KEY** > **Create new key**.
+
+[<img src="./assets/creating-google-service-account/14-create-new-key.png" width="800" />](./assets/creating-google-service-account/14-create-new-key.png)
+
+4. Under **Key type**, make sure **JSON** is selected, and click **Create**.
+
+[<img src="./assets/creating-google-service-account/15-select-json-key-type.png" width="800" />](./assets/creating-google-service-account/15-select-json-key-type.png)
+
+5. A **.json** file will download on your computer. You can repeat _steps 7 to 10_ from the previous section to use this downloaded key.
+
+[<img src="./assets/creating-google-service-account/16-service-key-created.png" width="800" />](./assets/creating-google-service-account/16-service-key-created.png)
+
+## Further reading
 
 To learn more about how to use `eas submit` to create an internal test or a production release archive, or automate subsequent releases to Google Play Store with `--auto-submit` flag, see [Android Production build](https://docs.expo.dev/tutorial/eas/android-production-build/) chapter in the EAS Tutorial.
 
