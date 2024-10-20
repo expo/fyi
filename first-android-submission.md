@@ -26,7 +26,7 @@ If you are submitting your Android app to Google Play Store **for the first time
 
 [<img src="./assets/first-android-submission/04-steps.png" width="800" />](./assets/first-android-submission/04-steps.png)
 
-5. You will be redirected to **Internal testing** page. Under **Testers**, click **Create email list**, provide a list of users to share the internal test release version of your app. After you've created the testers list, or selected a pre-existing one, click **Save**.
+5. You will be redirected to **Internal testing** page. Under **Testers**, click **Create email list**, provide a list of users to share the internal test release version of your app. After you have created the testers list, or selected a pre-existing one, click **Save**.
 
 [<img src="./assets/first-android-submission/05-create-email-list.png" width="800" />](./assets/first-android-submission/05-create-email-list.png)
 [<img src="./assets/first-android-submission/05-testing.png" width="800" />](./assets/first-android-submission/05-testing.png)
@@ -35,7 +35,7 @@ If you are submitting your Android app to Google Play Store **for the first time
 
 [<img src="./assets/first-android-submission/06-create-release.png" width="800" />](./assets/first-android-submission/06-create-release.png)
 
-7. You'll be redirected to the App integrity screen. Select **Choose signing key**, select **Google-generated key**. Using a Google-generated key will let you upload your app if you somehow happen to lose your Android Keystore.
+7. You will be redirected to the App integrity screen. Select **Choose signing key**, select **Google-generated key**. Using a Google-generated key will let you upload your app if you somehow happen to lose your Android Keystore.
 
 [<img src="./assets/first-android-submission/07-google-app-signing.png" width="800" />](./assets/first-android-submission/07-google-app-signing.png)
 
@@ -43,7 +43,7 @@ If you are submitting your Android app to Google Play Store **for the first time
 
 [<img src="./assets/first-android-submission/08-upload-aab-archive.png" width="800" />](./assets/first-android-submission/08-upload-aab-archive.png)
 
-9. Once the upload completes, you will see the archive type along with the **Version code**. The **Version code** is used to identify your app's releases. Each new release needs to have a unique **Version code**. If you're using the Expo, you can set this value in app config under `expo.android.versionCode` or learn how to automatically increment this value with [Remote version source](https://docs.expo.dev/build-reference/app-versions/).
+9. Once the upload completes, you will see the archive type along with the **Version code**. The **Version code** is used to identify your app's releases. Each new release needs to have a unique **Version code**. If you are using the Expo, you can set this value in app config under `expo.android.versionCode` or learn how to automatically increment this value with [Remote version source](https://docs.expo.dev/build-reference/app-versions/).
 
 [<img src="./assets/first-android-submission/09-view-version-code.png" width="800" />](./assets/first-android-submission/09-view-version-code.png)
 
