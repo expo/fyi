@@ -4,12 +4,14 @@ A Google Service Account Key is a credential in the form of a JSON file that you
 
 **EAS requires you to upload and configure a Google Service Account Key** to submit your Android app to the Google Play Store with `eas submit`.
 
+This guides provides steps to create a new service account and its key or re-use an existing service account to create a new key.
+
 > [!NOTE]
-> Beginning in June 2024, all Android notifications must be sent using the FCM v1 protocol. EAS requires a Google Service Account Key to be uploaded and configured for sending Android push notifications via `https://exp.host/--/api/v2/push/send` using the FCM v1 protocol. You can configure separate Google Service Account Keys for Play Store Submissions and [sending Android Push notifications with FCM v1 protocol](https://docs.expo.dev/push-notifications/fcm-credentials/) or you can upload a single Google Service Account Key and use it for both use cases (provided that the correct authorizations are in place for that Service Account in Google Cloud Console).
+> From June 2024, all Android notifications must be sent using the FCM v1 protocol. EAS requires a Google Service Account Key to be uploaded and configured for sending Android push notifications via `https://exp.host/--/api/v2/push/send` using the FCM v1 protocol. You can configure separate Google Service Account Keys for Play Store Submissions and [sending Android Push notifications with FCM v1 protocol](https://docs.expo.dev/push-notifications/fcm-credentials/) or you can upload a single Google Service Account Key and use it for both use cases (provided that the correct authorizations are in place for that Service Account in Google Cloud Console).
 
-## Setup Service Account Key
+## Set up Service Account Key
 
-To set up a Google Service Account Key for Play Store Submissions via `eas submit`, the following steps are required:
+To setup a Google Service Account Key for Play Store Submissions via `eas submit`, the following steps are required:
 
 - Create a Google Cloud project (optional if you already have one)
 - Create a Google Service Account and create and download the JSON key file
