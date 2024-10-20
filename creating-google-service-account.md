@@ -56,3 +56,7 @@ To set up a Google Service Account Key for Play Store Submissions via `eas submi
 [<img src="./assets/creating-google-service-account/11-set-permissions.png" width="800" />](./assets/creating-google-service-account/11-account-permissions.png)
 
 10. Now you can upload your newly created Google Service Account Key to EAS servers and upload your app's release archive to Google Play Store using `eas submit`.
+
+### Further reading
+
+To learn more about how to use `eas submit` to create an internal test or a production release archive, or automate subsequent releases to Google Play Store with `--auto-submit` flag, see [Android Production build](https://docs.expo.dev/tutorial/eas/android-production-build/) chapter in the EAS Tutorial.
