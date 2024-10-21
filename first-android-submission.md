@@ -5,8 +5,8 @@ If you are submitting your Android app to Google Play Store **for the first time
 > [!NOTE]
 > After you have submitted your app manually through Play Console, you will be able to use `eas submit -p android` for subsequent submissions.
 
-> [!DISCLAIMER]
-> Eventually, Google Play Console dashboard gets updated and to keep track of those changes is out of our scope. If you find something from this guide does not align with the Play Console, open an issue to let us know.
+> [!WARNING]
+> Google Play Console dashboard gets updated, and keeping track of those changes is out of our scope. If you find something from this guide does not align with the Play Console, open an issue to let us know.
 
 ## Steps to create your first release
 
