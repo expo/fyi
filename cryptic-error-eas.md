@@ -4,7 +4,7 @@ Sometimes you'll receive an error that is cryptic and you won't know what to do.
 
 ## The error is informative but I don't know how to fix it
 
-If it isn't covered in our [docs](https://docs.expo.dev), then you should post about it in our [forums](https://chat.expo.dev/).
+If it isn't covered in our [docs](https://docs.expo.dev), then you should post about it in our [Discord](https://chat.expo.dev/).
 
 ## The error isn't informative
 
