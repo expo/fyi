@@ -42,7 +42,7 @@ One zero-config workaround is to run `npx expo start --tunnel`. This will instal
 
 ## Connecting to an Expo dev server running from WSL (LAN-compatible)
 
-To make Expo work from WSL just like it would on any other machine connected directly to your LAN, we need to forward traffic from the WSL virtual machine to the host Windows environment
+To make Expo work from WSL just like it would on any other machine connected directly to your LAN, we need to forward traffic from the WSL virtual machine to the host Windows environment.
 
 ### Forwarding traffic from the WSL VM
 
@@ -50,13 +50,15 @@ WSL 2 now supports a dedicated "mirrored" mode that will forward traffic from WS
 
 > Be sure to update to the latest WSL version to ensure that mirrored mode is supported.
 
-#### Enable mirrored mode
+#### Enable mirrored mode / hostAddressLoopback
 
-To enable mirrored mode, add/update the **.wslconfig** file in your **%USERPROFILE%** directory (usually **c:/Users/[username]**):
+To enable mirrored mode and some other features that will improve your development experience, add/update the **.wslconfig** file in your **%USERPROFILE%** directory (usually **c:/Users/[username]**):
 
 ```
 [wsl2]
 networkingMode=mirrored
+[experimental]
+hostAddressLoopback=true
 ```
 
 WSL will need to shut down and restart for this setting to take effect. You can see if WSL is still running by opening a Powershell terminal and running:
@@ -69,6 +71,10 @@ If any are still open, run `wsl --shutdown` and reopen a WSL terminal (via Windo
 
 > [!TIP]
 > If mirrored mode is configured correctly, when you run `npx expo start` in your project, the IP address for the QR code should match the IP address you would see if you ran `ipconfig` in PowerShell. If you see a `172.x.x.x` IP address in your WSL terminal, mirrored mode is likely not configured correctly.
+
+##### What do these settings do?
+- `networkingMode=mirrored` will cause WSL to use the same IP address as the Windows host, instead of having its own special IP address that isn't accessible on the rest of your LAN. This enables a development build or Expo Go to be able to connect to download the JS bundle being served from WSL.
+- `hostAddressLoopback=true` will enable the Windows IP address to be used from Windows to connect to a server running from WSL. If this is turned on , you will be able to browse to the web version of your Expo app from your windows browser via `http://localhost:8081` or `http://[myipaddress]:8081`, for instance (without the setting, only `localhost` would work). This is useful for the React DevTools debugger, which will open a Windows process that is pointing to your IP address, or DevTools plugins. This setting is not required to run your app on a device, however.
 
 #### Opening up the Hyper-V firewall
 
@@ -85,9 +91,12 @@ These commands may change with software updates. If this does not work, check [M
 
 > If you do not want to enable mirrored mode, it is also possible to [setup per-port forwarding of traffic from WSL to Windows manually](https://learn.microsoft.com/en-us/windows/wsl/networking#accessing-a-wsl-2-distribution-from-your-local-area-network-lan).
 
+## Using the React Devtools debugger
+In SDK 52, the React Devtools debugger will be enabled by default, so debugging via the "shake" menu should work without any further configuration (other than what we did above) in WSL. In SDK 51, you can enable this debugger with the `EXPO_USE_UNSTABLE_DEBUGGER` flag, e.g., run `EXPO_USE_UNSTABLE_DEBUGGER=1 npx expo start`. Some features may be limited in older SDK's using this debugger, such as network debugging support.
+
 ## Using the JS Debugger
 
-We are currently looking into an [issue](https://github.com/expo/expo/issues/23678) with opening the browser for the debugger from WSL. In the meantime, you can run still debug from WSL by installing Chrome or another compatible browser inside the WSL Linux environment and patching the Expo CLI to force it to open the Linux-based browser when running in WSL instead of the Windows browser:
+If you need to use the JS Debugger, you can run still debug from WSL by installing Chrome or another compatible browser inside the WSL Linux environment and patching the Expo CLI to force it to open the Linux-based browser when running in WSL instead of the Windows browser:
 
 1. Install Chrome or another compatible browser in the Linux environment, using [Microsoft's instructions for installing GUI apps in WSL](https://learn.microsoft.com/en-us/windows/wsl/tutorials/gui-apps) as a guide.
 2. Use `patch-package` to remove the `IS_WSL` condition [as described here](https://github.com/expo/expo/issues/23678#issuecomment-1699253619).
