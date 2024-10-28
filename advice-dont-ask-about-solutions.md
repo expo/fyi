@@ -8,9 +8,9 @@ We often encounter problems that appear to have multiple, possible solutions. Th
 solutions themselves however could cause more problems, which in turn have multiple
 solutions, which in turn may cause more problems...
 
-What may have happened here is that you just asked a question that mostly consists
-of what you tried or waht you're trying to do, rather than giving context on **why
-it is you think you have to do this**. For example,
+What may have happened here is that you asked a question that mostly consists
+of what you tried or what you're trying to do, rather than giving context on **why
+it is you think you have to do this in the first place**. For example,
 
 > You wanted to do `<X>`.
 > You ran into a problem with `<X>` or don't know how to do `<X>`.
