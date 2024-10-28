@@ -18,11 +18,11 @@ What may have happened here is that you asked a question that mostly consists
 of what you tried or what you're trying to do, rather than giving context on **why
 it is you think you have to do this in the first place**. For example,
 
-> You wanted to do `<X>`.
-> You ran into a problem with `<X>` or don't know how to do `<X>`.
-> You figured, you can solve `<X>` by doing `<Y>`.
-> You ran into a problem with `<Y>` or don't know how to do `<Y>`.
-> You asked for help with `<Y>`.
+> You wanted to do `<X>`.<br/>
+> You ran into a problem with `<X>` or don't know how to do `<X>`.<br/>
+> You figured, you can solve `<X>` by doing `<Y>`.<br/>
+> You ran into a problem with `<Y>` or don't know how to do `<Y>`.<br/>
+> You asked for help with `<Y>`.<br/>
 > Others help you with `<Y>` but are confused, because they don't know about `<X>`.
 
 This leads to enormous amounts of wasted time and energy, both on your part, and

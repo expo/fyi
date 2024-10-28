@@ -3,8 +3,8 @@
 You may have been sent this document because **you asked to ask** a question,
 such as:
 
-> You: Can someone message me about `<topic>`?
-> You: Can anyone help me with `<topic>`?
+> You: Can someone message me about `<topic>`?<br/>
+> You: Can anyone help me with `<topic>`?<br/>
 > You: Does anyone know about `<topic>`?
 
 This isn't particularly productive and doesn't often lead to others being able to
@@ -39,7 +39,8 @@ and if they have an idea or recognize the problem, chances are they'll reply.
 
 **If you're not sure what to ask, describe your issue.**
 
-> Can someone help me with `<topic>`? I'm seeing `<problem>`, I've tried `<solution>`,
+> Can someone help me with `<topic>`?<br/>
+> I'm seeing `<problem>`, I've tried `<solution>`,<br/>
 > but instead of `<expected>`, I get `<symptom>`.
 
 Instead of leaving a message that only asks about a subject or topic, try describing your

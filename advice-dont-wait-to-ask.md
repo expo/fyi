@@ -3,9 +3,9 @@
 You may have been sent this document because **you waited to ask** a question,
 such as:
 
-> You: Hi
-> You: Anyone got a second?
-> You: Quick question.
+> You: Hi<br/>
+> You: Anyone got a second?<br/>
+> You: Quick question.<br/>
 > You: `@someone`?
 
 In asynchronous messaging, this is similar to calling someone, then putting them on hold
@@ -38,7 +38,7 @@ at any time and don't require someone's immediate attention, this makes sure cha
 
 **If you feel it's rude to simply ask a question, combine your question with an introduction.**
 
-> You: Hiya! `<question>`
+> You: Hiya! `<question>`<br/>
 > You: Hi everyone, I'm `<name>`. `<question>`
 
 If you ask a question immediately, there's nothing stopping you from combining it with the introduction
