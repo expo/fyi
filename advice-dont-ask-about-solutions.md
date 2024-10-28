@@ -4,6 +4,12 @@ You may have been sent this document because **you asked about solutions** to a 
 rather than the problem itself, or without explaining your original problem.
 This is called ["The XY Problem"](https://en.wikipedia.org/wiki/XY_problem)
 
+> [!TIP]
+> **tl;dr:** don't ask "Why is `<solution>` not working?", but rather ask:
+> - "How do I solve `<problem>` given `<context>`?"
+> - "I tried `<solution>` because of `<problem>` while working on `<context>`. What is an alternative solution?"
+> - "I ran into `<issue>`, when trying to do `<context>`. What's happening and what's a possible solution?"
+
 We often encounter problems that appear to have multiple, possible solutions. These
 solutions themselves however could cause more problems, which in turn have multiple
 solutions, which in turn may cause more problems...
@@ -45,12 +51,5 @@ explain:
 If you talk about your original goals and problems rather than your later solutions,
 you're telling others the full story of what happened and you may save yourself and
 them some time having to hunt down where your problem originally started.
-
-### tl;dr
-
-To summarize, don't ask "Why is `<solution>` not working?", but rather ask:
-- "How do I solve `<problem>` given `<context>`?"
-- "I tried `<solution>` because of `<problem>` while working on `<context>`. What is an alternative solution?"
-- "I ran into `<issue>`, when trying to do `<context>`. What's happening and what's a possible solution?"
 
 [^1]: This document was inspired by https://xyproblem.info/

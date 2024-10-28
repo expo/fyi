@@ -10,6 +10,12 @@ such as:
 This isn't particularly productive and doesn't often lead to others being able to
 help you.
 
+> [!TIP]
+> **tl;dr:** don't ask "Does anyone know about `<topic>`?", but rather ask:
+> - "How do I solve `<problem>` given `<context>`?"
+> - "Why is `<problem>` occurring when I do `<action>`?"
+> - "What do I do when I see `<issue>`, after I've done `<context>`?"
+
 There are plenty of reasons why people who otherwise would help you, may not be able
 to or may not commit to replying to you. If you ask to ask, you're omitting information
 about your problem or question, since you haven't formalized it. You are instead asking
@@ -39,12 +45,5 @@ and if they have an idea or recognize the problem, chances are they'll reply.
 Instead of leaving a message that only asks about a subject or topic, try describing your
 issue, even if you don't know what question to ask. If people recognize your problem or
 are interested in it, they are much more likely to help you, than if you had asked to ask.
-
-### tl;dr
-
-To summarize, don't ask "Does anyone know about `<topic>`?", but rather ask:
-- "How do I solve `<problem>` given `<context>`?"
-- "Why is `<problem>` occurring when I do `<action>`?"
-- "What do I do when I see `<issue>`, after I've done `<context>`?"
 
 [^1]: This document was inspired by https://dontasktoask.com/

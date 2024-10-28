@@ -12,6 +12,10 @@ In asynchronous messaging, this is similar to calling someone, then putting them
 after they pick up. If you prompt someont to respond before asking your question, you won't
 get an answer sooner but are instead asking for someone's attention.
 
+> [!TIP]
+> **tl;dr:** don't wait to ask your question or wait for someone to respond, but rather
+> write your question immediately.
+
 This causes conflict and problems because:
 - no one may respond, since they can't prioritize your message
 - someone may respond while you won't be there to ask your question
