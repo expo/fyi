@@ -3,9 +3,9 @@
 You may have been sent this document because **you asked to ask** a question,
 such as:
 
-> You: Can someone message me about <topic>?
-> You: Can anyone help me with <topic>?
-> You: Does anyone know about <topic>?
+> You: Can someone message me about `<topic>`?
+> You: Can anyone help me with `<topic>`?
+> You: Does anyone know about `<topic>`?
 
 This isn't particularly productive and doesn't often lead to others being able to
 help you.
@@ -33,8 +33,8 @@ and if they have an idea or recognize the problem, chances are they'll reply.
 
 **If you're not sure what to ask, describe your issue.**
 
-> Can someone help me with <topic>? I'm seeing <problem>, I've tried <solution>,
-> but instead of <expected>, I get <symptom>.
+> Can someone help me with `<topic>`? I'm seeing `<problem>`, I've tried `<solution>`,
+> but instead of `<expected>`, I get `<symptom>`.
 
 Instead of leaving a message that only asks about a subject or topic, try describing your
 issue, even if you don't know what question to ask. If people recognize your problem or
@@ -42,9 +42,9 @@ are interested in it, they are much more likely to help you, than if you had ask
 
 ### tl;dr
 
-To summarize, don't ask "Does anyone know about <topic>?", but rather ask:
-- "How do I solve <problem> given <context>?"
-- "Why is <problem> occurring when I do <action>?"
-- "What do I do when I see <issue>, after I've done <context>?"
+To summarize, don't ask "Does anyone know about `<topic>`?", but rather ask:
+- "How do I solve `<problem>` given `<context>`?"
+- "Why is `<problem>` occurring when I do `<action>`?"
+- "What do I do when I see `<issue>`, after I've done `<context>`?"
 
 [^1]: This document was inspired by https://dontasktoask.com/

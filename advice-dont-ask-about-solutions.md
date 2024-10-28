@@ -12,12 +12,12 @@ What may have happened here is that you just asked a question that mostly consis
 of what you tried or waht you're trying to do, rather than giving context on **why
 it is you think you have to do this**. For example,
 
-> You wanted to do <X>.
-> You ran into a problem with <X> or don't know how to do <X>.
-> You figured, you can solve <X> by doing <Y>.
-> You ran into a problem with <Y> or don't know how to do <Y>.
-> You asked for help with <Y>.
-> Others help you with <Y> but are confused, because they don't know about <X>.
+> You wanted to do `<X>`.
+> You ran into a problem with `<X>` or don't know how to do `<X>`.
+> You figured, you can solve `<X>` by doing `<Y>`.
+> You ran into a problem with `<Y>` or don't know how to do `<Y>`.
+> You asked for help with `<Y>`.
+> Others help you with `<Y>` but are confused, because they don't know about `<X>`.
 
 This leads to enormous amounts of wasted time and energy, both on your part, and
 on the part of those trying to help you.
@@ -39,8 +39,8 @@ did before you started working on what you posted about.**
 
 If you're not sure what to ask about, think back of when you started your task, and
 explain:
-> I started to work on <task> and wanted to achieve <goal>.
-> Instead of <expectation>, I encountered <problem>.
+> I started to work on `<task>` and wanted to achieve `<goal>`.
+> Instead of `<expectation>`, I encountered `<problem>`.
 
 If you talk about your original goals and problems rather than your later solutions,
 you're telling others the full story of what happened and you may save yourself and
@@ -48,9 +48,9 @@ them some time having to hunt down where your problem originally started.
 
 ### tl;dr
 
-To summarize, don't ask "Why is <solution> not working?", but rather ask:
-- "How do I solve <problem> given <context>?"
-- "I tried <solution> because of <problem> while working on <context>. What is an alternative solution?"
-- "I ran into <issue>, when trying to do <context>. What's happening and what's a possible solution?"
+To summarize, don't ask "Why is `<solution>` not working?", but rather ask:
+- "How do I solve `<problem>` given `<context>`?"
+- "I tried `<solution>` because of `<problem>` while working on `<context>`. What is an alternative solution?"
+- "I ran into `<issue>`, when trying to do `<context>`. What's happening and what's a possible solution?"
 
 [^1]: This document was inspired by https://xyproblem.info/

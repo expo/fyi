@@ -6,7 +6,7 @@ such as:
 > You: Hi
 > You: Anyone got a second?
 > You: Quick question.
-> You: @<someone>?
+> You: `@someone`?
 
 In asynchronous messaging, this is similar to calling someone, then putting them on hold
 after they pick up. If you prompt someont to respond before asking your question, you won't
@@ -34,8 +34,8 @@ at any time and don't require someone's immediate attention, this makes sure cha
 
 **If you feel it's rude to simply ask a question, combine your question with an introduction.**
 
-> You: Hiya! <question>
-> You: Hi everyone, I'm <name>. <question>
+> You: Hiya! `<question>`
+> You: Hi everyone, I'm `<name>`. `<question>`
 
 If you ask a question immediately, there's nothing stopping you from combining it with the introduction
 you originally wanted to write first - like a letter. This not only gives you time to formulate and
