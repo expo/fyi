@@ -26,16 +26,16 @@ Questions like the above cause conflict and problems because they:
 - question people's confidence and knowledge
 - wall out people who might be able to answer your question
 - ask for someone's undivided attention in real time
-- prompt people to commit to interviewing you to get to your real questions
+- prompt people to commit to interviewing you to figure out your real question
 - obscure any replies, which prevents it from being useful to other people
 
 Others might see this as you not having done the work to diagnose your problem - and
-conclude, why should they now put in any work to help you solve it.
+conclude that if _you_ didn't make any effort, why should _they_ now have to put in all the work to help solve the problem for you.
 
 **Instead, take the time to form a question please.**
 
 The solution to the problem is not to ask to ask, but just to ask. Someone may see your question,
-and if they have an idea or recognize the problem, chances are they'll reply.
+and if they have an idea or recognize the problem, you are much more likely to get a reply.
 
 **If you're not sure what to ask, describe your issue.**
 

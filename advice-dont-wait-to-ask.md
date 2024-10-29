@@ -9,26 +9,26 @@ such as:
 > You: `@someone`?
 
 In asynchronous messaging, this is similar to calling someone, then putting them on hold
-after they pick up. If you prompt someont to respond before asking your question, you won't
+after they pick up. If you prompt someone to respond before asking your question, you won't
 get an answer sooner but are instead asking for someone's attention.
 
 > [!TIP]
 > **tl;dr:** don't wait to ask your question or wait for someone to respond, but rather
 > write your question immediately.
 
-This causes conflict and problems because:
+Not writing your question in the first message causes conflict and problems because:
 - no one may respond, since they can't prioritize your message
 - someone may respond while you won't be there to ask your question
 - someone is prompted to give you their full attention to wait for your question
 
-Maybe you tried to be polite and wanted to ease someone into your question or introduce
-yourself before jumping into a request or asking for someone to commit to helping you - like
-one would in person or on the phone? That's great!
-But, online chats and forums are different.
+You may have done this with good intentions, tried to be polite, wanted to ease someone
+into your question, or introduce yourself before jumping into a request or asking for someone
+to commit to helping you - like one would in person or on the phone?
+Your intentions are admirable, but online chats and forums have different etiquette.
 
-Instead of letting someone respond in their own time, you're making them acknowledge your
-message before then making them wait for you to phrase your question, which is lost time for
-both you and the person responding (and that's frustrating for everyone).
+By asking to ask, instead of letting someone respond in their own time,
+you're making them acknowledge your message first, then wait for you to phrase your question,
+which is lost time for both you and the person responding (and that's frustrating for everyone).
 
 **Instead, just ask your question.**
 

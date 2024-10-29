@@ -14,7 +14,7 @@ We often encounter problems that appear to have multiple, possible solutions. Th
 solutions themselves however could cause more problems, which in turn have multiple
 solutions, which in turn may cause more problems...
 
-What may have happened here is that you asked a question that mostly consists
+You may have asked a question that mostly consists
 of what you tried or what you're trying to do, rather than giving context on **why
 it is you think you have to do this in the first place**. For example,
 
