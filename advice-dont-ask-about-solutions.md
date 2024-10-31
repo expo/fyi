@@ -1,7 +1,6 @@
 # Don't ask about solutions[^1]
 
-You may have been sent this document because **you asked about solutions** to a problem,
-rather than the problem itself, or without explaining your original problem.
+You may have been sent this document because **you asked about solutions** to a problem, rather than the problem itself, or without explaining your original problem.
 This is called ["The XY Problem"](https://en.wikipedia.org/wiki/XY_problem)
 
 > [!TIP]
