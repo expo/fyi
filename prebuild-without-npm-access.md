@@ -7,8 +7,8 @@ Within some corporate networks, direct access to NPM may be disabled, with all p
 
 If Github can be accessed over the network, you can specify a Github link. The default template is located in the **templates/expo-template-bare-minimum** folder inside the [Expo repository](https://github.com/expo/expo).
 
-1. Find the correct template for your SDK version. For example, the SDK 50 version is available at https://github.com/expo/expo/tree/sdk-50/templates/expo-template-bare-minimum. Substitute "sdk-50" for your required SDK.
-2. Pass this URL to Prebuild, e.g., `npx expo prebuild --template https://github.com/expo/expo/tree/sdk-50/templates/expo-template-bare-minimum`
+1. Find the correct template for your SDK version. For example, the SDK 50 version is available at https://github.com/expo/expo/tree/sdk-51/templates/expo-template-bare-minimum. Substitute "sdk-51" for your required SDK.
+2. Pass this URL to Prebuild, e.g., `npx expo prebuild --template https://github.com/expo/expo/tree/sdk-51/templates/expo-template-bare-minimum`
 
 ## Using a template from a local file
 If you cannot access NPM or Github from your CLI, you can use a local template from the [Expo repository](https://github.com/expo/expo) or elsewhere. The default template used by Prebuild is located in the **templates/expo-template-bare-minimum** folder.
