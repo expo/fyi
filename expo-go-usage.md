@@ -1,0 +1,17 @@
+# Expo Go: supported uses cases and suggested usage
+
+Expo Go is intended to be a sandbox environment, and we recommend using development builds for any real app. The ["Set up your environment"](https://docs.expo.dev/get-started/set-up-your-environment/) guide will help you get set up with a development build.
+
+## Who might want to use Expo Go
+
+- **First-time Expo developers**: you are just getting started with Expo and React Native and you want to learn about it without installing any native tooling like Xcode or Android Studio. 
+- **Experienced developers that want to quickly try out ideas**: Expo Go is a great way to try out features of the [Expo SDK](https://docs.expo.dev/versions/latest/) without having to add the package and re-compile/build your native app. In a matter of seconds you can have a sandbox for the latest Expo SDK and React Native version, and you can play with the features and see how they work on your device.
+
+## Use cases that are not supported by the sandbox
+
+- **Use development builds instead of Expo Go when building an app for production**: [Development builds](https://docs.expo.dev/develop/development-builds/introduction/) are a fully featured native development environment for when you are building an app that you intend to ship to end-users. They are extremely easy to get started with (try it out with [expo.new](https://expo.new/)). The tradeoff made with the Expo Go app is that, in order for it to be extremely fast to get started with, it is also very limited in what you can do. It does not allow you to customize any native code or configuration. It will be updated on app stores as new SDK versions are released, and only supports a single SDK version at a time - so if you depend on it, then you will have to follow the SDK release cycle immediately in some cases (you can still install Expo Go for any SDK version on Android emulators, Android devices, iOS simulators, and we explain how to do that here: https://expo.dev/go). We recommend using development builds for any real app, and we explicitly do not support use cases where developers use Expo Go as their development environment for production applications. [Learn more about Expo Go vs Development builds](https://expo.dev/blog/expo-go-vs-development-builds).
+- **Do not distribute your app to end-users through Expo Go**: Expo Go is not intended to be used for distribution. We do not support this use case and relying on it as the distribution mechanism for your app will not be a reliable experience for your users. Distribute your apps through app stores or other typical native app distribution channels.
+
+## Historical note
+
+We had to make the decision to support a single SDK version in Expo Go due to the [reasons outlined in our SDK 50 blog post back in January, 2023](https://expo.dev/changelog/2024/01-18-sdk-50#a-single-sdk-version-per-release-of-the-expo-go-app-looking-ahead-to-sdk-51). We understand that to some folks this may have been a disruptive change, and we are sorry for any inconvenience this has caused. We are confident that moving over to development builds for any non-trivial apps will be a better experience for everyone. We will continue to support Expo Go with a single SDK version, since this is the best way to quickly experience Expo and React Native for the first time and to experiment with different features in an isolated sandbox.
