@@ -77,3 +77,7 @@ A minimal reproduction is where you take the default app template, and try to ad
 If you have a minimal reproduction and it's for the Expo SDK or CLI, submit it to the [Expo Github issues list](https://github.com/expo/expo/issues). If we can run it on our end and see the same issue you're seeing, it greatly improves the odds that we'll be able to fix it in short order, or at least be able to suggest a workaround.
 
 If you have a minimal reproduction for another package, submit it to that package's Issues list. Minimal reproductions are helpful and appreciated everywhere.
+
+## Tips for non-CNG projects
+
+If you're managing your own **ios** and **android** folders, a common source of issues during an upgrade are changes to native project files. You can see all the changes to the base native template in the [Native Project Upgrade Helper](https://docs.expo.dev/bare/upgrade). Double-check those, as one line can make a big difference!
