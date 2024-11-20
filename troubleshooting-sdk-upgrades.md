@@ -73,7 +73,7 @@ At this point, if you're still hunting down the issue, you've collected a lot of
 
 ### Create a minimal reproduction
 
-A minimal reproduction is where you take the default app template (`npx react-expo-app@latest`), and try to add just enough code, packages, or configuration to cause the same issue that you see in your app. A one of a few wonderful things can happen when you do this:
+A minimal reproduction is where you take the default app template (`npx create-expo-app@latest`), and try to add just enough code, packages, or configuration to cause the same issue that you see in your app. A one of a few wonderful things can happen when you do this:
 1. You might find that you can't reproduce the issue, and this suggests that something else may be causing it. You've eliminated one possibility!
 2. You might find that you can't reproduce the issue, but it's becaues you found a problem with your implementation that was easier to see in isolation. So now you can take that learning back to your own code!
 3. If you can reproduce the issue, you've just created a valuable artifact that you can pass along to the maintainer when you ask for help, eliminating several obstacles on their way to providing a fix.
