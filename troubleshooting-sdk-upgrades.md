@@ -5,20 +5,21 @@ While much of your upgrade to the next SDK version can be accomplished in a [few
 This goal of this guide is provide background on what goes into an SDK upgrade and some battle-tested strategies for troubleshooting upgrades, so you can be ready to quickly narrow down root cause and get your app working on the next version.
 
 ## What's included in an Expo SDK upgrade?
+
 An SDK upgrade includes:
 - Changes to core functionality in the `expo` module and its dependencies
 - New versions of Expo SDK (`expo-*`) packages, such as `expo-updates`, `expo-camera`, and `expo-dev-client`
 - Updates to other critical packages, such as `react-native-reanimiated`, `react-native-screens`, or React Navigation packages (when using Expo Router)
 - An upgrade to the next version of `react-native`, including associated packages like Metro Bundler.
 
-That last item is key: each Expo SDK upgrade is keyed to a React Native version. You are upgrading React Native at the same time, so your JavaScript/Typescript, any custom native code you write, and third party packages will need to be compatible with that version of React Native.
+That last item is key: each Expo SDK upgrade is tied to a React Native version. You are upgrading React Native at the same time, so your JavaScript/Typescript, any custom native code you write, and third party packages will need to be compatible with that version of React Native.
 
 Knowing the different categories of what is getting updated can help us look in the right general direction when we have an issue, going from "it's not working" to "this specific functionality in the new version of that specific package has a specific issue."
 
 ## Before you upgrade
 
 These few things can really help you start your upgrade on the right foot.
-- [Migrate to development builds](https://docs.expo.dev/develop/development-builds/introduction/). If you're still using Expo Go for testing, migrate to development builds before you upgrade. Expo Go is limited in how it can simulate the functionality of your standalone app. Migrating to development builds before you upgrade will give you a good baseline for comparing between old and new versions, and will set you up for being ready to create a development build under the new SDK version. Once you're on development builds, you will have the flexibility to upgrade on your own schedule with less pressure.
+- [Migrate to development builds](https://docs.expo.dev/develop/development-builds/introduction/). If you're still using Expo Go for development (note: [Expo Go isn't recommended beyond learning and prototyping](https://expo.fyi/expo-go-usage)), migrate to development builds before you upgrade. Expo Go is limited in how it can simulate the functionality of your standalone app. Migrating to development builds before you upgrade will give you a good baseline for comparing between old and new versions, and will set you up for being ready to create a development build under the new SDK version. Once you're on development builds, you will have the flexibility to upgrade on your own schedule with less pressure.
 - **Start your upgrade on a separate git branch**. You should be able to switch back to working on your previous version if your upgrade takes a little longer than expected. Only merge your upgrade into main once you've confirmed everything is working and you're ready to ship.
 - **Upgrade one thing at a time**. Starting with SDK 52, many developers are also upgrading their apps to use the React Native New Architecture. Do the upgrade to SDK 52 first, and then try [enabling the New Architecture](https://docs.expo.dev/guides/new-architecture/#enable-the-new-architecture-in-an-existing-project), so you can better tell at what step an issue occurred. Likewise, upgrade one SDK version at a time so don't miss any important breaking changes.
 
@@ -27,6 +28,7 @@ These few things can really help you start your upgrade on the right foot.
 Below are some general approaches to troubleshooting, in a general order of things you should try first and are quick fixes, to things you should try when the quick fixes don't resolve the issue.
 
 ### Check Expo Doctor warnings
+
 Run `npx expo-doctor@latest`. You'll get warnings about out-of-date packages, any packages that are known to be not compatible with the New Architecture, and alerts about other common pitfalls.
 
 If you see any out-of-date dependencies, run `npx expo install --fix` to upgrade to the latest patch version. Maybe those updates include a fix to your issue!
@@ -37,17 +39,18 @@ If you're migrating to New Architecture and see that a package does not support 
 
 The [changelogs](https://docs.expo.dev/workflow/upgrading-expo-sdk-walkthrough/#sdk-changelogs) include notes about any breaking changes, such as deprecated API's that were removed or changes required by Android or Apple SDK's.
 
-### Clear node modules
+### Clear the node_modules directory
 
-Sometimes our **node_modules** folder gets into an unexpected state when a lot of things change. If and when these errors occur often depends on what package manager you're using or if your app is inside a monorepo.
+Sometimes our **node_modules** folder gets into an invalid state when many packages change at the same time. Package managers often optimize for speed rather than correctness. If and when these errors occur often depends on what package manager you're using or if your app is inside a monorepo.
 
-Run `rm -rf node_modules` to delete **node_modules** and all of its contents, and then run your package manager again to recreate it (`Remove-Item -Path "node_modules" -Recurse -Force` on PowerShell).
+Run `rm -rf node_modules` to delete **node_modules** and all of its contents, and then run your package manager again to recreate it (`Remove-Item -Path "node_modules" -Recurse -Force` on PowerShell). You can alternatively use `npx npkill` to delete **node_modules** and any nested **node_modules** directories interactively.
 
-Sometimes just removing the folder and reinstalling dependencies is enough, but if that doesn't work, you can also try deleting the lockfile (e.g., **yarn.lock**, **package-lock.json**) and deleting **node_modules** at the same time, and then reinstalling dependencies. Your lockfile will likely change slightly after doing this, which may end up being just the fix you need.
+Sometimes just removing the folder and reinstalling dependencies is enough, but if that doesn't work, you can also try deleting the lockfile (e.g., **yarn.lock**, **package-lock.json**) and deleting **node_modules** at the same time, and then reinstalling dependencies. Your lockfile will likely change slightly after doing this, which may end up being just the fix you need. This often isn't desirable, especially in monorepos where you don't want to touch any other unrelated dependencies. Using more recent versions of your package manager of choice tend to reduce the risk of this being needed.
 
-### Clear the bundler cache
+### Clear caches
 
-You can also clear the Metro Bundler cache by running `npx expo start -c`.
+- **Metro**: You can also clear the Metro Bundler cache by running `npx expo start -c`.
+- **Native directories**: If you use [CNG](https://docs.expo.dev/workflow/continuous-native-generation/) but still compile your project locally, run `npx expo prebuild --clean` to re-generate your **android** and **ios** directories from scratch.
 
 ### Check Github repositories for third-party packages
 
@@ -89,6 +92,8 @@ When you report an issue, describe what is specifically happening versus what yo
 ## Tips for non-CNG projects
 
 If you're managing your own **ios** and **android** folders, a common source of issues during an upgrade are changes to native project files. You can see all the changes to the base native template in the [Native Project Upgrade Helper](https://docs.expo.dev/bare/upgrade). Double-check those, as one line can make a big difference!
+
+Be sure to clear any native caches prior to running a new build, such as iOS derived data and Android build directories.
 
 ## More information
 
