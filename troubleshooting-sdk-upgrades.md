@@ -59,6 +59,10 @@ On EAS Build, if you see a compilation error for a third-party package in the Gr
 
 This could take on a lot of forms, but sometimes we do things to workaround issues, and those workarounds can be the source of the problem after you upgrade. For instance, maybe you set a specific `kotlinVersion` using the `expo-build-properties` config plugin because a package required it at the time, but now you're getting a bundle of syntax errors in the Gradle step. It might be time to remove that configuration!
 
+### Use React Native DevTools to debug JavaScript / Redbox errors
+
+Press `m` to open React Native DevTools when running your app locally, which lets you read console errors, set breakpoints, view network traffic, and more. Setting a breakpoint on unhandled exceptions can help you see the state of your app just before the error, including the function calls leading up to the error.
+
 ### Use native logging tools to debug crashes
 
 If your app builds but is crashing when you run it, use [ADB Logcat or macOS Console](https://docs.expo.dev/debugging/runtime-issues/#production-errors) to listen in on native log messages. You'll often see something when reproducing the error with one of these tools connected that will help on your way to getting unblocked.
@@ -74,10 +78,18 @@ A minimal reproduction is where you take the default app template, and try to ad
 2. You might find that you can't reproduce the issue, but it's becaues you found a problem with your implementation that was easier to see in isolation. So now you can take that learning back to your own code!
 3. If you can reproduce the issue, you've just created a valuable artifact that you can pass along to the maintainer when you ask for help, eliminating several obstacles on their way to providing a fix.
 
+### Submit an issue
+
 If you have a minimal reproduction and it's for the Expo SDK or CLI, submit it to the [Expo Github issues list](https://github.com/expo/expo/issues). If we can run it on our end and see the same issue you're seeing, it greatly improves the odds that we'll be able to fix it in short order, or at least be able to suggest a workaround.
 
 If you have a minimal reproduction for another package, submit it to that package's Issues list. Minimal reproductions are helpful and appreciated everywhere.
 
+When you report an issue, describe what is specifically happening versus what you expect to happen. Language like "not working" is typically too vague, as there's many different ways something could be "not working." Descriptions like "I got this error message: {specific error message}" or "the view overlaps the camera notch when it should be under it" help others visualize your issue, whether reporting it via Github or discussing it on Discord.
+
 ## Tips for non-CNG projects
 
 If you're managing your own **ios** and **android** folders, a common source of issues during an upgrade are changes to native project files. You can see all the changes to the base native template in the [Native Project Upgrade Helper](https://docs.expo.dev/bare/upgrade). Double-check those, as one line can make a big difference!
+
+## More information
+
+Check out our [troubleshooting guides overview](https://docs.expo.dev/troubleshooting/overview/) for a list of all of our guides for how to debug specific issues and use debugging tools in general. One of the issues presented in here might resemble your issue.
