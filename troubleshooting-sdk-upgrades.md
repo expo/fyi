@@ -9,7 +9,7 @@ This goal of this guide is provide background on what goes into an SDK upgrade a
 An SDK upgrade includes:
 - Changes to core functionality in the `expo` module and its dependencies
 - New versions of Expo SDK (`expo-*`) packages, such as `expo-updates`, `expo-camera`, and `expo-dev-client`
-- Updates to other critical packages, such as `react-native-reanimiated`, `react-native-screens`, or React Navigation packages (when using Expo Router)
+- Updates to other critical packages, such as `react-native-reanimated`, `react-native-screens`, or React Navigation packages (when using Expo Router)
 - An upgrade to the next version of `react-native`, including associated packages like Metro Bundler.
 
 That last item is key: each Expo SDK upgrade is tied to a React Native version. You are upgrading React Native at the same time, so your JavaScript/Typescript, any custom native code you write, and third party packages will need to be compatible with that version of React Native.
