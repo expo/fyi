@@ -22,4 +22,4 @@ If you cannot access NPM or Github from your CLI, you can use a local template f
 `npx create-expo-module` downloads a template in a similar way and thus may not work without direct NPM access. You can specify a template as a folder path to avoid needing to download it.
 
 1. Download the folder contents of expo-modules-template (e.g., https://github.com/expo/expo/tree/sdk-50/packages/expo-module-template, except replace "sdk-50" with your desired SDK version).
-2. Pass the path to the command, e.g., `npx create-expo-app --source ./expo/packages/expo-module-template`.
+2. Pass the path to the command, e.g., `npx create-expo-module --source ./expo/packages/expo-module-template`.
