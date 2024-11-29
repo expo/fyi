@@ -9,7 +9,7 @@ This goal of this guide is provide background on what goes into an SDK upgrade a
 An SDK upgrade includes:
 - Changes to core functionality in the `expo` module and its dependencies
 - New versions of Expo SDK (`expo-*`) packages, such as `expo-updates`, `expo-camera`, and `expo-dev-client`
-- Updates to other critical packages, such as `react-native-reanimiated`, `react-native-screens`, or React Navigation packages (when using Expo Router)
+- Updates to other critical packages, such as `react-native-reanimated`, `react-native-screens`, or React Navigation packages (when using Expo Router)
 - An upgrade to the next version of `react-native`, including associated packages like Metro Bundler.
 
 That last item is key: each Expo SDK upgrade is tied to a React Native version. You are upgrading React Native at the same time, so your JavaScript/Typescript, any custom native code you write, and third party packages will need to be compatible with that version of React Native.
@@ -78,7 +78,7 @@ At this point, if you're still hunting down the issue, you've collected a lot of
 
 A minimal reproduction is where you take the default app template (`npx create-expo-app@latest`), and try to add just enough code, packages, or configuration to cause the same issue that you see in your app. A one of a few wonderful things can happen when you do this:
 1. You might find that you can't reproduce the issue, and this suggests that something else may be causing it. You've eliminated one possibility!
-2. You might find that you can't reproduce the issue, but it's becaues you found a problem with your implementation that was easier to see in isolation. So now you can take that learning back to your own code!
+2. You might find that you can't reproduce the issue, but it's because you found a problem with your implementation that was easier to see in isolation. So now you can take that learning back to your own code!
 3. If you can reproduce the issue, you've just created a valuable artifact that you can pass along to the maintainer when you ask for help, eliminating several obstacles on their way to providing a fix.
 
 ### Submit an issue
