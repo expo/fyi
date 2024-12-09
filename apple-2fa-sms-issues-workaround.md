@@ -1,7 +1,7 @@
 # Workaround for Apple 2FA SMS issues
 
 > [!NOTE]
-> On 2024-11-15 it was reported that [Apple API was throwing internal server errors while trying to send 2FA SMS codes for American phone numbers, when authenticating through EAS CLI](https://github.com/expo/eas-cli/issues/2698). This was due to a change in the Apple API that required a new header to be used. The Expo team has since updated the EAS CLI to include this header and this issue should be fixed in version `14.0.3`.
+> On 2024-11-15 it was reported that [Apple API was throwing internal server errors while trying to send 2FA SMS codes for American phone numbers, when authenticating through EAS CLI](https://github.com/expo/eas-cli/issues/2698). The Expo team has since updated the EAS CLI to match the new authentication requests. The issue should be fixed in version `14.0.3`.
 
 If you are experiencing persisting issues with Apple SMS 2FA while logging in through EAS CLI, you can use the `device` 2FA method as a workaround.
 
