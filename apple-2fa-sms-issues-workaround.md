@@ -12,3 +12,16 @@ We'll continue improving the SMS 2FA as best we can, and EAS CLI currently handl
 Follow [these Apple docs](https://support.apple.com/en-us/102660) to set a trusted device ([for example your Mac](https://github.com/expo/eas-cli/issues/2698#issuecomment-2525401555)) for your Apple account.
 Once the trusted device is set up, you can use the `device` 2FA method when prompted `How do you want to validate your account?` in the EAS CLI.
 This method will send a 2FA code to your trusted device, which you can then enter in the CLI to authenticate.
+
+## Remove EAS CLI Apple authentication cache (if you are using EAS CLI version >= `14.0.3`)
+
+If you still encounter this issue while using EAS CLI version >= `14.0.3`, you can try to remove old Apple authentication cache.
+It seems to fix the issue for some users.
+
+Run the following command to remove the Apple authentication cache used by EAS CLI:
+
+```bash
+rm -rf ~/.app-store/
+```
+
+After removing the cache, try logging in again with the EAS CLI.
