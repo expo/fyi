@@ -124,3 +124,12 @@ If you didn't copy it when creating it, for a limited time, client secret will b
 The Expo organization name is available from the Account overview when logging into your account at [expo.dev](https://expo.dev):
 
 [<img src="./assets/sso-setup-general/01-expo-org.png" width="400" />](./assets/sso-setup-general/01-expo-org.png)
+
+## Troubleshooting
+If SSO authentication works on initial login but fails on "sudo" operations (e.g., re-authenticating when granting a user additional permissions), check that the following settings are set:
+- Check the "ID tokens" checkbox under "Implicit grant and hybrid flows"
+- Ensure that the `User.read` scope is added.
+
+[<img src="./assets/sso-setup-microsoft/24-id-token-set.png" width="500" />](./assets/sso-setup-microsoft/24-id-token-set.png)
+
+[<img src="./assets/sso-setup-microsoft/25-user-read-scope.png" width="500" />](./assets/sso-setup-microsoft/25-user-read-scope.png)
