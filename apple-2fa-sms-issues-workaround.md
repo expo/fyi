@@ -3,7 +3,9 @@
 > [!NOTE]
 > On 2024-11-15 it was reported that [Apple API was throwing internal server errors while trying to send 2FA SMS codes for American phone numbers, when authenticating through EAS CLI](https://github.com/expo/eas-cli/issues/2698). The Expo team has since updated the EAS CLI to match the new authentication requests. The issue should be fixed in version `14.0.3`.
 
-If you are experiencing persisting issues with Apple SMS 2FA while logging in through EAS CLI, you can use the `device` 2FA method as a workaround.
+If you are experiencing persistent issues with Apple SMS 2FA while logging in through EAS CLI, **you should switch to using the `device` 2FA method**. Apple has recently changed their APIs in a way that has made this auth method less reliable for external tools (for example, see [fastlane#28816](https://github.com/fastlane/fastlane/issues/28816)). At Expo, we have adjusted our implementation to fix many cases but we do not have any direct access to the information that would allow us to feel confident that we can fix it in every scenario. For this reason, we strongly recommend moving to device 2FA instead.
+
+We'll continue improving the SMS 2FA as best we can, and EAS CLI currently handles it better than any other tool that we are aware of, but we can't guarantee that it will be reliable. It is possible that Apple may be moving away from the SMS 2FA method, given that it is generally considered to be less secure than alternative approaches.
 
 ## How to setup and use `device` 2FA method with EAS CLI
 
