@@ -81,7 +81,7 @@ If any are still open, run `wsl --shutdown` and reopen a WSL terminal (via Windo
 On recent Windows/WSL updates, you may also need to open up inbound connections on the Hyper-V firewall. [Microsoft documents a few options for this](https://learn.microsoft.com/en-us/windows/wsl/networking#mirrored-mode-networking). One option is to right-click on Windows Terminal in the Start menu, click "Open as Administrator", open a Powershell tab, and run the following command:
 
 ```
-Set-NetFirewallHyperVVMSetting -Name ‘{40E0AC32-46A5-438A-A0B2-2B479E8F2E90}’ -DefaultOutboundAction Allow
+Set-NetFirewallHyperVVMSetting -Name '{40E0AC32-46A5-438A-A0B2-2B479E8F2E90}' -DefaultInboundAction Allow
 ```
 
 > [!TIP]
