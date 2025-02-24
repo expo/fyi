@@ -2,7 +2,9 @@
 
 Using `expo-status-bar` or `expo-navigation-bar` in apps with edge-to-edge layout enabled may cause unexpected behavior, as they currently use [deprecated APIs](https://developer.android.com/about/versions/15/behavior-changes-15#deprecated-apis). This could result in the feature not working entirely.
 
-Instead, use the `SystemBars` component from [`react-native-edge-to-edge`](https://github.com/zoontek/react-native-edge-to-edge).
+Instead, use the `SystemBars` component from [`react-native-edge-to-edge`](https://github.com/zoontek/react-native-edge-to-edge):
+
+_package.json_
 
 ```diff
 {
@@ -13,6 +15,8 @@ Instead, use the `SystemBars` component from [`react-native-edge-to-edge`](https
   }
 }
 ```
+
+_in your app_
 
 ```diff
 import { useEffect } from "react";
