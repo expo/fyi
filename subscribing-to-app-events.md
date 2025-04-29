@@ -2,7 +2,7 @@
 
 Your app or library may need to subscribe to application events such as `onCreate` (Android), `applicationDidFinishLaunching` (iOS) and more. Often times, it's necessary to hook into these events to perform, for example, a third-party SDK setup.
 
-[Expo Modules API](https://docs.expo.dev/modules/overview/) supports integrating with these APIs from your modules, without needing to modify the underlying native project. This can be accomplished with [Android lifecycle listeners](https://docs.expo.dev/modules/android-lifecycle-listeners/) and [iOS AppDelegate subscribers](https://docs.expo.dev/modules/appdelegate-subscribers/). We'll collectively call these "Subscribers" in this document.
+[Expo Modules API](https://docs.expo.dev/modules/overview/) supports integrating with these APIs from your modules, without needing to modify the underlying native project. This can be achieved with [Android lifecycle listeners](https://docs.expo.dev/modules/android-lifecycle-listeners/) and [iOS AppDelegate subscribers](https://docs.expo.dev/modules/appdelegate-subscribers/). We'll collectively call these "Subscribers" in this document.
 
 ## Migrating legacy config plugins
 
@@ -12,9 +12,9 @@ If you are using a config plugin to perform a task that can be done by a Subscri
 
 ### Migrating to Subscribers (recommended)
 
-Read more about this approach and see examples in ["Developing and debugging a plugin"](https://docs.expo.dev/config-plugins/development-and-debugging/#ios-appdelegate). For a step-by-step guide for libraries, follow ["integrate Expo Modules API into an existing library"](https://docs.expo.dev/modules/existing-library/).
+Read more about this approach and see examples in ["Developing and debugging a plugin"](https://docs.expo.dev/config-plugins/development-and-debugging/#ios-appdelegate). For a step-by-step guide for libraries, follow ["integrate Expo Modules API into an existing library"](https://docs.expo.dev/modules/existing-library/#subscribing-to-application-events).
 
-[//]: # "TODO vonovak 04/2025: add link to more detailed instructions in https://docs.expo.dev/modules/existing-library/"
+A good, minimal example of using Subscribers in a community Expo Module is `react-native-app-security`: see its [Android lifecycle listener](https://github.com/bamlab/react-native-app-security/blob/c1a861cbd348f404ec18ffae90d1c9bdc66bc00d/android/src/main/java/tech/bam/rnas/AndroidReactActivityLifecycleListener.kt) and [iOS AppDelegate subscriber](https://github.com/bamlab/react-native-app-security/blob/c1a861cbd348f404ec18ffae90d1c9bdc66bc00d/ios/RNASAppLifecyleDelegate.swift).
 
 ### Updating the config plugin
 
