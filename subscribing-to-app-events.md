@@ -1,12 +1,12 @@
 # Subscribing to important application events
 
-Your app or library may need to subscribe to important application events such as `onCreate` (Android), `applicationDidFinishLaunching` (iOS) and more. Often times, it's necessary to hook into these events to perform, for example, a third-party SDK setup.
+Your app or library may need to subscribe to application events such as `onCreate` (Android), `applicationDidFinishLaunching` (iOS) and more. Often times, it's necessary to hook into these events to perform, for example, a third-party SDK setup.
 
-[Expo modules](https://docs.expo.dev/modules/overview/) api supports this through [Android lifecycle listeners](https://docs.expo.dev/modules/android-lifecycle-listeners/) and [iOS AppDelegate subscribers](https://docs.expo.dev/modules/appdelegate-subscribers/). We'll collectively call these "Subscribers" in this document.
+[Expo Modules API](https://docs.expo.dev/modules/overview/) supports integrating with these APIs from your modules, without needing to modify the underlying native project. This can be accomplished with [Android lifecycle listeners](https://docs.expo.dev/modules/android-lifecycle-listeners/) and [iOS AppDelegate subscribers](https://docs.expo.dev/modules/appdelegate-subscribers/). We'll collectively call these "Subscribers" in this document.
 
 ## Migrating legacy config plugins
 
-You may be using a config plugin to add code inside the same methods that the Subscribers allow hooking into. Using Subscribers is the recommended approach, as they are more robust and less error-prone. For example, in SDK 53, `AppDelegate` was migrated from Objective-C to Swift, which would break config plugins that only supported Objective-C.
+You may be using a config plugin to add code inside the same methods that the Subscribers allow hooking into. Using Subscribers is the recommended approach, as they are more robust and less error-prone, since they compose well with multiple listeners compared to modifying code with a regular expression in a config plugin. For example, in SDK 53, `AppDelegate` was migrated from Objective-C to Swift, which would break config plugins that only supported Objective-C.
 
 If you are using a config plugin to perform a task that can be done by a Subscriber, we recommend you [switch to Subscribers](#migrating-to-subscribers-recommended). Alternatively, read [instructions below](#updating-the-config-plugin) to migrate your config plugin to support Swift.
 
