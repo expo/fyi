@@ -18,7 +18,7 @@ A good, minimal example of using Subscribers in a community Expo Module is `reac
 
 ### Updating the config plugin
 
-If you want to make modifications using a config plugin, make use of utility functions exported from `@expo/config-plugins` listed below. For an example of a config plugin that modifies the `AppDelegate.swift/mm` and `MainActivity.kt/java`, refer to [`react-native-bootsplash` config plugin](https://github.com/zoontek/react-native-bootsplash/blob/388d6be3d7082f60fdafe4bbfead73c17f00f0a8/src/expo.ts).
+If you want to make modifications using a config plugin, make use of utility functions exported from `expo/config-plugins` listed below. For an example of a config plugin that modifies the `AppDelegate.swift/mm` and `MainActivity.kt/java`, refer to [`react-native-bootsplash` config plugin](https://github.com/zoontek/react-native-bootsplash/blob/388d6be3d7082f60fdafe4bbfead73c17f00f0a8/src/expo.ts).
 
 _This list is non-exhaustive._
 
