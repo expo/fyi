@@ -57,7 +57,7 @@ To setup a Google Service Account Key for Play Store Submissions via `eas submit
 
 [<img src="./assets/creating-google-service-account/11-set-permissions.png" width="800" />](./assets/creating-google-service-account/11-account-permissions.png)
 
-10. Now you can upload your newly created Google Service Account Key to EAS servers and upload your app's release archive to Google Play Store using `eas submit`.
+10. Now use `eas submit` to upload your newly created Google Service Account Key to EAS servers and upload your app's release archive to Google Play Store.
 
 ## Download key from an existing service account
 
