@@ -9,6 +9,8 @@ it is recommended that you create and configure a new Google Cloud Project in yo
 - Google issuer URL is https://accounts.google.com
 - Expo organization name
 
+A user with Owner permission can enter this information in your Expo org's settings to turn on SSO.
+
 Read on for how to configure the Google WS application and obtain this information.
 
 ## Setting up the Google WS application
