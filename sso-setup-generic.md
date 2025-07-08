@@ -39,6 +39,13 @@ In order to configure SSO, the following must be true:
   - Run `eas login`
   - Follow the prompts to login via SSO
 
+#### Recommended testing
+
+Identity providers may handle token refresh in different ways. When first verifying that your setup works, it's recommended to set shorter refresh durations in order to ensure there's no issues, particularly:
+- refresh token duration
+- access token expiration
+- ID token expiration
+
 ## Troubleshooting
 
 - If you can't see the SSO option in the org settings, verify that you have owner access on the org, and that the org is subscribed to the Enterprise plan.
