@@ -72,7 +72,7 @@ Both of these issues are related to your app's JavaScript bundle and runtime err
 
 The Expo SDK contains different modules and tools that are designed to work together. As we release new versions of Expo packages, older versions may not work as intended with newer versions of the SDK. Similarly, sometimes a package form a newer SDK release isn't always compatible with older versions of the SDK.
 
-The SDK version is set using the version of the `expo` package. A set of dependency version ranges is tested against every SDK release and the `expo install` tool will check your dependencies against these known version ranges and report any misalignment.
+The SDK version is determined using the version of the installed `expo` package. A limited set of dependency version ranges is tested against every SDK release and the [`expo install` command](https://docs.expo.dev/more/expo-cli/#install) will compare your dependencies against these known version ranges and report any misalignment.
 
 ```sh
 # Check which installed packages need to be updated
