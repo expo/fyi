@@ -221,7 +221,7 @@ However, you should be aware that, by default, in npm, pnpm, and Bun, **peer dep
 This can, in rare cases, lead to unintentional conflicts if that package manager doesn't also verify that the auto-installed peer dependency isn't already a transitive dependency or installs it twice.
 
 <details>
-<summary>Disabling auto-installing peer dependencies for npm</summary>
+<summary><strong>Disabling auto-installing peer dependencies for npm</strong></summary>
 
 To disable automatically installed peer dependencies for npm, create a `.npmrc` file in your project with this configuration option:
 
@@ -233,7 +233,7 @@ legacy-peer-deps=true
 </details>
 
 <details>
-<summary>Disabling auto-installing peer dependencies for pnpm</summary>
+<summary><strong>Disabling auto-installing peer dependencies for pnpm</strong></summary>
 
 To disable automatically installed peer dependencies for pnpm, create a `pnpm-workspace.yaml` file in your project with this configuration option:
 
