@@ -1,5 +1,8 @@
 # Resolving Dependency Issues
 
+> [!NOTE]
+> If you've been linked to this page or already know that you have a dependency conflict, you can skip ahead to the ["How to resolve dependency issues" section](#how-to-resolve-dependency-issues).
+
 Projects with outdated, misaligned, or duplicate dependencies can unexpectedly fail with build errors.
 Common issues include but are not limited to:
 
@@ -60,6 +63,8 @@ Relating to the **four common causes of dependency issues**, having duplicate ve
 **Native linking issues** happen because of [autolinking](https://docs.expo.dev/more/glossary-of-terms/#autolinking). [Expo Autolinking](https://docs.expo.dev/modules/autolinking/) will search for React Native and Expo modules in your dependencies and link them into your native build system. When compiling the native app, only one version of any native module can be present. However, this is in direct conflict with [normal Node.js resolution](https://nodejs.org/api/modules.html#loading-from-node_modules-folders), which can access duplicate versions of packages that contain native modules.
 
 Both of these issues are related to your app's JavaScript bundle and runtime errors. Native modules typically don't expect to have multiple, different versions of their JavaScript code bundled into a single aop.
+
+---
 
 ## How to resolve dependency issues
 
