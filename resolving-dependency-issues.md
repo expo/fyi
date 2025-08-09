@@ -117,7 +117,7 @@ Once you've identified a duplicate for one of your top-level dependencies, chang
 > [!TIP]
 > From SDK 54, `expo-doctor` will automatically check for duplicate native modules by using Expo Autolinking's output.
 
-### 3. Duplicating transitive dependencies in your lockfile
+### 3. Deduplicating transitive dependencies in your lockfile
 
 Sometimes even after doing both of these steps, your app will still contain duplicate native modules. This is often due to **transitive** dependencies. These are your dependencies' dependencies and since you may not directly depend on these in your `package.json`, you may not be aware of all of them. Some of these transitive dependencies may also be native modules that shouldn't be duplicated.
 
