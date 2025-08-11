@@ -45,7 +45,7 @@ When installing multiple dependencies, package managers will deduplicate your de
 
 [<img src="./assets/resolving-dependency-issues/install-hoisting.png" width="800" />](./assets/resolving-dependency-issues/install-hoisting.png)
 
-For example, as seen in the graphic above, the hoisting algorithm has three parts to it:
+For example, as seen in the graphic above, the hoisting algorithm has three parts:
 - if two packages are on compatible version ranges (`b@^1.1.0` and `b@^1.0.0`), a deduplicated version (`b@1.1.0`) can be installed if they share a common parent
 - a deduplicated version can be shared and moved upwards ("hoisted") until either the root `node_modules` folder is reached, or a conflict occurs
 - a conflict occurs, if a package has a conflicting version range (`b@^2.0.0` can't be shared with `b@^1.1.0`)
@@ -62,7 +62,7 @@ Relating to the **four common causes of dependency issues**, having duplicate ve
 
 **Native linking issues** happen because of [autolinking](https://docs.expo.dev/more/glossary-of-terms/#autolinking). [Expo Autolinking](https://docs.expo.dev/modules/autolinking/) will search for React Native and Expo modules in your dependencies and link them into your native build system. When compiling the native app, only one version of any native module can be present. However, this is in direct conflict with [normal Node.js resolution](https://nodejs.org/api/modules.html#loading-from-node_modules-folders), which can access duplicate versions of packages that contain native modules.
 
-Both of these issues are related to your app's JavaScript bundle and runtime errors. Native modules typically don't expect to have multiple, different versions of their JavaScript code bundled into a single aop.
+Both of these issues are related to your app's JavaScript bundle and runtime errors. Native modules typically don't expect to have multiple, different versions of their JavaScript code bundled into a single app.
 
 ---
 
@@ -70,7 +70,7 @@ Both of these issues are related to your app's JavaScript bundle and runtime err
 
 ### 1. Resolving Expo SDK incompatibilities
 
-The Expo SDK contains different modules and tools that are designed to work together. As we release new versions of Expo packages, older versions may not work as intended with newer versions of the SDK. Similarly, sometimes a package form a newer SDK release isn't always compatible with older versions of the SDK.
+The Expo SDK contains different modules and tools that are designed to work together. As we release new versions of Expo packages, older versions may not work as intended with newer versions of the SDK. Similarly, sometimes a package from a newer SDK release isn't always compatible with older versions of the SDK.
 
 The SDK version is determined using the version of the installed `expo` package. A limited set of dependency version ranges is tested against every SDK release and the [`expo install` command](https://docs.expo.dev/more/expo-cli/#install) will compare your dependencies against these known version ranges and report any misalignment.
 
@@ -81,7 +81,7 @@ npx expo install --check
 npx expo install --fix
 ```
 
-When running `expo install --fix`, the CLI will automatically attempt to realign your `dependencies` with the expected versions of your current Expo SDK version. This is a necessary step when upgrading between major SDK versions and `npx expo-doctor` will also tell you when to run this command.
+When running `expo install --fix`, the CLI will automatically attempt to realign your `dependencies` with the expected versions for your current Expo SDK version. This is a necessary step when upgrading between major SDK versions and `npx expo-doctor` will also tell you when to run this command.
 
 ### 2. Deduplicating top-level dependencies
 
@@ -175,7 +175,7 @@ First, check if the affected packages can support and run with a newer (or older
 
 For npm, you have to use a property named `overrides` rather than `resolutions`, but it's otherwise the same. Reinstall your dependencies after adding this resolution.
 
-This will instruct your package manager to **always** use the specified version of this package (`react` in the example) rather than any other version ranges it finds. This will always deduplicate a package. Make sure you don't keep a resolution around for any longer than it's needed however, as it can cause incompatibilities when you upgrade in the future!
+This will instruct your package manager to **always** use the specified version of this package (`react` in the example) rather than any other version ranges it finds. This will always deduplicate a package. Make sure you don't keep a resolution around for any longer than it's needed, as it can cause incompatibilities when you upgrade in the future!
 
 ## When dependency issues commonly happen
 
@@ -185,7 +185,7 @@ Dependency issues and conflicts don't happen randomly, but may happen whenever y
 - A downgraded or removed package may lead to conflicts with some package managers
 - Upgrading the SDK or updating many dependencies at the same time may lead to duplicates
 
-In short, dependency issues may happen whenver your dependencies change. But we have three tips to make them less likely!
+In short, dependency issues may happen whenever your dependencies change. But we have three tips to make them less likely!
 
 ### 1. Use `expo install` for native modules
 
