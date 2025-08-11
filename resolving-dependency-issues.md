@@ -173,7 +173,18 @@ First, check if the affected packages can support and run with a newer (or older
 }
 ```
 
-For npm, you have to use a property named `overrides` rather than `resolutions`, but it's otherwise the same. Reinstall your dependencies after adding this resolution.
+For npm, you have to use a property named `overrides` rather than `resolutions`, but it's otherwise the same:
+
+
+```json
+{
+  "overrides": {
+    "react": "^19.1.0"
+  }
+}
+```
+
+Reinstall your dependencies after adding your resolutions.
 
 This will instruct your package manager to **always** use the specified version of this package (`react` in the example) rather than any other version ranges it finds. This will always deduplicate a package. Make sure you don't keep a resolution around for any longer than it's needed, as it can cause incompatibilities when you upgrade in the future!
 
