@@ -254,6 +254,18 @@ autoInstallPeers: false
 
 </details>
 
+<details>
+<summary><strong>Disabling auto-installing peer dependencies for Bun</strong></summary>
+
+To disable automatically installed peer dependencies for pnpm, add `peer = false` to the `[install]` section of your `bunfig.toml` file in your project:
+
+```toml
+[install]
+peer = false
+```
+
+</details>
+
 ### 3. Run Expo Doctor after upgrading
 
 When upgrading your Expo SDK version (no matter if it's an update or a new major release), or after upgrading native modules, or after upgrading dependencies, please run Expo Doctor to quickly check whether your project's dependencies are still in a clean state.
