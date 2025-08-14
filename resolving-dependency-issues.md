@@ -257,7 +257,7 @@ autoInstallPeers: false
 <details>
 <summary><strong>Disabling auto-installing peer dependencies for Bun</strong></summary>
 
-To disable automatically installed peer dependencies for pnpm, add `peer = false` to the `[install]` section of your `bunfig.toml` file in your project:
+To disable automatically installed peer dependencies for Bun, add `peer = false` to the `[install]` section of your `bunfig.toml` file in your project:
 
 ```toml
 [install]
