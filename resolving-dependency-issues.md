@@ -1,8 +1,5 @@
 # Resolving Dependency Issues
 
-> [!NOTE]
-> If you've been linked to this page or already know that you have a dependency conflict, you can skip ahead to the ["How to resolve dependency issues" section](#how-to-resolve-dependency-issues).
-
 Projects with outdated, misaligned, or duplicate dependencies can unexpectedly fail with build errors.
 Common issues include but are not limited to:
 
@@ -12,7 +9,12 @@ Common issues include but are not limited to:
 
 These problems typically lead to errors during native builds, bundling/exporting apps, or during runtime.
 
-## Why dependency issues occur
+<details>
+<summary>
+  <strong>Explanation: Why do dependency issues occur?</strong>
+</summary>
+
+## Why do dependency issues occur?
 
 There are **four common causes of dependency issues** you are most likely to encounter while using Expo:
 
@@ -54,7 +56,7 @@ This explains how the **four common causes of dependency issues** occur. The dep
 
 _Hoisting_ is typically desirable, conflicts are expected, and it's been designed to work together with the [Node.js resolution algorithm](https://nodejs.org/api/modules.html#loading-from-node_modules-folders). When a package is resolved (`require` with CommonJS or `import` with ESM), resolution will look up a dependency in the current directory's `node_modules` folder, then in any `node_modules` folder in a parent directory.
 
-### When hoisting leads to problems
+### When does hoisting lead to problems?
 
 Relating to the **four common causes of dependency issues**, having duplicate versions for a package installed isn't always desirable and may lead to issues. These are either **runtime issues** or **native linking issues**.
 
@@ -64,7 +66,7 @@ Relating to the **four common causes of dependency issues**, having duplicate ve
 
 Both of these issues are related to your app's JavaScript bundle and runtime errors. Native modules typically don't expect to have multiple, different versions of their JavaScript code bundled into a single app.
 
----
+</details>
 
 ## How to resolve dependency issues
 
@@ -188,7 +190,9 @@ Reinstall your dependencies after adding your resolutions.
 
 This will instruct your package manager to **always** use the specified version of this package (`react` in the example) rather than any other version ranges it finds. This will always deduplicate a package. Make sure you don't keep a resolution around for any longer than it's needed, as it can cause incompatibilities when you upgrade in the future!
 
-## When dependency issues commonly happen
+---
+
+## How to avoid dependency issues
 
 Dependency issues and conflicts don't happen randomly, but may happen whenever your dependencies or transitive dependencies change.
 - A newly added package may cause a conflict
@@ -208,7 +212,7 @@ When you're installing a new native module, try using `npx expo install <pkg>` i
 # For example, instead of this:
 yarn add expo-audio
 # USE THIS INSTEAD:
-expo install expo-audio
+npx expo install expo-audio
 ```
 
 ### 2. Be aware of (auto-installing) peer dependencies
