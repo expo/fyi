@@ -92,3 +92,9 @@ Though 16KB page size support is targeting Android 15+ (API level 35+), if your 
 > New apps and app updates must target Android 15 (API level 35) or higher to be submitted to Google Play; except for Wear OS, Android Automotive OS, and Android TV apps, which must target Android 14 (API level 34) or higher.
 
 Therefore, you cannot downgrade `targetSdkVersion` to bypass the 16KB page size policy. You still need to update your app to be compatible with 16KB page sizes.
+
+## Need more time to upgrade Expo SDK?
+
+If you have difficulty upgrading your Expo SDK or need more time to get ready for the 16KB page size support, Google Play Store offers an option to extend the timeline.
+
+> If you need more time to update your app, you can request an extension to this deadline. If you request more time, you'll have until May 31, 2026 to update your app.
