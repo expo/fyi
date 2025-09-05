@@ -1,10 +1,33 @@
 # Android 16KB page sizes support for Google Play Store
 
-Starting **November 1st, 2025**, Google Play Store will require all new apps and app updates targeting Android 15+ to support devices with 16KB memory page sizes. You may have seen this warning from the Google Play Store:
+Starting **November 1st, 2025**, Google Play Store will require all new apps and app updates targeting Android 15+ (API level 35+) to support devices with 16KB memory page sizes.
+
+You may have seen this warning from the Google Play Store:
 
 [<img src="./assets/android-16kb-page-sizes/google-play-store-warning.png" width="800" />](./assets/android-16kb-page-sizes/google-play-store-warning.png)
 
 This guide will walk through the problem and how to resolve it for Expo apps.
+
+## Quick Summary
+
+**✅ You're already ready if:**
+
+- Using **Expo SDK 53+** with `expo@53.0.14` or newer
+- Using **Expo SDK 54+** or **55+** (when available)
+
+**⚠️ Action needed if:**
+
+- Using **Expo SDK below 53**
+- Using **Expo SDK 53** with `expo@<53.0.14`
+- Have third-party libraries with native code that are incompatible with 16KB page size
+
+**🗓️ Key deadlines for Google Play Store:**
+
+- **August 31, 2025**: Must target Android 15+ (API level 35+)
+- **November 1, 2025**: Must support 16KB page sizes
+- **May 31, 2026**: Extended deadline if you request more time
+
+**🚀 Quick fix:** Update to Expo SDK 53+ and run `npx expo install --fix`
 
 ## Android 16KB page sizes support
 
