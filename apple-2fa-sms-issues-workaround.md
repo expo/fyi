@@ -7,6 +7,10 @@ If you are experiencing persistent issues with Apple SMS 2FA while logging in th
 
 We'll continue improving the SMS 2FA as best we can, and EAS CLI currently handles it better than any other tool that we are aware of, but we can't guarantee that it will be reliable. It is possible that Apple may be moving away from the SMS 2FA method, given that it is generally considered to be less secure than alternative approaches.
 
+# Alternative Workaround: Add a New Phone Number
+
+Another potential fix is to go to [Apple’s account page](https://account.apple.com/account/manage). Log into your developer account. Click on **Account Security**. Then click on the "**+**" button to add a new phone number to your account. After adding the number, re-run your `eas build` command. When prompted in the CLI, you should be able to choose the new phone number to send the code to. This workaround has worked for some users and does not require re-logging in on a new device.
+
 ## How to setup and use `device` 2FA method with EAS CLI
 
 Follow [these Apple docs](https://support.apple.com/en-us/102660) to set a trusted device ([for example your Mac](https://github.com/expo/eas-cli/issues/2698#issuecomment-2525401555)) for your Apple account.
