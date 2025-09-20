@@ -29,6 +29,7 @@ If you are using a different version control system, or if you are not using any
 - It does not use any VCS tooling (like the `git` command).
 - It respects `.gitignore` files (the same as in the default workflow) or `.easignore` files.
 - It uploads a copy of your working directory to EAS Build.
+- By default the project root is the current folder, this can be overriden by setting the environment variable `EAS_PROJECT_ROOT=<monorepo_root>`.
 
 ## Migration notes
 
