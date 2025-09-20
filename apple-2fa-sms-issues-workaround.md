@@ -25,3 +25,20 @@ rm -rf ~/.app-store/
 ```
 
 After removing the cache, try logging in again with the EAS CLI.
+
+## Update: Addressing Multiple Apple Accounts on macOS
+
+If you have multiple Apple accounts (e.g., a personal Apple ID and a separate developer account), **EAS CLI** may not correctly prompt you to choose how to validate your account. This can occur when your **personal Apple account** is the active user account on your Mac.
+
+### Resolution:
+1. **Sign out of the personal Apple account** in your macOS **System Settings**:
+   - Open **System Settings** > Click on your name (Apple ID) > Scroll down and select **Sign Out**.
+2. **Sign in with the developer account** used for Apple Developer Portal access.
+3. Retry the EAS CLI login process.
+
+### Why This Happens:
+EAS CLI relies on Apple APIs, which sometimes default to the macOS user account rather than the intended Apple Developer account. By signing out of your personal account, you ensure EAS CLI interacts with the correct Apple ID for authentication.
+
+### Note:
+This step is a temporary workaround. The Expo team is investigating ways to address this issue without requiring users to log out of their macOS account.
+
