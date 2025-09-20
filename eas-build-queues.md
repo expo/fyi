@@ -1,14 +1,14 @@
 # EAS Build Queues
 
-At any given time, there is a fixed maximum capacity for number of concurrent builds on EAS Build. The number of build requests at times will exceed the capacity, and so it is necessary to put build requests into queues.
+At any given time, there is a fixed maximum capacity for the number of concurrent builds on EAS Build. The number of build requests at times will exceed the capacity, and so it is necessary to put build requests into queues.
 
-There are two queue types: normal and priority. The normal queue is available to developers on the free tier, and priority is available to accounts with Starter, Production, and Enterprise subscriptions.
+There are two queue types: low- and high-priority queues. The low-priority queue is available to developers on the Free plan, and the high-priority queue is available to accounts with Starter, Production, and Enterprise subscriptions.
 
-Usage of EAS Build tends to peak during the middle of the business day in North American timezones, and during that time, priority builds will typically use up most of the available capacity. The normal queue time during peak will frequently grow to an hour or more. If you find yourself in this situation, you have the following options.
+Usage of EAS Build tends to peak during the middle of the business day in North American timezones, and during that time, low-priority queue builds will typically use up most of the available capacity. The low-priority queue time during peak will frequently grow to an hour or more. If you find yourself in this situation, you have the following options.
 
-## Alternatives to waiting in free tier queue
+## Alternatives to waiting in low-priority queue
 
-- [Upgrade to a Starter, Production, or Enterprise plan](https://expo.dev/pricing) for priority queue access
+- [Upgrade to a Starter, Production, or Enterprise plan](https://expo.dev/pricing) for high-priority queue access
 - Run your build locally (or on other hosted infrastructure) with `eas build --local`. [Learn more](https://docs.expo.dev/build-reference/local-builds/)
 - Run your build locally by running `npx expo prebuild` and then manually archiving and signing it. [Learn more](https://docs.expo.dev/deploy/build-project/#production-builds-locally)
 - Work around peak times and build at slower times of the day. You can see detailed charts about usage on the [EAS Build - Service Status Page](https://expo.dev/eas-build-status) to help decide what times are best.
