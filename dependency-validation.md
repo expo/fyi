@@ -25,3 +25,4 @@ By specifying the library under the install.exclude array in the **package.json*
 ```
 
 See the [**package.json** configuration guide](https://docs.expo.dev/versions/latest/config/package-json/) for more options.
+npx expo install expo-dev-client
