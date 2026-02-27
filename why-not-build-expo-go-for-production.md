@@ -9,3 +9,11 @@ For example, if you add a library with native code that is not in the Expo SDK, 
 Development builds provide a reliable and flexible development environment, and behave more predictably and similarly to production builds. This makes it easier to catch potential issues during development.
 
 [Learn more about converting from Expo Go to a development build.](https://docs.expo.dev/develop/development-builds/expo-go-to-dev-build/)
+
+## How EAS CLI detects this
+
+EAS CLI shows a warning when **all** of the following are true:
+
+- The build profile is named `"production"`
+- The `expo-dev-client` package is not installed in the project
+- No native project directories (`android/`, `ios/`) are present (or they are git-ignored)
