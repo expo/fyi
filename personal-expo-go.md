@@ -19,7 +19,7 @@ You can check the status at any time on [App Store Connect](https://appstoreconn
 By default, `eas go` uses the latest supported SDK. To pin a version:
 
 ```bash
-eas go --sdk-version 55
+eas go --sdk-version 55.0.0
 ```
 
 ## Sharing with your team
