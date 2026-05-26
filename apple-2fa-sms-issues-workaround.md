@@ -19,9 +19,49 @@ If you still encounter this issue while using EAS CLI version >= `14.0.3`, you c
 It seems to fix the issue for some users.
 
 Run the following command to remove the Apple authentication cache used by EAS CLI:
-
 ```bash
 rm -rf ~/.app-store/
 ```
 
 After removing the cache, try logging in again with the EAS CLI.
+
+## Bypass Apple authentication for `eas submit` using `ascAppId`
+
+If you're experiencing Apple 2FA issues specifically with `eas submit`, you can bypass the Apple authentication prompt entirely by adding your App Store Connect App ID to your `eas.json` configuration.
+
+### How to find your App Store Connect App ID:
+
+1. Go to https://appstoreconnect.apple.com
+2. Sign in and select your app
+3. Look at the URL - it will be in this format: `https://appstoreconnect.apple.com/apps/1234567890/...`
+4. Copy the numeric ID (e.g., `1234567890`)
+
+### Add to your `eas.json`:
+```json
+{
+  "submit": {
+    "production": {
+      "ios": {
+        "ascAppId": "1234567890",
+        "appleId": "your-apple-id@example.com"
+      }
+    }
+  }
+}
+```
+
+After adding this configuration, `eas submit --platform ios` will skip the interactive Apple login and 2FA steps entirely, using the App Store Connect API directly.
+
+## Bypass Apple authentication for `eas build` using `--non-interactive` flag
+
+If you're experiencing Apple 2FA issues with `eas build`, you can bypass the authentication prompt by using the `--non-interactive` flag. This skips the Apple auth prompt entirely and uses the existing remote iOS credentials stored on the Expo server.
+```bash
+npx eas-cli build --platform ios --profile production --non-interactive
+```
+
+This method works because:
+- It bypasses the interactive authentication flow
+- Uses cached/remote credentials already configured in your Expo account
+- Avoids triggering the problematic Apple 2FA SMS verification
+
+**Note:** This only works if you have previously set up iOS credentials for your project. If this is your first build, you'll need to authenticate at least once interactively or set up credentials through other means.
