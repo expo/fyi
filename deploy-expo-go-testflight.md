@@ -1,6 +1,6 @@
 # Deploy Expo Go to your TestFlight internal team
 
-The `eas go` command builds a version of the Expo Go app on EAS and deploys it to your TestFlight internal team — making it available to install on any device in your team. You can choose the SDK version with `--sdk-version`, so if you're in the middle of exploring an idea or learning something with Expo Go, you can stay on the SDK you need regardless of releases.
+Currently, SDK 55 and higher are not available on the Apple App Store ([learn more](https://expo.dev/changelog/expo-go-and-app-store-may-2026)). The `eas go` command builds a version of the Expo Go app on EAS and deploys it to your TestFlight internal team — making it available to install on any device in your team. This command does not count against the build usage for your account, it counts as workflow minutes. You can choose the SDK version with `--sdk-version`, so if you're in the middle of exploring an idea or learning something with Expo Go, you can stay on the SDK you need regardless of releases.
 
 That said, you may alternatively want to consider migrating your project to using a [development build](https://docs.expo.dev/develop/development-builds/expo-go-to-dev-build/), which provides you with everything that you need to build an app that you ship to stores.
 
