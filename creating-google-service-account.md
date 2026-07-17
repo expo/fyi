@@ -83,7 +83,7 @@ If you have already created a Google Service Account, you can create a new **JSO
 
 3. Click **Keys** > **Add key** > **Create new key**.
 
-[<img src="./assets/creating-google-service-account/05-create-new-key.png" width="800" />](./assets/creating-google-service-account/05-create-new-key.png)
+[<img src="./assets/creating-google-service-account/14-create-new-key.png" width="800" />](./assets/creating-google-service-account/14-create-new-key.png)
 
 4. Under **Key type**, make sure **JSON** is selected, and click **Create**.
 
@@ -91,7 +91,7 @@ If you have already created a Google Service Account, you can create a new **JSO
 
 5. A **.json** file will download on your computer. You can repeat _steps 7 to 10_ from the previous section to use this downloaded key.
 
-[<img src="./assets/creating-google-service-account/07-key-saved.png" width="800" />](./assets/creating-google-service-account/07-key-saved.png)
+[<img src="./assets/creating-google-service-account/16-service-key-created.png" width="800" />](./assets/creating-google-service-account/16-service-key-created.png)
 
 ## Further reading
 
