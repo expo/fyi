@@ -50,7 +50,7 @@ To setup a Google Service Account Key for Play Store Submissions via `eas submit
 
 [<img src="./assets/creating-google-service-account/09-users-permissions.png" width="800" />](./assets/creating-google-service-account/09-users-permissions.png)
 
-8. Enter the email address of the service account you created in _step 4_. On the **App permissions** tab, select your app(s). If you want to apply the permissions to all apps, you can also select the permissions on the **Account permissions** tab instead.
+8. Enter the email address of the service account you created in _step 3_. On the **App permissions** tab, select your app(s). If you want to apply the permissions to all apps, you can also select the permissions on the **Account permissions** tab instead.
 
 [<img src="./assets/creating-google-service-account/10-invite-user.png" width="800" />](./assets/creating-google-service-account/10-invite-user.png)
 
