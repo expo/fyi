@@ -4,7 +4,7 @@ A Google Service Account Key is a credential in the form of a JSON file that you
 
 **EAS requires you to upload and configure a Google Service Account Key** to submit your Android app to the Google Play Store with `eas submit`.
 
-This guides provides steps to create a new service account and its key or re-use an existing service account to create a new key.
+This guide provides steps to create a new service account and its key or re-use an existing service account to create a new key.
 
 > [!NOTE]
 > From June 2024, all Android notifications must be sent using the FCM v1 protocol. EAS requires a Google Service Account Key to be uploaded and configured for sending Android push notifications via `https://exp.host/--/api/v2/push/send` using the FCM v1 protocol. You can configure separate Google Service Account Keys for Play Store Submissions and [sending Android Push notifications with FCM v1 protocol](https://docs.expo.dev/push-notifications/fcm-credentials/) or you can upload a single Google Service Account Key and use it for both use cases (provided that the correct authorizations are in place for that Service Account in Google Cloud Console).
@@ -22,11 +22,12 @@ To setup a Google Service Account Key for Play Store Submissions via `eas submit
 
 [<img src="./assets/creating-google-service-account/01-new-google-cloud-project.png" width="800" />](./assets/creating-google-service-account/01-new-google-cloud-project.png)
 
-2. Open [**Service Accounts**](https://console.cloud.google.com/iam-admin/serviceaccounts) in the Google Cloud Console and click **Create Service Account**.
+2. Open [**Service Accounts**](https://console.cloud.google.com/iam-admin/serviceaccounts) in the Google Cloud Console. You can also find this page from the navigation menu: **IAM & Admin** > **Service Accounts**. Then, click **Create Service Account**.
 
+[<img src="./assets/creating-google-service-account/17-navigate-service-accounts.png" width="800" />](./assets/creating-google-service-account/17-navigate-service-accounts.png)
 [<img src="./assets/creating-google-service-account/02-service-accounts.png" width="800" />](./assets/creating-google-service-account/02-service-accounts.png)
 
-3. Enter a name for your service account. We recommend a name that will make it easy for you to remember that it is for your Google Play Console account. Optionally, enter the service account ID and description of your choice. Click the **Done** button.
+3. Enter a name for your service account. We recommend a name that will make it easy for you to remember that it is for your Google Play Console account. Optionally, enter the service account ID and description of your choice. Click the **Create and close** button.
 
 [<img src="./assets/creating-google-service-account/03-create-service-account.png" width="800" />](./assets/creating-google-service-account/03-create-service-account.png)
 
@@ -53,9 +54,20 @@ To setup a Google Service Account Key for Play Store Submissions via `eas submit
 
 [<img src="./assets/creating-google-service-account/10-invite-user.png" width="800" />](./assets/creating-google-service-account/10-invite-user.png)
 
-9. Select the following required permissions to upload and manage your app, and click **Invite user**.
+9. Select the following required permissions to upload and manage your app:
 
-[<img src="./assets/creating-google-service-account/11-set-permissions.png" width="800" />](./assets/creating-google-service-account/11-account-permissions.png)
+   - Under **App access**, select **View app information (read-only)**.
+   - Under **Draft apps**, select **Edit and delete draft apps**.
+   - Under **Releases**, select **Release to production, exclude devices, and use Play App Signing**, **Release apps to testing tracks**, and **Manage testing tracks and edit tester lists**.
+   - Under **Store presence**, select **Manage store presence**.
+
+   Google Play Console selects **View app quality information (read-only)**, **Manage policy declarations**, and **Manage deep links** automatically. They appear checked and greyed out.
+
+   You don't need **Admin (all permissions)**, **View financial data**, **Manage orders and subscriptions**, or **Reply to reviews**.
+
+   After selecting the permissions, click **Invite user**.
+
+[<img src="./assets/creating-google-service-account/11-set-permissions.png" width="800" />](./assets/creating-google-service-account/11-set-permissions.png)
 
 10. Now use `eas submit` to upload your newly created Google Service Account Key to EAS servers and upload your app's release archive to Google Play Store.
 
@@ -69,17 +81,17 @@ If you have already created a Google Service Account, you can create a new **JSO
 
 [<img src="./assets/creating-google-service-account/13-select-existing-service-account.png" width="800" />](./assets/creating-google-service-account/13-select-existing-service-account.png)
 
-3. Click **Keys** > **ADD KEY** > **Create new key**.
+3. Click **Keys** > **Add key** > **Create new key**.
 
-[<img src="./assets/creating-google-service-account/14-create-new-key.png" width="800" />](./assets/creating-google-service-account/14-create-new-key.png)
+[<img src="./assets/creating-google-service-account/05-create-new-key.png" width="800" />](./assets/creating-google-service-account/05-create-new-key.png)
 
 4. Under **Key type**, make sure **JSON** is selected, and click **Create**.
 
-[<img src="./assets/creating-google-service-account/15-select-json-key-type.png" width="800" />](./assets/creating-google-service-account/15-select-json-key-type.png)
+[<img src="./assets/creating-google-service-account/06-key-type.png" width="800" />](./assets/creating-google-service-account/06-key-type.png)
 
 5. A **.json** file will download on your computer. You can repeat _steps 7 to 10_ from the previous section to use this downloaded key.
 
-[<img src="./assets/creating-google-service-account/16-service-key-created.png" width="800" />](./assets/creating-google-service-account/16-service-key-created.png)
+[<img src="./assets/creating-google-service-account/07-key-saved.png" width="800" />](./assets/creating-google-service-account/07-key-saved.png)
 
 ## Further reading
 
