@@ -15,7 +15,7 @@ In order to build an iOS app with custom entitlements, you'll need to setup _cod
 5. Select a physical device to build the app onto, and Xcode will add this device to your account.
 6. Build the app onto your device.
    1. You may need to "trust" the device you just added to the Xcode "Development Certificate". This is done from your iOS device.
-   2. Navigate: Settings > General > Device Management > [your new certificate] > Trust.
+   2. Navigate: Settings > General > VPN & Device Management > [your new certificate] > Trust.
       Learn more: [Apple docs (MaintainingCertificates)](https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingCertificates/MaintainingCertificates.html).
 
 Now you can return to Expo CLI and build your project locally with `npx expo run:ios`. This process only needs to be done once per computer/account. You don't need to do this for every new native project.
