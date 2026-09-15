@@ -2,7 +2,7 @@
 
 Starting with SDK 58, Expo apps on iOS use the UIKit scene-based life cycle (`UIScene`). The iOS 27 SDK requires it: apps built with Xcode 27 that still use the application-based life cycle do not launch correctly on iOS 27.
 
-This guide explains what changed, who needs to act, and how to migrate.
+This guide explains what changed, who needs to act, how to migrate, and how to opt in on SDK 57 if you need to build with Xcode 27 before upgrading. See [Staying on SDK 57 with Xcode 27](#staying-on-sdk-57-with-xcode-27).
 
 ## Quick summary
 
@@ -16,6 +16,7 @@ This guide explains what changed, who needs to act, and how to migrate.
 - You maintain the **ios** directory by hand. See [Migrating a hand-managed iOS project](#migrating-a-hand-managed-ios-project).
 - You have a bare React Native app that uses Expo modules. Run `npx install-expo-modules@latest`, which migrates the project for SDK 58 and newer.
 - You override `UIApplicationDelegate` methods directly, or ship a library that does. See [Libraries and custom app delegate code](#libraries-and-custom-app-delegate-code).
+- You are on SDK 57 and want to build with Xcode 27 and the iOS 27 SDK. See [Staying on SDK 57 with Xcode 27](#staying-on-sdk-57-with-xcode-27).
 
 ## What changed
 
@@ -137,6 +138,37 @@ If your previous `AppDelegate` created the window, set a root view controller, o
 - **Direct `UIApplicationDelegate` hooks do not fire.** Code that swizzles or subclasses `UIApplicationDelegate` outside of `ExpoAppDelegate`, for example a library that expects `applicationDidBecomeActive(_:)` to be called on the app delegate by UIKit, needs a scene delegate equivalent such as `sceneDidBecomeActive(_:)`, or should move to `ExpoAppDelegateSubscriber`.
 - **Do not use `ExpoAppSceneDelegate` in extensions.** It is marked unavailable in app extensions and widget targets ([expo/expo#46799](https://github.com/expo/expo/pull/46799), [expo/expo#47894](https://github.com/expo/expo/pull/47894)).
 - **Avoid `UIScreen.main` and `UIApplication.shared.keyWindow`.** With scenes, read geometry from the scene a view belongs to. `expo-modules-core` exposes `Utilities.keyWindow()` and scene-aware geometry helpers for modules to reuse.
+
+## Staying on SDK 57 with Xcode 27
+
+SDK 57 apps keep the application-based life cycle by default. If you need to build with Xcode 27 and the iOS 27 SDK before upgrading to SDK 58, opt in with the `ios.enableSceneSupport` property of [`expo-build-properties`](https://docs.expo.dev/versions/latest/sdk/build-properties/):
+
+```json
+{
+  "expo": {
+    "plugins": [
+      [
+        "expo-build-properties",
+        {
+          "ios": {
+            "enableSceneSupport": true
+          }
+        }
+      ]
+    ]
+  }
+}
+```
+
+Then run `npx expo prebuild --clean`, or make a new build on EAS Build.
+
+Requirements and behavior:
+
+- **`expo@57.0.23` or newer.** The scene runtime was backported to SDK 57 in [expo/expo#50191](https://github.com/expo/expo/pull/50191). The plugin throws on older 57 patches, so run `npx expo install --fix` first.
+- **The latest `expo-build-properties`.** The property was added in [expo/expo#50205](https://github.com/expo/expo/pull/50205).
+- **What it changes.** With `true`, prebuild makes `AppDelegate` conform to `ExpoReactNativeFactoryProvider`, removes the legacy React Native startup block from `didFinishLaunchingWithOptions`, and adds a `UIApplicationSceneManifest` to **Info.plist** that points at Expo's built-in `EXExpoAppSceneDelegate`. No **SceneDelegate.swift** is generated on SDK 57. Setting the property back to `false` reverts those changes.
+- **It only edits the template AppDelegate.** If your **AppDelegate.swift** differs from the SDK 57 template, or **Info.plist** already declares a scene manifest, the plugin refuses to overwrite it and you need to apply the changes by hand. Follow [Migrating a hand-managed iOS project](#migrating-a-hand-managed-ios-project), but set `UISceneDelegateClassName` to `EXExpoAppSceneDelegate` instead of adding your own scene delegate class.
+- **Remove it after upgrading.** On SDK 58 and newer the property is a no-op, and prebuild prints a warning that it can be removed.
 
 ## Troubleshooting
 
