@@ -2,6 +2,8 @@
 
 When you run `eas build`, we need to get your source code from your development machine to one of our macOS or Linux build workers. In order to do this, EAS CLI will collect and compress project files into a single archive, and then upload that archive to private cloud storage that is accessible only to the build worker. By default, EAS CLI will produce the archive by copying all files starting from the root of the git repository with the exception of `.git`, `node_modules`, and all files matched by rules from `.gitignore` (or `.easignore` if it exists).
 
+The archive is uploaded directly to Google Cloud Storage (`storage.googleapis.com`) using a short-lived signed URL. If your network, proxy, or firewall blocks or rewrites requests to that host, the upload fails.
+
 > `.easignore` supports [the same path patterns as `.gitignore` files](http://git-scm.com/docs/gitignore), but it can only be located in the root of your git repository and, if it is present, none of the existing `.gitignore` files will be respected by EAS CLI.
 
 ## What files are included in the archive?
