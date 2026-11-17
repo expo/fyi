@@ -27,9 +27,10 @@ To setup a Google Service Account Key for Play Store Submissions via `eas submit
 [<img src="./assets/creating-google-service-account/17-navigate-service-accounts.png" width="800" />](./assets/creating-google-service-account/17-navigate-service-accounts.png)
 [<img src="./assets/creating-google-service-account/02-service-accounts.png" width="800" />](./assets/creating-google-service-account/02-service-accounts.png)
 
-3. Enter a name for your service account. We recommend a name that will make it easy for you to remember that it is for your Google Play Console account. Optionally, enter the service account ID and description of your choice. Click the **Create and close** button.
+3. Enter a name for your service account. We recommend a name that will make it easy for you to remember that it is for your Google Play Console account. Optionally, enter the service account ID and description of your choice. Click the **Create and continue** button. Add the role **Service Account User**. Click the **Done** button.
 
 [<img src="./assets/creating-google-service-account/03-create-service-account.png" width="800" />](./assets/creating-google-service-account/03-create-service-account.png)
+[<img src="./assets/creating-google-service-account/03-service-account-user-role.png" width="800" />](./assets/creating-google-service-account/03-service-account-user-role.png)
 
 4. From **Service Accounts**, copy the email ID for your account. You will need this in _step 8_.
 
